@@ -1,0 +1,84 @@
+
+
+@mixin rounded($radius,$orientation)
+	border-$orientation-radius: $radius
+	-moz-border-$orientation-radius: $radius
+	-webkit-border-$orientation-radius: $radius
+	
+@mixin rounded( $radius: 10px) 
+	border-top-left-radius: $radius
+	-moz-border-top-left-radius: $radius
+	-webkit-border-top-left-radius: $radius
+	border-top-right-radius: $radius
+	-moz-border-top-right-radius: $radius
+	-webkit-border-top-right-radius: $radius
+	border-bottom-left-radius: $radius
+	-moz-border-bottom-left-radius: $radius
+	-webkit-border-bottom-left-radius: $radius
+	border-bottom-right-radius: $radius
+	-moz-border-bottom-right-radius: $radius
+	-webkit-border-bottom-right-radius: $radius
+	
+@mixin fullscreen($img)
+	background: url($img) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+
+@mixin transparent-black-background
+	background : transparent url("/static/images/window-background.png") repeat top left
+
+		
+.window
+	overflow : hidden
+	border : 3px solid grey 
+	height : 400px
+	@include rounded
+	
+
+
+#controls
+	margin-top : 10px
+#logo
+	height : 70px
+
+#body
+	width : 950px
+	text-align: center
+	margin-left : auto
+	margin-right : auto
+	
+	
+
+.geo-invisible
+	visibility : hidden
+	position : absolute
+	whitespace : nowrap
+	
+
+.map-loading
+	display : none
+	position : absolute
+	@include transparent-black-background
+	z-index : 9999
+	
+#upload
+	position : relative
+	height : 60%
+	top : 30%
+	width : 80%
+	left : 10%
+	p 
+		width : 100%
+		vertical-align : middle
+		
+		input,select
+			width : 60%
+			float : right
+		label
+			width : 20%
+
+
+		
+	

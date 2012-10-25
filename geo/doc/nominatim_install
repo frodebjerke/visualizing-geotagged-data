@@ -1,0 +1,28 @@
+sudo  apt-get install php5-pgsql postgis postgresql php5 php-pear gcc proj autoconf
+pear install DB
+
+
+change config variables, those are the important ones 
+
+@define('CONST_Database_DSN', 'pgsql://www-data:www-data@localhost:5432/nominatim');
+
+	// Paths
+	@define('CONST_Postgresql_Version', '8.4');
+	@define('CONST_Path_Postgresql_Contrib', '/usr/share/postgresql/'.CONST_Postgresql_Version.'/contrib');
+	@define('CONST_Path_Postgresql_Postgis', CONST_Path_Postgresql_Contrib.'/postgis-1.5');
+    @define('CONST_Osm2pgsql_Binary', '/usr/bin/osm2pgsql');
+    @define('CONST_Osmosis_Binary', CONST_BasePath.'/osmosis-0.38/bin/osmosis');
+    
+ 
+ setup.php is buggy. you not to comment out the if and else that contains the 'create extension hstore' sql query.
+ hstore is apparently not needed anymore if you have postgres > 8.3. add --no-password to the psql script function at the end
+ argh too many bugs in setup.php. the fixed setup.php is in the doc folder
+ 
+ 
+ 
+ sett pg_hba.conf to trust and specify a password for www-data
+ 
+ create database user www-data with superuser password [password]
+ 
+ start the script with  sudo -u www-data setup.php --osm-file [file] --all
+ insert all the password prompts
