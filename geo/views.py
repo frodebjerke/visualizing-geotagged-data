@@ -86,9 +86,9 @@ def track(request):
     trackform = TrackForm(request.GET)
     if not trackform.is_valid():
         return HttpResponseBadRequest(content=failure(trackform.errors), content_type="text/json")
-    logger.debug("Request is valid. Get map %d", trackform.cleaned_data["mode"])
-    map = Map.getinstance(trackform.cleaned_data["mode"])
-    logger.debug("Map has %d mappoints and %d connections", len(map.mappoints), len(map.connections))
+    logger.info("Request is valid. Get network %d", trackform.cleaned_data["mode"])
+    network = Map.getinstance(trackform.cleaned_data["mode"])
+    logger.info("Map has %d mappoints and %d connections", len(network.mappoints), len(network.connections))
 
     json = JSONX()
 
@@ -96,20 +96,20 @@ def track(request):
     targetid = trackform.cleaned_data["target"]
 
     if sourceid and targetid:
-        logger.debug("Calculate shortest path")
-        source = map.getmappoint(pointid=sourceid)
-        target = map.getmappoint(pointid=targetid)
+        logger.info("Calculate shortest path")
+        source = network.getmappoint(pointid=sourceid)
+        target = network.getmappoint(pointid=targetid)
         if not source or not target:
             return HttpResponseBadRequest(content=failure("did not found source or target"), content_type="text/json")
-        connectiontrack = map.getshortesttrack(source, target)
+        connectiontrack = network.getshortesttrack(source, target)
         print vars(connectiontrack)
-        json.setconnectiontrack(connectiontrack, map)
+        json.setconnectiontrack(connectiontrack, network)
         return HttpResponse(content=json.getjson(), content_type="text/json")
 
     else:
-        print "Calculate whole track from %d mappoints with %d connections" % (len(map.mappoints), len(map.connections))
-        pointtracks = map.getpointtracks()
-        print "Got %d pointtracks" % len(pointtracks)
+        logger.info("Calculate whole track from %d mappoints with %d connections" % (len(network.mappoints), len(network.connections)))
+        pointtracks = network.getpointtracks()
+        logger.info("Got %d pointtracks" % len(pointtracks))
         json.setpointtracks(pointtracks)
         return HttpResponse(content=json.getjson(), content_type="text/json")
     

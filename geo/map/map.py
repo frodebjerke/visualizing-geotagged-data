@@ -21,7 +21,7 @@ import heapq
 from copy import deepcopy
 from maptrack import MapConnectionTrack, MapPointTrack
 from django.core.exceptions import ObjectDoesNotExist
-
+import logging
 
 
 """Datastructure that hold Points and PointConnection"""
@@ -38,6 +38,8 @@ class Map:
     NODE_COLOR = "#E9D5C1"
     TRACE_EDGE_COLOR = "#FFDDDD"
     MAP_EDGE_COLOR = "#99FF99"
+    
+    logger = logging.getLogger(__name__)
 
     def __init__(self, mode):
                 #dict on id of database nodes
@@ -127,6 +129,7 @@ class Map:
 
     def insertmappoint(self, lat, lon, address=None):
         "Adds the point to the map if it does not exist yet and creates a connection to the point itself. Returns the new point"
+        self.logger.debug("Adding %f,%f as mappoint." % (lat,lon))
         point = self.getmappoint(lat, lon)
         if point:
             return point
@@ -173,6 +176,7 @@ class Map:
 
     def inserttracepoint(self, dto):
         "Adds the trace point to the map or updates the time of and existing one and creates a map point if it does not exist yet"
+        self.logger.debug("Adding %f,%f as tracepoint." % (dto.getlat(), dto.getlon()))
         mappoint = self.getmappoint(lat=dto.getlat(), lon=dto.getlon())
 
         #try to get mappoint from current map insert it if it does not exist

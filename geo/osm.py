@@ -16,6 +16,7 @@ from django.conf import settings
 import json
 import os,sys,math
 from decimal import Decimal
+import logging
 
 class OSM(Coder):
     """
@@ -23,13 +24,20 @@ class OSM(Coder):
     @summary: Uses a local .osm files that contains only nodes from highways. This is highly inefficient.
     """
     MANNHEIM_OSM = os.path.join(settings.MAP_DIR,"mannheim-streets.osm")
+    logger = logging.getLogger(__name__)
     
     def __init__(self):
         try:
+            self.nodes = []
             doc = minidom.parse(self.MANNHEIM_OSM)
-            self.nodes = doc.getElementsByTagName("node")
+            nodes = doc.getElementsByTagName("node")
+            for node in nodes:
+                self.nodes.append((Decimal(node.getAttribute("lat")),Decimal(node.getAttribute("lon"))))
         except Exception as e:
             raise OSMException, "Could not parse osm file: %s" % str(e)
+    
+    def getnodes(self):
+        return self.nodes;
     
     def reversegecode(self,lat,lon):
         """
@@ -39,18 +47,18 @@ class OSM(Coder):
         min_node = None
         
         for node in self.nodes:
-            node_lat,node_lon = (Decimal(node.getAttribute("lat")),Decimal(node.getAttribute("lon")))
-            distance = self._get_distance(lat,lon,node_lon,node_lat)
+            distance = self._getdistance(lat,lon,node[0],node[1])
+#            self.logger.debug("Comparing %f to %f." % (distance, min_distance))
             if distance < min_distance:
                 min_distance = distance
-                min_node = (node_lat,node_lon)
+                min_node = node
         
         if min_node is None:
             raise OSMException, "Could not find a nearby node!"
         
         return min_node
         
-    def _get_distance(self,lat1,lon1,lat2,lon2):
+    def _getdistance(self,lat1,lon1,lat2,lon2):
         lon1, lat1, lon2, lat2 = map(math.radians , [lon1, lat1, lon2, lat2])
         # haversine formula 
         dlon = lon2 - lon1 
