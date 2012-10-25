@@ -5,45 +5,49 @@ when you run "manage.py test".
 Replace this with more appropriate tests for your application.
 """
 
-import settings
-from appsettings import APP_PATH, APP_NAME
-import unittest
+
+import appsettings
 import os
+import sys
 import re
-import types
-import unittest
+import logging
 
-base = os.path.split(__file__)[0]
-filetest = re.compile("test\.py$")
+logger = logging.getLogger(__name__)
 
+def loaddefinitions(packages, importall = False, nglobals = globals()):
+    " Import every module in packages or import every definition from every module in packages. Probably not compatible with nested packages."  
+    
+    filename = re.compile("__init__|test")
+    
+    for package in packages:
+        try :
+            modulepaths = os.listdir(os.path.join(appsettings.APP_PATH,
+                                              package.replace(".", os.sep)))
+            for modulepath in modulepaths:
+                (name, ext) = os.path.splitext(modulepath)
+                if filename.search(name) or ext == ".pyc":
+                    continue
+                modulename = appsettings.APP_NAME + "." + package + "." + name
+                logger.debug("Trying to import %s" % (modulename))
+                __import__(modulename)
+                if importall:
+                    module = sys.modules[modulename]
+                    for k in dir(module):
+#                        print k
+                        nglobals[k] = module.__dict__[k]
+    
+    
+        except Exception as e:
+            raise
 
-def loadtests(path):
-    global filetest
-    for dirpath, dirnames, filenames in os.walk(path):
-        tests = [filename for filename in filenames
-                     if filetest.search(filename)]
-        for test in tests:
-            modulename = tomodulename(test, dirpath)
+def loadmodels():
+    loaddefinitions(packages = appsettings.MODEL_DEFINITION)
 
-            module = __import__(modulename)
-            for attr in dir(module):
-                if attr == types.ClassType and issubclass(attr, unittest.TestCase):
-                    print "Importing %s " % attr
-                    __import__(module, attr)
+def loadtests(nglobals):
+    loaddefinitions(packages = appsettings.TEST_DEFINITION, nglobals = nglobals, importall = True)
 
-def tomodulename(filename, dirpath):
-    global base
-    filename = filename.replace(".py", "")
-    modulename = os.path.join(dirpath.replace(base, ""), filename)
-    split = modulename.split("/")
-    if split[0] == "":
-        split = split[1:]
-    split.insert(0, APP_NAME)
-    modulename = ".".join(split)
-    return modulename
+loadtests(nglobals = globals())
 
-loadtests(base)
-
-from geo.map.maptest import MapTest
-from geo.coordinate.gpxtest import GPXTest
-from geo.video.oggtest import OggTest
+#from geo.map.maptest import MapTest 
+#from geo.coordinate.gpxtest import GPXTest
+#from geo.video.oggtest import OggTest

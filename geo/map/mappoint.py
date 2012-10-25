@@ -5,7 +5,7 @@ Created on Mar 22, 2012
 '''
 
 from django.db import models
-from point import Point
+from point import Point 
 from math import radians, cos, sin, asin, sqrt
 
 class MapPoint(Point):

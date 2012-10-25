@@ -13,23 +13,23 @@ from geo.coordinate.videotime import videotimes
 
 import os
 import pickle
-from geo.web.logger import getLogger
+import logging
+
+logger = logging.getLogger(__name__)
 
 def resolvefile(inpath, outpath):
-    logger = getLogger(__name__)
     gpx = GPX(open(inpath, "r"))
-    osm = OSM()
+    geocoder = OSM()
 
     geocodes = []
     if not gpx.isvalid():
         raise RuntimeError, "gpx file is not valid"
     for (lat, lon, time) in gpx.gettrackpoint():
-        (lat, lon, address) = osm.reversegecode(lat=lat, lon=lon)
-        geocodes.append((lat,
-                         lon,
-                         address,
+        (lat_new, lon_new) = geocoder.reversegecode(lat=lat, lon=lon)
+        geocodes.append((lat_new,
+                         lon_new,
                          time))
-        logger.debug("Processed %s, %s" % (lat, lon))
+        logger.debug("Processed %s, %s to %s,%s" % (lat, lon,lat_new,lon_new))
     out = open(outpath, "w")
     pickle.dump(videotimes(geocodes), out)
     out.flush()
@@ -38,14 +38,17 @@ def resolvefile(inpath, outpath):
 def filetodto(track, videopath):
     dtos = []
     video = VideoFactory.createvideo(videopath)
-    for (lat, lon, address, realtime, videotime) in pickle.load(track):
-        dto = TracePointDTO(lat=lat, lon=lon, realtime=realtime, videotime=videotime, video=video, address=address)
+    logger.info("Reading from %s..." % track)
+    for (lat, lon, realtime, videotime) in pickle.load(track):
+        dto = TracePointDTO(lat=lat, lon=lon, realtime=realtime, videotime=videotime, video=video)
         dtos.append(dto)
     return dtos
 
 def resolveall():
-    from geo.script.filldb import tracktovideo
+    from geo.script.filldb import tracktovideo 
     for trackpath in tracktovideo.keys():
-        print "%s" % (trackpath)
+        logger.info("Resolving file %s" % (trackpath))
         resolvefile(trackpath.replace(".geocode", ".gpx"), trackpath)
 
+if __name__ == "__main__":
+    resolveall()

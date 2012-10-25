@@ -2,11 +2,11 @@ from django.conf.urls.defaults import patterns, include, url
 from django.views.generic.simple import direct_to_template
 
 from django.contrib import admin
-from geo.web.forms.uploadform import UploadForm
+#from geo.web.forms.uploadform import UploadForm
 admin.autodiscover()
 
 
-from geo.web.handler.handler import index, track
+from geo.views import index, track
 
 
 # Uncomment the next two lines to enable the admin:

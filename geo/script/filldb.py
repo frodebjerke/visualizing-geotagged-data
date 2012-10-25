@@ -45,8 +45,13 @@ tracktovideo = {
                 SCHLOSS_PARADEPLATZ_TRAM_TRACK : [ConnectionMode.TRAIN, SCHLOSS_PARADEPLATZ_TRAM_VIDEO]}
 
 def insertall():
+    """
+    @summary: Inserts already geocoded traces into the db
+    """
     for trackpath in tracktovideo.keys():
         dtos = filetodto(open(trackpath, "r"), tracktovideo[trackpath][1])
         map = Map.getinstance(tracktovideo[trackpath][0])
         map.inserttracepoints(dtos)
 
+if __name__ == "__main__":
+    insertall()

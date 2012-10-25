@@ -11,9 +11,11 @@ from geo.map.tracepoint import TracePoint
 import json
 import os
 from django.conf import settings
-from geo.web.logger import getLogger
+import logging
 
 class JSONX(Parser):
+
+    logger = logging.getLogger(__name__)
 
     def setpointtracks(self, pointtracks):
         data = []
@@ -28,7 +30,7 @@ class JSONX(Parser):
 
     def setconnectiontrack(self, connectiontrack, map):
         data = []
-        logger = getLogger(__name__)
+        logger = self.getLogger(__name__)
         logger.debug("PROJECT_PATH: %s", settings.PROJECT_PATH)
         for connection in connectiontrack:
             data.append(self.objectifypoint(connection.mapsource, connection, map))

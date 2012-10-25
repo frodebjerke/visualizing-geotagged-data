@@ -13,7 +13,7 @@ setup_environ(settings)
 
 filename = re.compile("__init__|test")
 
-for package in appsettings.GEO_MODEL_DEFINITION :
+for package in appsettings.MODEL_DEFINITION :
     try :
         modules = os.listdir(os.path.join(appsettings.APP_PATH,
                                           package.replace(".", os.sep)))

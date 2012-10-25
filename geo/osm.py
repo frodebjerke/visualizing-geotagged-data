@@ -9,12 +9,60 @@ https://github.com/agabel/python-nominatim
 
 from geo.coder import Coder
 from geo.exception import OSMException
+from xml.dom import minidom
 from decimal import Decimal
 import urllib
-
-import simplejson
+from django.conf import settings
+import json
+import os,sys,math
+from decimal import Decimal
 
 class OSM(Coder):
+    """
+    @author: Frederik Claus
+    @summary: Uses a local .osm files that contains only nodes from highways. This is highly inefficient.
+    """
+    MANNHEIM_OSM = os.path.join(settings.MAP_DIR,"mannheim-streets.osm")
+    
+    def __init__(self):
+        try:
+            doc = minidom.parse(self.MANNHEIM_OSM)
+            self.nodes = doc.getElementsByTagName("node")
+        except Exception as e:
+            raise OSMException, "Could not parse osm file: %s" % str(e)
+    
+    def reversegecode(self,lat,lon):
+        """
+        @summary: Performs a lookup and return the nearest address
+        """
+        min_distance = sys.maxint
+        min_node = None
+        
+        for node in self.nodes:
+            node_lat,node_lon = (Decimal(node.getAttribute("lat")),Decimal(node.getAttribute("lon")))
+            distance = self._get_distance(lat,lon,node_lon,node_lat)
+            if distance < min_distance:
+                min_distance = distance
+                min_node = (node_lat,node_lon)
+        
+        if min_node is None:
+            raise OSMException, "Could not find a nearby node!"
+        
+        return min_node
+        
+    def _get_distance(self,lat1,lon1,lat2,lon2):
+        lon1, lat1, lon2, lat2 = map(math.radians , [lon1, lat1, lon2, lat2])
+        # haversine formula 
+        dlon = lon2 - lon1 
+        dlat = lat2 - lat1 
+        a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
+        c = 2 * math.asin(math.sqrt(a)) 
+        km = 6367 * c
+        return km 
+#        return (lat1-lat2)**2 + (lon1 - lon2)**2
+        
+    
+class OSMLegacy(Coder):
     """Nominatim never returns any error message. 
         It tries to match with the Point that is closest, even if no parameters are given"""
     
@@ -43,8 +91,8 @@ class OSM(Coder):
         
     def parse_json(self, data):
         try:
-            data = simplejson.loads(data)
-        except simplejson.JSONDecodeError:
+            data = json.loads(data)
+        except:
             data = []
         
         return data

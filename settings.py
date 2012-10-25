@@ -12,7 +12,10 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 STATIC_PATH = os.path.join(PROJECT_PATH, "static")
 
 UPLOAD_PATH = os.path.join("upload", "%Y", "%m", "%d")
-TEST_PATH = os.path.join(PROJECT_PATH, "test")
+RES_DIR = os.path.join(PROJECT_PATH,"res")
+MAP_DIR = os.path.join(RES_DIR,"map")
+
+TEST_PATH = os.path.join(RES_DIR, "test")
 
 LOG_PATH = os.path.join(PROJECT_PATH, "main.log")
 MANAGERS = ADMINS
@@ -159,11 +162,21 @@ INSTALLED_APPS = (
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters' : {
+                    'verbose': {
+                                'format': '%(levelname)s %(asctime)s %(module)s %(message)s'
+                                },
+                    },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler'
-        }
+        },
+        'console':{
+            'level':'DEBUG',
+            'class':'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
     },
     'loggers': {
         'django.request': {
@@ -171,5 +184,15 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
+        'geo': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        '__main__': {
+                     'handlers' : ['console'],
+                     'level': 'DEBUG',
+                     'propagate' : False
+                     }
     }
 }

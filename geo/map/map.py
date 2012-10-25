@@ -7,7 +7,7 @@ Created on Mar 22, 2012
 from tracepointconnection import TracePointConnection
 from mappointconnection import MapPointConnection
 from pointconnection import PointConnection
-from connectionmode import ConnectionMode
+from connectionmode import ConnectionMode 
 from exceptions import RuntimeError
 from tracepointdto import TracePointDTO
 from tracepoint import TracePoint
