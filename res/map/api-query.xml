@@ -1,0 +1,7 @@
+<query type="way">
+  <has-kv k="name" />
+  <has-kv k="highway" />
+  <bbox-query s="49.48" n="49.5" w="8.45" e="8.48"/>
+</query>
+<recurse type="way-node"/>
+<print/>

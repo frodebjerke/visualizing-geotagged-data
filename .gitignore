@@ -19,4 +19,3 @@ CACHE/
 .sass-cache
 *.sqlite
 out/
-map/
