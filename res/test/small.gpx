@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<gpx version="1.1" creator="nl.sogeti.android.gpstracker" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/gpx/1/1/gpx.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gpx10="http://www.topografix.com/GPX/1/0" xmlns:ogt10="http://gpstracker.android.sogeti.nl/GPX/1/0">
+<metadata>
+<time>2012-03-07T13:20:30Z</time>
+</metadata>
+<trk>
+<name>Track 2012-03-07 14:20</name>
+<trkseg>
+<trkpt lat="49.484921693800445" lon="8.463377952575438">
+<ele>211.0</ele>
+<time>2012-03-07T13:20:31Z</time>
+<extensions>
+<ogt10:accuracy>9.487171173095703</ogt10:accuracy>
+<gpx10:course>116.0</gpx10:course></extensions>
+</trkpt>
+<trkpt lat="49.48483586311197" lon="8.463420867919677">
+<ele>178.0</ele>
+<time>2012-03-07T13:20:41Z</time>
+<extensions>
+<ogt10:accuracy>9.487171173095703</ogt10:accuracy>
+<gpx10:course>116.0</gpx10:course></extensions>
+</trkpt>
+</trkseg>
+</trk>
+</gpx>

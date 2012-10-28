@@ -18,5 +18,5 @@ upload/
 CACHE/
 .sass-cache
 *.sqlite
-test/
+out/
 map/

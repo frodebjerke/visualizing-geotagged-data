@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<gpx version="1.1" creator="nl.sogeti.android.gpstracker" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/gpx/1/1/gpx.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gpx10="http://www.topografix.com/GPX/1/0" xmlns:ogt10="http://gpstracker.android.sogeti.nl/GPX/1/0">
+<metadata>
+<time>2012-03-07T11:38:06Z</time>
+</metadata>
+<trk>
+<name>Track 2012-03-07 12:38</name>
+<trkpt lat="49.48483586311197" lon="8.463313579559081">
+<ele>196.0</ele>
+<time>2012-03-07T11:38:07Z</time>
+<extensions>
+<gpx10:speed>1.9444444179534912</gpx10:speed>
+<ogt10:accuracy>9.487171173095703</ogt10:accuracy>
+<gpx10:course>38.0</gpx10:course></extensions>
+</trkpt>
+<trkpt lat="49.484910964964385" lon="8.463399410247558">
+<ele>184.0</ele>
+<time>2012-03-07T11:38:12Z</time>
+<extensions>
+<gpx10:speed>3.6111111640930176</gpx10:speed>
+<ogt10:accuracy>9.487171173095703</ogt10:accuracy>
+<gpx10:course>50.0</gpx10:course></extensions>
+</trkpt>
+<trkpt lat="49.4849860668168" lon="8.463485240936034">
+<ele>182.0</ele>
+<time>2012-03-07T11:38:39Z</time>
+<extensions>
+<gpx10:speed>0.8333333134651184</gpx10:speed>
+<ogt10:accuracy>9.487171173095703</ogt10:accuracy>
+<gpx10:course>22.0</gpx10:course></extensions>
+</trkpt>
+<trkpt lat="49.4850075244882" lon="8.463656902312987">
+<ele>182.0</ele>
+<time>2012-03-07T1:38:45Z</time>
+<extensions>
+<ogt10:accuracy>4.640999794006348</ogt10:accuracy>
+<gpx10:course>23.0</gpx10:course></extensions>
+</trkpt>
+<trkpt lat="49.48499679565286" lon="8.463742733001464">
+<ele>182.0</ele>
+<time>2012-03-07T11:38:49Z</time>
+<extensions>
+<ogt10:accuracy>4.640999794006348</ogt10:accuracy>
+<gpx10:course>23.0</gpx10:course></extensions>
+</trkpt>
+<trkpt lat="49.48510408401346" lon="8.463721275329345">
+<ele>180.0</ele>
+<time>2012-03-07T11:39:12Z</time>
+<extensions>
+<gpx10:speed>1.1111111640930176</gpx10:speed>
+<ogt10:accuracy>9.487171173095703</ogt10:accuracy>
+<gpx10:course>35.0</gpx10:course></extensions>
+</trkpt>
+<trkpt lat="49.48521137237405" lon="8.463699817657226">
+<ele>181.0</ele>
+<time>2012-03-07T11:39:16Z</time>
+<extensions>
+<gpx10:speed>0.8333333134651184</gpx10:speed>
+<ogt10:accuracy>9.487171173095703</ogt10:accuracy>
+<gpx10:course>30.0</gpx10:course></extensions>
+</trkpt>
+</trk>
+</gpx>
