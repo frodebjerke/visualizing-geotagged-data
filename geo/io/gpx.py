@@ -7,19 +7,26 @@ Code based on http://the.taoofmac.com/space/blog/2005/10/11/2359
 '''
 import sys, string
 from xml.dom import minidom, Node
-from geo.coordinate.parser import Parser
-from geo.coordinate.exception import NoTrkTagException, NoTrkSegTagException, \
+from geo.exceptions import NoTrkTagException, NoTrkSegTagException, \
     NoTrkPtException
-import re
+import re,logging
 from time import strptime, mktime
 from decimal import Decimal
 from datetime import datetime
 
 
-class GPX(Parser):
+class GPX():
     "GPX Parser for file-like objects"
 
     DATETIME_FMT = "%Y-%m-%d %H:%M:%S"
+    logger = logging.getLogger(__name__)
+
+    def __init__(self, file=None, notime = False):
+        "Use file if you want to read from file."
+        self.file = file
+        self.notime = notime
+        self.parsed = False
+        
 
     def isvalid(self):
         try:
@@ -27,16 +34,20 @@ class GPX(Parser):
             for (lat, lon, time) in self.gettrackpoint():
                 if (float(lat) == None) or (float(lon) == None) or (time == None):
                     return False
-        except:
+        except Exception, e:
+            self.logger.warn("GPX not valid. %s" % str(e))
             return False
 
         return True
 
-
+    
     def parse(self):
-
+        if self.parsed:
+            return 
+        
+        self.parsed = True
         try:
-            doc = minidom.parse(self.file.name)
+            doc = minidom.parse(self.file)
             doc.normalize()
         except Exception as e:
             raise e
@@ -69,11 +80,17 @@ class GPX(Parser):
             for trkpt in trkpts:
                 lat = Decimal(trkpt.getAttribute('lat'))
                 lon = Decimal(trkpt.getAttribute('lon'))
-                time = trkpt.getElementsByTagName('time')[0].firstChild.data
-                match = timeregex.match(time)
-                time = " ".join(match.groups())
-                time = strptime(time, self.DATETIME_FMT)
-                time = datetime.fromtimestamp(mktime(time))
+                try:
+                    time = trkpt.getElementsByTagName('time')[0].firstChild.data
+                    match = timeregex.match(time)
+                    time = " ".join(match.groups())
+                    time = strptime(time, self.DATETIME_FMT)
+                    time = datetime.fromtimestamp(mktime(time))
+                except Exception,e :
+                    if self.notime:
+                        time = None
+                    else:
+                        raise e
                 yield (lat, lon, time)
 
     def setpointtracks(self, mappointtracks):

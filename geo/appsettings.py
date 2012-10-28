@@ -8,5 +8,5 @@ import os
 
 APP_PATH = os.path.abspath(os.path.dirname(__file__))
 APP_NAME = "geo"
-MODEL_DEFINITION = ["model", "map", ]
+MODEL_DEFINITION = ["routing" ]
 TEST_DEFINITION = ["test"]

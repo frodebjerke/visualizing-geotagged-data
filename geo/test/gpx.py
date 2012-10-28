@@ -5,12 +5,12 @@ Created on Mar 20, 2012
 '''
 
 from unittest import TestCase
-from geo.coordinate.gpx import GPX
+from geo.io.gpx import GPX
 from settings import TEST_PATH
 import os
 from decimal import Decimal
 from time import strftime
-from geo.coordinate.exception import *
+from geo.exceptions import *
 import logging
 
 class GPXTest(TestCase):

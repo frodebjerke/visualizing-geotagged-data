@@ -1,10 +1,18 @@
 '''
-Created on Mar 27, 2012
+Created on Oct 28, 2012
 
 @author: fredo
 '''
+class ConnectionMode:
+    WALK = 0
+    TRAIN = 1
+    BIKE = 2
+    MOTOR_VEHICLE = 3
 
-class MapConnectionTrack:
+    ALL = [WALK, BIKE, TRAIN, MOTOR_VEHICLE]
+    
+
+class MapConnectionTrace:
     def __init__(self):
         self.connections = []
     def addconnection(self, connection):
@@ -19,7 +27,7 @@ class MapConnectionTrack:
         return cost
 
     def tomappointtrack(self):
-        pointtrack = MapPointTrack()
+        pointtrack = MapPointTrace()
         if not self.connections:
             return pointtrack
         pointtrack.addpoint(self.connections[0].mapsource)
@@ -53,7 +61,7 @@ class MapConnectionTrack:
             strconnections.append(label)
         return ">".join(strconnections)
 
-class MapPointTrack:
+class MapPointTrace:
     def __init__(self):
         self.points = []
     def addpoint(self, point):

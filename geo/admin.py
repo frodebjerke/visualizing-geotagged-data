@@ -5,11 +5,11 @@ Created on Mar 23, 2012
 '''
 from django.contrib import admin
 
-from geo import map
-from geo import model
+from geo import routing
+from geo import models
 
-admin.site.register(map.mappoint.MapPoint)
-admin.site.register(map.mappointconnection.MapPointConnection)
-admin.site.register(map.tracepoint.TracePoint)
-admin.site.register(map.tracepointconnection.TracePointConnection)
-admin.site.register(model.video.Video)
+admin.site.register(routing.points.MapPoint)
+admin.site.register(routing.connections.MapPointConnection)
+admin.site.register(routing.points.TracePoint)
+admin.site.register(routing.connections.TracePointConnection)
+admin.site.register(models.Video)

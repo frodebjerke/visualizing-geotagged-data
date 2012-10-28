@@ -4,28 +4,20 @@ Created on Mar 22, 2012
 @author: fredo
 '''
 
-from tracepointconnection import TracePointConnection
-from mappointconnection import MapPointConnection
-from pointconnection import PointConnection
-from connectionmode import ConnectionMode 
+from connections import PointConnection,TracePointConnection,MapPointConnection
 from exceptions import RuntimeError
-from tracepointdto import TracePointDTO
-from tracepoint import TracePoint
-from mappoint import MapPoint
-from django.db import models
-from geo.map.exception import InsertTracePointException
+from points import TracePoint,MapPoint
 from decimal import Decimal
-import heapq
 import networkx as nx
 import heapq
 from copy import deepcopy
-from maptrack import MapConnectionTrack, MapPointTrack
+from util import MapConnectionTrace, MapPointTrace, ConnectionMode
 from django.core.exceptions import ObjectDoesNotExist
 import logging
 
 
 """Datastructure that hold Points and PointConnection"""
-class Map:
+class Graph:
 
     MODE_TO_MAP = {}
 
@@ -66,11 +58,11 @@ class Map:
 
         mode = int(mode)
         self.setmode(mode)
-        self.maxdistance = Map.MAX_DISTANCE[mode]
+        self.maxdistance = self.MAX_DISTANCE[mode]
 
         self.graph = nx.DiGraph()
 
-        Map.setinstance(self, mode)
+        self.setinstance(self, mode)
 
     @classmethod
     def getinstance(cls, mode):
@@ -78,15 +70,15 @@ class Map:
 #        try:
 #            map = cls.MODE_TO_MAP[mode]
 #        except KeyError:
-#            map = Map.createmap(mode)
+#            map = Graph.createmap(mode)
 #            cls.MODE_TO_MAP[mode] = map
 #        return map
-        return Map.createmap(mode)
+        return Graph.createmap(mode)
 
     @classmethod
     def createmap(cls, mode):
 
-        map = Map(mode)
+        map = Graph(mode)
         traceconnections = TracePointConnection.objects.filter(mode=mode)
         #find all tracepoints that are interconnected by a tracepointconnection
         tracepoints = set()
@@ -366,17 +358,17 @@ class Map:
             try:
                 node_color = colors["node_color"]
             except KeyError :
-                node_color = Map.NODE_COLOR
+                node_color = self.NODE_COLOR
 
             try:
                 trace_edge_color = colors["trace_edge_color"]
             except KeyError :
-                trace_edge_color = Map.TRACE_EDGE_COLOR
+                trace_edge_color = self.TRACE_EDGE_COLOR
 
             try:
                 map_edge_color = colors["map_edge_color"]
             except KeyError:
-                map_edge_color = Map.MAP_EDGE_COLOR
+                map_edge_color = self.MAP_EDGE_COLOR
 
 
             self.inserttracepoints(dtos)
@@ -391,11 +383,11 @@ class Map:
         import matplotlib.pyplot as plt
 
         if not node_color:
-            node_color = Map.NODE_COLOR
+            node_color = self.NODE_COLOR
         if not trace_edge_color :
-            trace_edge_color = Map.TRACE_EDGE_COLOR
+            trace_edge_color = self.TRACE_EDGE_COLOR
         if not map_edge_color :
-            map_edge_color = Map.MAP_EDGE_COLOR
+            map_edge_color = self.MAP_EDGE_COLOR
 
         mapconnectiongraph = nx.DiGraph()
         traceconnectiongraph = nx.DiGraph()
@@ -497,10 +489,10 @@ class Map:
                 self.relax(connection, successor)
 
     def getshortesttrack(self, source, target):
-        print "Starting single source shortest path from %d to %d" % (source.id, target.id)
+        self.logger.info("Starting single source shortest path from %d to %d" % (source.id, target.id))
         self.shortesttrack(source)
         print "Finshed single source shortest path"
-        shortesttrack = MapConnectionTrack()
+        shortesttrack = MapConnectionTrace()
         currentconnection = None
         totalcost = None
         totarget = self.getallconnections(target=target)
@@ -558,7 +550,7 @@ class Map:
             except KeyError:
                 pass
 
-            currenttrack = MapPointTrack()
+            currenttrack = MapPointTrace()
             currenttrack.addpoint(connection.mapsource)
             currenttrack.addpoint(connection.maptarget)
             tracks.append(currenttrack)
@@ -581,7 +573,7 @@ class Map:
             currenttrack.addpoint(neighbour)
             tracks.append(currenttrack)
 
-            currenttrack = MapPointTrack()
+            currenttrack = MapPointTrace()
             try:
                 if visited[neighbour.id]:
                     continue

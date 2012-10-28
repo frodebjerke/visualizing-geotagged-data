@@ -5,7 +5,7 @@ Created on Oct 25, 2012
 '''
 
 from django import forms
-from geo.map.connectionmode import ConnectionMode
+from geo.routing.util import ConnectionMode
 
 class TrackForm(forms.Form):
     source = forms.IntegerField(required=False)

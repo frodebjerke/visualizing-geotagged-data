@@ -1,22 +1,18 @@
 # Create your views here.
 
 
-from django.shortcuts import render_to_response
-from settings import UPLOAD_PATH
-
 import os
-from geo.coordinate.gpx import GPX
+from geo.io.gpx import GPX
 from geo.script.gpxtogeocode import resolvefile, filetodto
 from geo.video.ogg import Ogg
 
 from django.views.generic.simple import direct_to_template
 from tempfile import mkstemp
-from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseRedirect
-from geo.map.map import Map
+from django.http import Http404, HttpResponse, HttpResponseBadRequest
+from geo.routing.graph import Graph
 from geo.forms import TrackForm,UploadForm
 
-from geo.coordinate.jsonx import JSONX
-import pprint 
+from geo.io.jsonx import JSONX
 import tempfile
 import logging
 
@@ -38,7 +34,7 @@ def index(request):
 
             gpx = GPX(gpxfile)
 
-            #convert video, resolve points and add everything to the map
+            #convert video, resolve points and add everything to the graph
             if gpx.isvalid():
                 logger.debug("gpx is valid")
                 ogg = Ogg()
@@ -47,21 +43,21 @@ def index(request):
                 resolvefile(gpxfile.name, gpxfile.name)
                 gpxfile.seek(0)
                 dtos = filetodto(gpxfile, oggvideopath)
-                map = Map.getinstance(form.cleaned_data["transportation_mode"])
-                map.inserttracepoints(dtos)
+                graph = Graph.getinstance(form.cleaned_data["transportation_mode"])
+                graph.inserttracepoints(dtos)
                 logger.debug("points added")
                 os.remove(oggvideopath)
                 os.remove(gpxfile.name)
-                messages.append("Upload successful. The trace has been added to the map.")
+                messages.append("Upload successful. The trace has been added to the graph.")
 
             else:
                 logger.debug("gpx not valid")
                 errors.append("The supplied .gpx is not a valid GPX trace.")
 
-            return direct_to_template(request, template="map.tpl", extra_context={"form":form, "messages":messages, "errors":errors})
+            return direct_to_template(request, template="index.html", extra_context={"form":form, "messages":messages, "errors":errors})
 
     else:
-        return direct_to_template(request, template="map.tpl", extra_context={"form":UploadForm()})
+        return direct_to_template(request, template="index.html", extra_context={"form":UploadForm()})
 
 
 def totemporaryfile(upload=None, mode="rw"):
@@ -86,9 +82,9 @@ def track(request):
     trackform = TrackForm(request.GET)
     if not trackform.is_valid():
         return HttpResponseBadRequest(content=failure(trackform.errors), content_type="text/json")
-    logger.info("Request is valid. Get network %d", trackform.cleaned_data["mode"])
-    network = Map.getinstance(trackform.cleaned_data["mode"])
-    logger.info("Map has %d mappoints and %d connections", len(network.mappoints), len(network.connections))
+    logger.info("Request is valid. Get graph %d", trackform.cleaned_data["mode"])
+    graph = Graph.getinstance(trackform.cleaned_data["mode"])
+    logger.info("Graph has %d mappoints and %d connections", len(graph.mappoints), len(graph.connections))
 
     json = JSONX()
 
@@ -97,20 +93,20 @@ def track(request):
 
     if sourceid and targetid:
         logger.info("Calculate shortest path")
-        source = network.getmappoint(pointid=sourceid)
-        target = network.getmappoint(pointid=targetid)
+        source = graph.getmappoint(pointid=sourceid)
+        target = graph.getmappoint(pointid=targetid)
         if not source or not target:
             return HttpResponseBadRequest(content=failure("did not found source or target"), content_type="text/json")
-        connectiontrack = network.getshortesttrack(source, target)
+        connectiontrack = graph.getshortesttrack(source, target)
         print vars(connectiontrack)
-        json.setconnectiontrack(connectiontrack, network)
+        json.setconnectiontrack(connectiontrack, graph)
         return HttpResponse(content=json.getjson(), content_type="text/json")
 
     else:
-        logger.info("Calculate whole track from %d mappoints with %d connections" % (len(network.mappoints), len(network.connections)))
-        pointtracks = network.getpointtracks()
-        logger.info("Got %d pointtracks" % len(pointtracks))
-        json.setpointtracks(pointtracks)
+        logger.info("Calculate whole track from %d mappoints with %d connections" % (len(graph.mappoints), len(graph.connections)))
+        pointtraces = graph.getpointtracks()
+        logger.info("Got %d pointtraces" % len(pointtraces))
+        json.pointtraces(pointtraces)
         return HttpResponse(content=json.getjson(), content_type="text/json")
     
 def failure(error):

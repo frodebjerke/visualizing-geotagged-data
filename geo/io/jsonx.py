@@ -4,22 +4,25 @@ Created on Mar 30, 2012
 @author: fredo
 '''
 
-from geo.coordinate.parser import Parser
-from geo.map.tracepointconnection import TracePointConnection
-from geo.map.mappointconnection import MapPointConnection
-from geo.map.tracepoint import TracePoint
+
+from geo.routing.connections import TracePointConnection
 import json
 import os
 from django.conf import settings
 import logging
 
-class JSONX(Parser):
+class JSONX():
 
     logger = logging.getLogger(__name__)
+    
+    def __init__(self, file=None):
+        "Use file if you want to read from file."
+        self.file = file
+    
 
-    def setpointtracks(self, pointtracks):
+    def pointtraces(self, pointtraces):
         data = []
-        for pointtrack in pointtracks:
+        for pointtrack in pointtraces:
             pair = []
             for mappoint in pointtrack:
                 pair.append({"lat" : str(mappoint.lat),
@@ -30,8 +33,8 @@ class JSONX(Parser):
 
     def setconnectiontrack(self, connectiontrack, map):
         data = []
-        logger = self.getLogger(__name__)
-        logger.debug("PROJECT_PATH: %s", settings.PROJECT_PATH)
+        
+        self.logger.debug("PROJECT_PATH: %s", settings.PROJECT_PATH)
         for connection in connectiontrack:
             data.append(self.objectifypoint(connection.mapsource, connection, map))
         lastconnection = connectiontrack.getlastconnection()

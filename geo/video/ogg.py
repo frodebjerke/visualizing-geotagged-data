@@ -4,15 +4,39 @@ Created on Mar 20, 2012
 @author: fredo
 '''
 
-from geo.video.converter import Converter
 import subprocess
 import tempfile
 import os
 
-class Ogg(Converter):
+class Profile:
+    PRO = "pro"
+    VIDEOBIN = "videobin"
+    PREVIEW = "preview"
+
+class Ogg():
 
     EXT = ".ogv"
-
+    profile = Profile.VIDEOBIN
+    
+    def __init__(self,profile = None):
+        self.setProfile(Profile.VIDEOBIN)
+        pass
+    
+    def setProfile(self,profile):
+        self.profile = profile
+    
+    def isfinished(self):
+        if self.process and self.process.poll() != None:
+            return True
+        else:
+            return False
+    
+    def getexitcode(self):
+        if self.process:
+            return self.process.poll()
+        else:
+            return None
+        
     def convert(self, source, targetpath):
         targetpath = self.__normalizepath(targetpath)
         (temp, temppath) = self.__writetotemp(source)

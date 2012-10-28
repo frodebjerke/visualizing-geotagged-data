@@ -4,10 +4,10 @@ Created on Mar 30, 2012
 @author: fredo
 '''
 
-from geo.map.map import Map
+from geo.routing.graph import Graph
 from django.conf import settings
 from geo.script.gpxtogeocode import filetodto
-from geo.map.connectionmode import ConnectionMode
+from geo.routing.util import ConnectionMode
 import os
 
 
@@ -37,12 +37,13 @@ SCHLOSS_PARADEPLATZ_TRAM_VIDEO = os.path.join(VIDEO_PATH, "v6.ogv")
 
 
 tracktovideo = {
-                PARADEPLATZ_WASSERTURM_FUSS_TRACK : [ConnectionMode.WALK, PARADEPLATZ_WASSERTURM_FUSS_VIDEO],
-                PARADEPLATZ_WASSERTURM_TRAM_TRACK : [ConnectionMode.TRAIN, PARADEPLATZ_WASSERTURM_TRAM_VIDEO],
+#                PARADEPLATZ_WASSERTURM_FUSS_TRACK : [ConnectionMode.WALK, PARADEPLATZ_WASSERTURM_FUSS_VIDEO],
+#                PARADEPLATZ_WASSERTURM_TRAM_TRACK : [ConnectionMode.TRAIN, PARADEPLATZ_WASSERTURM_TRAM_VIDEO],
                 SCHLOSS_MARKTPLATZ_FUSS_TRACK : [ConnectionMode.WALK, SCHLOSS_MARKTPLATZ_FUSS_VIDEO],
-                SCHLOSS_MARKTPLATZ_TRAM_TRACK : [ConnectionMode.TRAIN, SCHLOSS_MARKTPLATZ_TRAM_VIDEO],
-                SCHLOSS_PARADEPLATZ_FUSS_TRACK : [ConnectionMode.WALK, SCHLOSS_PARADEPLATZ_FUSS_VIDEO],
-                SCHLOSS_PARADEPLATZ_TRAM_TRACK : [ConnectionMode.TRAIN, SCHLOSS_PARADEPLATZ_TRAM_VIDEO]}
+#                SCHLOSS_MARKTPLATZ_TRAM_TRACK : [ConnectionMode.TRAIN, SCHLOSS_MARKTPLATZ_TRAM_VIDEO],
+#                SCHLOSS_PARADEPLATZ_FUSS_TRACK : [ConnectionMode.WALK, SCHLOSS_PARADEPLATZ_FUSS_VIDEO],
+#                SCHLOSS_PARADEPLATZ_TRAM_TRACK : [ConnectionMode.TRAIN, SCHLOSS_PARADEPLATZ_TRAM_VIDEO]
+                }
 
 def insertall():
     """
@@ -50,7 +51,7 @@ def insertall():
     """
     for trackpath in tracktovideo.keys():
         dtos = filetodto(open(trackpath, "r"), tracktovideo[trackpath][1])
-        map = Map.getinstance(tracktovideo[trackpath][0])
+        map = Graph.getinstance(tracktovideo[trackpath][0])
         map.inserttracepoints(dtos)
 
 if __name__ == "__main__":

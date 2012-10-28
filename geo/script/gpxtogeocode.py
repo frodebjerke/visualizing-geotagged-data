@@ -4,12 +4,11 @@ Created on Mar 23, 2012
 @author: fredo
 '''
 
-from geo.coordinate.gpx import GPX
+from geo.io.gpx import GPX
 from geo.osm import OSM
-from geo.model.videofactory import VideoFactory
-from geo.map.tracepointdto import TracePointDTO
-from django.conf import settings
-from geo.coordinate.videotime import videotimes
+from geo.models import createvideo
+from geo.routing.points import TracePointDTO
+from geo.io.videotime import videotimes
 
 import os
 import pickle
@@ -37,7 +36,7 @@ def resolvefile(inpath, outpath):
 
 def filetodto(track, videopath):
     dtos = []
-    video = VideoFactory.createvideo(videopath)
+    video = createvideo(videopath)
     logger.info("Reading from %s..." % track)
     for (lat, lon, realtime, videotime) in pickle.load(track):
         dto = TracePointDTO(lat=lat, lon=lon, realtime=realtime, videotime=videotime, video=video)

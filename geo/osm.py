@@ -7,8 +7,8 @@ https://github.com/agabel/python-nominatim
 @author: fredo
 '''
 
-from geo.coder import Coder
-from geo.exception import OSMException
+
+from geo.exceptions import OSMException
 from xml.dom import minidom
 from decimal import Decimal
 import urllib
@@ -18,7 +18,7 @@ import os,sys,math
 from decimal import Decimal
 import logging
 
-class OSM(Coder):
+class OSM():
     """
     @author: Frederik Claus
     @summary: Uses a local .osm files that contains only nodes from highways. This is highly inefficient.
@@ -70,7 +70,7 @@ class OSM(Coder):
 #        return (lat1-lat2)**2 + (lon1 - lon2)**2
         
     
-class OSMLegacy(Coder):
+class OSMLegacy():
     """Nominatim never returns any error message. 
         It tries to match with the Point that is closest, even if no parameters are given"""
     
