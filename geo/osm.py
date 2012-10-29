@@ -26,10 +26,10 @@ class OSM():
     MANNHEIM_OSM = os.path.join(settings.MAP_DIR,"mannheim-streets.osm")
     logger = logging.getLogger(__name__)
     
-    def __init__(self):
+    def __init__(self, mode):
         try:
             self.nodes = []
-            doc = minidom.parse(self.MANNHEIM_OSM)
+            doc = minidom.parse(os.path.join(settings.MAP_DIR,"%d.osm" % mode))
             nodes = doc.getElementsByTagName("node")
             for node in nodes:
                 self.nodes.append((Decimal(node.getAttribute("lat")),Decimal(node.getAttribute("lon"))))

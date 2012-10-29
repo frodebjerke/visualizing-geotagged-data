@@ -16,9 +16,9 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-def resolvefile(inpath, outpath):
+def resolvefile(inpath, outpath,mode):
     gpx = GPX(open(inpath, "r"))
-    geocoder = OSM()
+    geocoder = OSM(mode)
 
     geocodes = []
     if not gpx.isvalid():
@@ -47,7 +47,7 @@ def resolveall():
     from geo.script.filldb import tracktovideo 
     for trackpath in tracktovideo.keys():
         logger.info("Resolving file %s" % (trackpath))
-        resolvefile(trackpath.replace(".geocode", ".gpx"), trackpath)
+        resolvefile(trackpath.replace(".geocode", ".gpx"), trackpath, tracktovideo[trackpath][0])
 
 if __name__ == "__main__":
     resolveall()
