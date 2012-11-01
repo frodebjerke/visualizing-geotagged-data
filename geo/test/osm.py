@@ -14,8 +14,9 @@ from decimal import Decimal
 class OSMTest(TestCase):
     
     def testReverseGeocode(self):
-        osm = OSM()
-        lat,lon = osm.reversegecode(Decimal("49.484921693800445"),Decimal("8.463377952575438"))
+        osm = OSM(1)
+        coordinates = osm.reversegeocode([(Decimal("49.484921693800445"),Decimal("8.463377952575438"),None)])
+        lat,lon,time,id = coordinates[0]
         self.assertTrue(not (lat == None and lon == None))
         self.assertTrue(isinstance(lat,Decimal))
         self.assertTrue(isinstance(lon,Decimal))
