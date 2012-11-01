@@ -10,12 +10,13 @@ from django.conf import settings
 import os
 
 def drawmap():
-    geocoder = OSM()
+    mode = 1
+    geocoder = OSM(1)
     nodes = geocoder.getnodes()
-    graph = Graph.getinstance(3)
+    graph = Graph.getinstance(mode)
     for node in nodes:
         graph.insertmappoint(node[0],node[1])
-    graph.draw(os.path.join(settings.TEST_PATH,"mannheim-streets"))
+    graph.draw(os.path.join(settings.OUT_DIR,"%d" % mode))
     
 
 if __name__ == "__main__":

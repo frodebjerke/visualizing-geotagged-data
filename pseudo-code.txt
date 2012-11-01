@@ -1,0 +1,89 @@
+N_LOOK_AHEAD = 3
+SIGMA = Decimal(0.010) #10 meter
+
+def resolve_coordinates(coordinates,mode)
+  predecessors = []
+  blacklist = []
+  index = 0
+  predecessor_index = 0
+  finished = false
+  n_coordinates = len(coordinates)
+  retries = 0
+  is_gapping_apart = False
+
+  while not finished:
+      coordinate = coordinates[index]
+      
+      if len(coordinates) == 0:
+          current = simple_resolve(coordinate)
+          append(predecessor,current)
+
+      else:
+          predecessor = predecessors[-1]
+          predecessor_distance = calculate_distance(predecessor,coordinate)
+          current = graph_resolve(predecessor, coordinate, blacklist)
+          if current is None: #look_ahead blacklisted the node
+              current = simple_resolve(coordinate,blacklist)
+          current_distance = calculate_distance(current,coordinate)
+
+          """ looking backward """
+          if predecessor_distance < current_distance: #we are going in the wrong way
+              predecessor_coordinate = coordinates[index - 1]
+              append(blacklist, predecessor) if predecessor not in blacklist #add to the blacklist
+              new_predecessor = simple_resolve(predecessor_coordinate, blacklist) #get another node close to the predecessor
+              if new_predecessor is None: #there is no good solution. stick to the best one
+                  new_predecessor = simple_resolve(predecessor_coordinate)
+              predecessor[-1] = predecessor_new
+              continue # try again
+
+          """ looking forward """
+          distances = look_ahead(coordinates, index, predecessor)
+
+          if gapping_apart(distances): #we are on a suboptimal trace
+              is_gapping_apart = True
+              append(blacklist, current) if current not in blacklist
+              continue #try again
+
+          index += 1
+          is_gapping_apart = False
+          append(predeccessors, current) #everything is fine
+
+          if index >= n_coordinates:
+              finished = True
+
+
+
+
+def gapping_apart(distances):
+    for index in range(len(distances)):
+        if index == len(distances):
+            break
+        if not (distance[index + 1] - distance[index ] > SIGMA) : #the next distance is not significantly bigger than the current one
+            return False
+    return True
+
+
+def look_ahead(coordinates, current_index, predecessor)
+  successor = None
+  successors = []
+  distances = []
+
+  for index in range(N_LOOK_AHEAD):
+      coordinate = coordinates[current_index + (index + 1)]
+      if len(successors) != 0:
+          predecessor = successors[-1 ]
+      current = graph_resolve(predecessor, coordinate)
+      append(successors,current) 
+      distance = calculate_distance(current, coordinate)
+      append(distances, distance)
+
+  return distances
+      
+          
+          
+          
+      
+          
+          
+  
+  

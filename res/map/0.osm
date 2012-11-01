@@ -1,8 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<osm version="0.6" generator="Overpass API">
+<osm version="0.5" generator="Overpass API">
 <note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
-<meta osm_base="2012-10-29T09:17:02Z"/>
+<meta osm_base="2012-11-01T14:04:03Z"/>
 
+  <way id="4420850">
+    <nd ref="1756301712"/>
+    <nd ref="1884205949"/>
+    <nd ref="1756301713"/>
+    <nd ref="1202759363"/>
+    <nd ref="1202759359"/>
+    <nd ref="1884065380"/>
+    <nd ref="1756280900"/>
+    <nd ref="1884205961"/>
+    <nd ref="1887371253"/>
+    <nd ref="1756280946"/>
+    <nd ref="1887371256"/>
+    <nd ref="1756280956"/>
+    <nd ref="26936972"/>
+    <nd ref="27088470"/>
+    <nd ref="1755140954"/>
+    <nd ref="27088466"/>
+    <nd ref="27088467"/>
+    <nd ref="26936912"/>
+    <nd ref="1887371295"/>
+    <nd ref="1378555193"/>
+    <nd ref="25283572"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="loc_name" v="Breite Straße"/>
+    <tag k="name" v="Kurpfalzstraße"/>
+  </way>
+  <way id="5073596">
+    <nd ref="1756290981"/>
+    <nd ref="1884132830"/>
+    <nd ref="1756280900"/>
+    <nd ref="1146971587"/>
+    <nd ref="1756280871"/>
+    <nd ref="26938720"/>
+    <nd ref="26938721"/>
+    <nd ref="26938722"/>
+    <nd ref="26938728"/>
+    <nd ref="26938724"/>
+    <nd ref="248784669"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="lit" v="yes"/>
+    <tag k="loc_name" v="Planken"/>
+    <tag k="name" v="Planken"/>
+    <tag k="psv" v="yes"/>
+    <tag k="wikipedia:de" v="Mannheimer Planken"/>
+  </way>
+  <way id="5730410">
+    <nd ref="27194987"/>
+    <nd ref="1924071008"/>
+    <nd ref="1199377924"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Rosengartenplatz"/>
+    <tag k="oneway" v="no"/>
+    <tag k="tracktype" v="grade1"/>
+  </way>
+  <way id="27283208">
+    <nd ref="299488248"/>
+    <nd ref="419328274"/>
+    <nd ref="1191385229"/>
+    <nd ref="1761373180"/>
+    <nd ref="299488710"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Beilstraße"/>
+  </way>
+  <way id="27429652">
+    <nd ref="1928067799"/>
+    <nd ref="1928067800"/>
+    <nd ref="1928067802"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Verlängerte Jungbuschstraße"/>
+  </way>
+  <way id="27429654">
+    <nd ref="301142401"/>
+    <nd ref="877901040"/>
+    <nd ref="1299546643"/>
+    <nd ref="301142402"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="layer" v="1"/>
+    <tag k="name" v="Teufelsbrücke"/>
+  </way>
+  <way id="35925379">
+    <nd ref="299488663"/>
+    <nd ref="1176400818"/>
+    <nd ref="420009446"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Freherstraße"/>
+  </way>
+  <way id="80599555">
+    <nd ref="1199832277"/>
+    <nd ref="1924071005"/>
+    <nd ref="1199377924"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Rosengartenplatz"/>
+    <tag k="surface" v="cobblestone"/>
+    <tag k="tracktype" v="grade1"/>
+  </way>
+  <way id="102699893">
+    <nd ref="1186155848"/>
+    <nd ref="148505501"/>
+    <tag k="cycleway" v="lane"/>
+    <tag k="foot" v="designated"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="lit" v="yes"/>
+    <tag k="name" v="Ludwigstraße"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="103901277">
+    <nd ref="1199377924"/>
+    <nd ref="1924070973"/>
+    <nd ref="1199799682"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Rosengartenplatz"/>
+    <tag k="oneway" v="no"/>
+    <tag k="surface" v="cobblestone"/>
+    <tag k="tracktype" v="grade1"/>
+  </way>
+  <way id="114976951">
+    <nd ref="1300860233"/>
+    <nd ref="1317551924"/>
+    <nd ref="880906100"/>
+    <nd ref="880905757"/>
+    <nd ref="1300860178"/>
+    <nd ref="1300860434"/>
+    <nd ref="1300860590"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Heny-Roos-Passage"/>
+  </way>
+  <way id="114976967">
+    <nd ref="1300870655"/>
+    <nd ref="1300860394"/>
+    <nd ref="1300860515"/>
+    <nd ref="1300860628"/>
+    <nd ref="1300859903"/>
+    <nd ref="1300860096"/>
+    <nd ref="1300860207"/>
+    <nd ref="1300859922"/>
+    <nd ref="1300860449"/>
+    <nd ref="1300860662"/>
+    <nd ref="1300860348"/>
+    <nd ref="1300860068"/>
+    <nd ref="1300860674"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Rheinpromenade"/>
+  </way>
+  <way id="143069794">
+    <nd ref="1756280822"/>
+    <nd ref="1910220385"/>
+    <nd ref="1910220382"/>
+    <nd ref="1910220376"/>
+    <nd ref="1565599150"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Heinrich-Vetter-Passage"/>
+    <tag k="surface" v="paved"/>
+    <tag k="tunnel" v="building_passage"/>
+  </way>
+  <way id="149918823">
+    <nd ref="248784669"/>
+    <nd ref="1891993988"/>
+    <nd ref="1910220399"/>
+    <nd ref="1910220395"/>
+    <nd ref="1910220391"/>
+    <nd ref="1910220389"/>
+    <nd ref="1910220387"/>
+    <nd ref="1756280822"/>
+    <nd ref="1917451229"/>
+    <nd ref="1450517120"/>
+    <nd ref="1206078901"/>
+    <nd ref="1898987648"/>
+    <nd ref="21686472"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="lit" v="yes"/>
+    <tag k="loc_name" v="Planken"/>
+    <tag k="name" v="Heidelberger Straße"/>
+    <tag k="psv" v="yes"/>
+    <tag k="wikipedia:de" v="Mannheimer Planken"/>
+  </way>
+  <way id="180446778">
+    <nd ref="1908879504"/>
+    <nd ref="1908879501"/>
+    <nd ref="1908881771"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Kapuzinerplanken"/>
+  </way>
+  <way id="181673003">
+    <nd ref="1920865881"/>
+    <nd ref="1912026083"/>
+    <nd ref="1920865880"/>
+    <nd ref="1920865879"/>
+    <nd ref="1912026020"/>
+    <nd ref="1920865876"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="N1 Passage"/>
+  </way>
+  <way id="187628753">
+    <nd ref="1928067802"/>
+    <nd ref="1191409608"/>
+    <nd ref="301142401"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="Verlängerte Jungbuschstraße"/>
+  </way>
   <node id="21686472" lat="49.4844551" lon="8.4744602">
     <tag k="TMC:cid_58:tabcd_1:Class" v="Point"/>
     <tag k="TMC:cid_58:tabcd_1:Direction" v="negative"/>
@@ -96,7 +302,7 @@
     <tag k="railway" v="crossing"/>
   </node>
   <node id="1450517120" lat="49.4846287" lon="8.4741002"/>
-  <node id="1565599150" lat="49.4845306" lon="8.4717686"/>
+  <node id="1565599150" lat="49.4845271" lon="8.4717763"/>
   <node id="1755140954" lat="49.4899353" lon="8.4682151"/>
   <node id="1756280822" lat="49.4852650" lon="8.4724490"/>
   <node id="1756280871" lat="49.4874733" lon="8.4669598"/>
@@ -125,8 +331,8 @@
   <node id="1908879501" lat="49.4855026" lon="8.4697350"/>
   <node id="1908879504" lat="49.4858138" lon="8.4689137"/>
   <node id="1908881771" lat="49.4851146" lon="8.4707559"/>
-  <node id="1910220376" lat="49.4845755" lon="8.4718107"/>
-  <node id="1910220382" lat="49.4850158" lon="8.4722237"/>
+  <node id="1910220376" lat="49.4845719" lon="8.4718197"/>
+  <node id="1910220382" lat="49.4850156" lon="8.4722236"/>
   <node id="1910220385" lat="49.4851459" lon="8.4723457"/>
   <node id="1910220387" lat="49.4854106" lon="8.4720678"/>
   <node id="1910220389" lat="49.4855169" lon="8.4718045"/>
@@ -150,14 +356,1761 @@
   <node id="1928067799" lat="49.4942572" lon="8.4571169"/>
   <node id="1928067800" lat="49.4942653" lon="8.4570857"/>
   <node id="1928067802" lat="49.4943172" lon="8.4564921"/>
+  <way id="4248376">
+    <nd ref="25100858"/>
+    <nd ref="1627076971"/>
+    <nd ref="940206184"/>
+    <nd ref="940206741"/>
+    <nd ref="27194940"/>
+    <nd ref="27194928"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Stresemannstraße"/>
+  </way>
+  <way id="4432610">
+    <nd ref="27194928"/>
+    <nd ref="299228954"/>
+    <nd ref="27194927"/>
+    <nd ref="872690872"/>
+    <nd ref="1635803731"/>
+    <nd ref="27194974"/>
+    <nd ref="872690875"/>
+    <nd ref="27194925"/>
+    <nd ref="299228950"/>
+    <nd ref="940206793"/>
+    <nd ref="940206186"/>
+    <nd ref="27194923"/>
+    <nd ref="1199949139"/>
+    <nd ref="299228957"/>
+    <nd ref="27194930"/>
+    <nd ref="27194929"/>
+    <nd ref="1929196517"/>
+    <nd ref="299228952"/>
+    <nd ref="27194928"/>
+    <tag k="highway" v="residential"/>
+    <tag k="junction" v="roundabout"/>
+    <tag k="name" v="Charlottenplatz"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="4432614">
+    <nd ref="21686411"/>
+    <nd ref="27194959"/>
+    <nd ref="27194958"/>
+    <nd ref="561223448"/>
+    <nd ref="561223426"/>
+    <nd ref="27194963"/>
+    <nd ref="266024166"/>
+    <nd ref="27194964"/>
+    <nd ref="1922324023"/>
+    <nd ref="27194968"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Werderstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="4432618">
+    <nd ref="27194947"/>
+    <nd ref="1205913843"/>
+    <nd ref="1205913760"/>
+    <nd ref="27194979"/>
+    <nd ref="1205913677"/>
+    <nd ref="27194980"/>
+    <nd ref="1205913987"/>
+    <nd ref="1205913483"/>
+    <nd ref="27194964"/>
+    <nd ref="27194965"/>
+    <nd ref="262466340"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Beethovenstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="4776128">
+    <nd ref="529053243"/>
+    <nd ref="1629418474"/>
+    <nd ref="1629424775"/>
+    <nd ref="30553230"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Geibelstraße"/>
+  </way>
+  <way id="5073615">
+    <nd ref="1316107156"/>
+    <nd ref="1628791271"/>
+    <nd ref="1628788389"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Lameystraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="5073616">
+    <nd ref="63800795"/>
+    <nd ref="262466250"/>
+    <nd ref="266024345"/>
+    <nd ref="1922324018"/>
+    <nd ref="262465873"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Werderstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="5144167">
+    <nd ref="24306337"/>
+    <nd ref="1183530134"/>
+    <nd ref="35674973"/>
+    <nd ref="298375758"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="Lange Rötterstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="14103491">
+    <nd ref="1168889227"/>
+    <nd ref="1377397659"/>
+    <nd ref="1183612695"/>
+    <nd ref="930372593"/>
+    <nd ref="266759534"/>
+    <nd ref="1757531569"/>
+    <nd ref="25422081"/>
+    <nd ref="1757524344"/>
+    <nd ref="1646670581"/>
+    <nd ref="930372467"/>
+    <nd ref="1161197938"/>
+    <nd ref="21732959"/>
+    <tag k="bicycle" v="designated"/>
+    <tag k="cycleway" v="lane"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Collinistraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="23055276">
+    <nd ref="248782313"/>
+    <nd ref="248782320"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="L8/L10"/>
+  </way>
+  <way id="23259800">
+    <nd ref="251716286"/>
+    <nd ref="251716287"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Moltkestraße"/>
+  </way>
+  <way id="23263248">
+    <nd ref="268591025"/>
+    <nd ref="930372034"/>
+    <nd ref="299453836"/>
+    <nd ref="299453837"/>
+    <nd ref="930372470"/>
+    <nd ref="1757524353"/>
+    <nd ref="1646670585"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="50"/>
+    <tag k="name" v="Collinistraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="zone:traffic" v="DE:urban"/>
+  </way>
+  <way id="24377359">
+    <nd ref="264499631"/>
+    <nd ref="1773386556"/>
+    <nd ref="264499626"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Hafenstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="24377361">
+    <nd ref="264499631"/>
+    <nd ref="1204043070"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Hafenstraße"/>
+  </way>
+  <way id="24470198">
+    <nd ref="266024358"/>
+    <nd ref="1750752933"/>
+    <nd ref="266024340"/>
+    <nd ref="21686487"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Friedrich-Karl-Straße"/>
+  </way>
+  <way id="24532430">
+    <nd ref="266747472"/>
+    <nd ref="268110995"/>
+    <nd ref="266747471"/>
+    <nd ref="266982954"/>
+    <nd ref="267503882"/>
+    <nd ref="266747656"/>
+    <nd ref="266921503"/>
+    <nd ref="266982632"/>
+    <nd ref="717654730"/>
+    <nd ref="717654767"/>
+    <nd ref="266982661"/>
+    <nd ref="266921706"/>
+    <nd ref="266747461"/>
+    <nd ref="266747470"/>
+    <nd ref="267166718"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="cycleway" v="opposite"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rheinhäuser Straße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="24533418">
+    <nd ref="266760151"/>
+    <nd ref="266760263"/>
+    <nd ref="930372572"/>
+    <nd ref="1646670581"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Mozartstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="24534182">
+    <nd ref="27194927"/>
+    <nd ref="27194954"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Rathenaustraße"/>
+  </way>
+  <way id="24534243">
+    <nd ref="266024166"/>
+    <nd ref="300988874"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Werderplatz"/>
+  </way>
+  <way id="24554371">
+    <nd ref="266982954"/>
+    <nd ref="267503880"/>
+    <nd ref="266983015"/>
+    <tag k="cycleway" v="opposite"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Gabelsbergerstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="24554929">
+    <nd ref="266990212"/>
+    <nd ref="266990216"/>
+    <nd ref="1180516877"/>
+    <nd ref="1959164145"/>
+    <nd ref="266990214"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Hermann-Heimerich-Ufer"/>
+    <tag k="oneway" v="no"/>
+  </way>
+  <way id="24599109">
+    <nd ref="267408133"/>
+    <nd ref="267408134"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="Grillparzerstraße"/>
+  </way>
+  <way id="24599111">
+    <nd ref="267408134"/>
+    <nd ref="267400913"/>
+    <nd ref="267408136"/>
+    <nd ref="267408135"/>
+    <nd ref="1825221206"/>
+    <nd ref="21732988"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Lenaustraße"/>
+  </way>
+  <way id="24600596">
+    <nd ref="24958221"/>
+    <nd ref="1207626945"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="Kleiststraße"/>
+  </way>
+  <way id="24600597">
+    <nd ref="267402201"/>
+    <nd ref="267422298"/>
+    <nd ref="1169221641"/>
+    <nd ref="1169221644"/>
+    <nd ref="267408132"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="untere Clignetstraße"/>
+  </way>
+  <way id="24600598">
+    <nd ref="267408132"/>
+    <nd ref="1207627145"/>
+    <nd ref="1207627022"/>
+    <nd ref="1207626864"/>
+    <nd ref="267426602"/>
+    <nd ref="267426604"/>
+    <nd ref="267426606"/>
+    <nd ref="1825783188"/>
+    <nd ref="267426608"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Uhlandstraße"/>
+  </way>
+  <way id="24600599">
+    <nd ref="267422298"/>
+    <nd ref="267422299"/>
+    <nd ref="267422300"/>
+    <nd ref="267423733"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="Eichendorffstraße"/>
+  </way>
+  <way id="24608191">
+    <nd ref="267503880"/>
+    <nd ref="267503881"/>
+    <nd ref="1306086427"/>
+    <nd ref="267503882"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Stolzestraße"/>
+  </way>
+  <way id="24620501">
+    <nd ref="266024582"/>
+    <nd ref="266024358"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Moltkestraße"/>
+    <tag k="oneway" v="no"/>
+  </way>
+  <way id="24666916">
+    <nd ref="268110995"/>
+    <nd ref="1757085075"/>
+    <nd ref="270747015"/>
+    <nd ref="268111105"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="cycleway" v="opposite"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Heinrich-Lanz-Straße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="24922594">
+    <nd ref="420235549"/>
+    <nd ref="1757085077"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="cycleway" v="opposite"/>
+    <tag k="highway" v="residential"/>
+    <tag k="man_made" v="30"/>
+    <tag k="name" v="Toräckerstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="25548343">
+    <nd ref="267408131"/>
+    <nd ref="921135046"/>
+    <nd ref="267422296"/>
+    <nd ref="1207626945"/>
+    <nd ref="267408132"/>
+    <nd ref="1169221645"/>
+    <nd ref="267423732"/>
+    <nd ref="267408134"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="Obere Clignetstraße"/>
+  </way>
+  <way id="25548358">
+    <nd ref="267422296"/>
+    <nd ref="267422298"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Eichendorffstraße"/>
+  </way>
+  <way id="25745784">
+    <nd ref="288999757"/>
+    <nd ref="1737639937"/>
+    <nd ref="280758129"/>
+    <nd ref="280833594"/>
+    <nd ref="281532945"/>
+    <nd ref="281532944"/>
+    <nd ref="280834004"/>
+    <nd ref="281765239"/>
+    <nd ref="1192379412"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Bürgermeister-Fuchs-Straße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="25777798">
+    <nd ref="298270343"/>
+    <nd ref="281169739"/>
+    <tag k="created_by" v="Potlatch 0.10"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Jean-Becker-Straße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="25777867">
+    <nd ref="1652063526"/>
+    <nd ref="1652063519"/>
+    <nd ref="281170048"/>
+    <nd ref="281170047"/>
+    <nd ref="1184448936"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Zehntstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="25777951">
+    <nd ref="1612220607"/>
+    <nd ref="1612156156"/>
+    <nd ref="281170696"/>
+    <nd ref="1612220590"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Pflügersgrundstraße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="25832040">
+    <nd ref="24958212"/>
+    <nd ref="24958205"/>
+    <nd ref="283537475"/>
+    <nd ref="281170048"/>
+    <nd ref="24958206"/>
+    <nd ref="281528450"/>
+    <nd ref="24958208"/>
+    <nd ref="1612156177"/>
+    <nd ref="280757006"/>
+    <nd ref="281170696"/>
+    <nd ref="24958167"/>
+    <nd ref="281169739"/>
+    <nd ref="281169674"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Riedfeldstraße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="25832158">
+    <nd ref="281766208"/>
+    <nd ref="921404292"/>
+    <nd ref="148494422"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Langstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="25872888">
+    <nd ref="24958183"/>
+    <nd ref="280757006"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Alphornstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="25990734">
+    <nd ref="281170879"/>
+    <nd ref="1202433081"/>
+    <nd ref="1202433052"/>
+    <nd ref="1202433073"/>
+    <nd ref="1202433065"/>
+    <nd ref="281170046"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Lutherstraße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="25990739">
+    <nd ref="281766208"/>
+    <nd ref="281766209"/>
+    <nd ref="282074724"/>
+    <nd ref="283537635"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Langstraße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="26393622">
+    <nd ref="979228849"/>
+    <nd ref="289144679"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Kaiser-Wilhelm-Straße"/>
+  </way>
+  <way id="26393800">
+    <nd ref="1300860049"/>
+    <nd ref="1300860526"/>
+    <nd ref="1300860699"/>
+    <nd ref="289144740"/>
+    <nd ref="1300860503"/>
+    <nd ref="1300860475"/>
+    <nd ref="1300860290"/>
+    <nd ref="289144696"/>
+    <nd ref="1300860312"/>
+    <nd ref="1300860513"/>
+    <nd ref="1300860578"/>
+    <nd ref="289144693"/>
+    <nd ref="1300860269"/>
+    <nd ref="1300859977"/>
+    <nd ref="1300860101"/>
+    <nd ref="1300860069"/>
+    <nd ref="289144681"/>
+    <nd ref="979228849"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Rheinuferstraße"/>
+  </way>
+  <way id="27261757">
+    <nd ref="27194977"/>
+    <nd ref="603622538"/>
+    <nd ref="569008571"/>
+    <nd ref="27194941"/>
+    <nd ref="561223427"/>
+    <nd ref="27194943"/>
+    <nd ref="27194944"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Werderplatz"/>
+  </way>
+  <way id="27276268">
+    <nd ref="300376915"/>
+    <nd ref="1838801950"/>
+    <nd ref="1769789387"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Ifflandstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27283179">
+    <nd ref="21732936"/>
+    <nd ref="299487288"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Kirchenstraße"/>
+  </way>
+  <way id="27283229">
+    <nd ref="299488535"/>
+    <nd ref="299488663"/>
+    <nd ref="1283261900"/>
+    <nd ref="823457403"/>
+    <nd ref="823457124"/>
+    <nd ref="299488664"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Werftstraße"/>
+  </way>
+  <way id="27283251">
+    <nd ref="299488710"/>
+    <nd ref="1191385432"/>
+    <nd ref="1928069813"/>
+    <nd ref="299489185"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Böckstraße"/>
+  </way>
+  <way id="27429641">
+    <nd ref="282448306"/>
+    <nd ref="301142366"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Akademiestraße"/>
+  </way>
+  <way id="27429642">
+    <nd ref="186083624"/>
+    <nd ref="1204029010"/>
+    <nd ref="301142368"/>
+    <nd ref="1204029008"/>
+    <nd ref="301142371"/>
+    <nd ref="1204029006"/>
+    <nd ref="301142373"/>
+    <nd ref="1204029004"/>
+    <nd ref="1204029015"/>
+    <nd ref="301142375"/>
+    <nd ref="1204029003"/>
+    <nd ref="1204029013"/>
+    <nd ref="301142377"/>
+    <nd ref="186083622"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Akademiestraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="27893829">
+    <nd ref="412181181"/>
+    <nd ref="1743822619"/>
+    <nd ref="25105655"/>
+    <nd ref="1743822617"/>
+    <nd ref="412181184"/>
+    <nd ref="491489396"/>
+    <nd ref="1743822629"/>
+    <nd ref="412181182"/>
+    <nd ref="25100890"/>
+    <nd ref="1743822650"/>
+    <nd ref="1743822666"/>
+    <nd ref="1743822680"/>
+    <nd ref="1743822687"/>
+    <nd ref="1949670169"/>
+    <nd ref="1743822770"/>
+    <nd ref="1883671762"/>
+    <nd ref="248539902"/>
+    <nd ref="306472239"/>
+    <tag k="highway" v="residential"/>
+    <tag k="loc_name" v="Breite Straße"/>
+    <tag k="name" v="Kurpfalzstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="28297618">
+    <nd ref="27194944"/>
+    <nd ref="27194947"/>
+    <nd ref="25100845"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Elisabethstraße"/>
+  </way>
+  <way id="31648189">
+    <nd ref="353973926"/>
+    <nd ref="353973919"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="residential"/>
+    <tag k="layer" v="1"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Spatzenbrücke"/>
+  </way>
+  <way id="33083535">
+    <nd ref="270747007"/>
+    <nd ref="1757085072"/>
+    <nd ref="266747471"/>
+    <nd ref="63800830"/>
+    <nd ref="63800808"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="cycleway" v="opposite"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Keplerstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="33083984">
+    <nd ref="267167368"/>
+    <nd ref="266921920"/>
+    <nd ref="1904318268"/>
+    <nd ref="266921401"/>
+    <nd ref="266921707"/>
+    <nd ref="266921504"/>
+    <nd ref="266921402"/>
+    <nd ref="266983015"/>
+    <nd ref="1750750853"/>
+    <nd ref="1750750860"/>
+    <nd ref="1750750849"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="cycleway" v="opposite"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Augartenstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="35834152">
+    <nd ref="448897375"/>
+    <nd ref="1283057086"/>
+    <nd ref="418968784"/>
+    <nd ref="1283057018"/>
+    <nd ref="1283057050"/>
+    <nd ref="1283057059"/>
+    <nd ref="1283057020"/>
+    <nd ref="1283057041"/>
+    <nd ref="448897376"/>
+    <nd ref="448897377"/>
+    <nd ref="1283057094"/>
+    <nd ref="1283057066"/>
+    <nd ref="448897379"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Holzstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="35834153">
+    <nd ref="27428130"/>
+    <nd ref="448897384"/>
+    <nd ref="25117447"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Seilerstraße"/>
+  </way>
+  <way id="35834157">
+    <nd ref="448897369"/>
+    <nd ref="1300500655"/>
+    <nd ref="823456855"/>
+    <nd ref="25117503"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Dalbergstraße"/>
+  </way>
+  <way id="35834159">
+    <nd ref="299488710"/>
+    <nd ref="299488663"/>
+    <tag k="created_by" v="xybot"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Beilstraße"/>
+  </way>
+  <way id="35925380">
+    <nd ref="420009449"/>
+    <nd ref="1168824291"/>
+    <nd ref="420009456"/>
+    <nd ref="25117503"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Dalbergstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="35948955">
+    <nd ref="420235548"/>
+    <nd ref="1553027599"/>
+    <nd ref="420235549"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Bismarckplatz"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="35953671">
+    <nd ref="251716287"/>
+    <nd ref="266024582"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Moltkestraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="38139888">
+    <nd ref="448881893"/>
+    <nd ref="412551279"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Verlängerte Jungbuschstraße"/>
+  </way>
+  <way id="38141499">
+    <nd ref="448897358"/>
+    <nd ref="1300500662"/>
+    <nd ref="1283261866"/>
+    <nd ref="448897366"/>
+    <nd ref="448897360"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Hafenstraße"/>
+  </way>
+  <way id="38141500">
+    <nd ref="25117503"/>
+    <nd ref="420009447"/>
+    <nd ref="25117506"/>
+    <nd ref="1168824302"/>
+    <nd ref="1761373182"/>
+    <nd ref="25117508"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Dalbergstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="42381233">
+    <nd ref="30553230"/>
+    <nd ref="1885653020"/>
+    <nd ref="288518295"/>
+    <nd ref="30324356"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Geibelstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="42381234">
+    <nd ref="529053228"/>
+    <nd ref="1629418477"/>
+    <nd ref="1629418472"/>
+    <nd ref="529053231"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Nürburgstraße"/>
+  </way>
+  <way id="42381417">
+    <nd ref="529053233"/>
+    <nd ref="1629418479"/>
+    <nd ref="529053230"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Eifelstraße"/>
+  </way>
+  <way id="42760133">
+    <nd ref="1316107047"/>
+    <nd ref="1316107029"/>
+    <nd ref="1316107267"/>
+    <nd ref="271083313"/>
+    <nd ref="1316106922"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="Tullastraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="42760862">
+    <nd ref="534696590"/>
+    <nd ref="534696598"/>
+    <nd ref="21686419"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="maxspeed" v="50"/>
+    <tag k="name" v="Kolpingstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="43578399">
+    <nd ref="306472239"/>
+    <nd ref="1917549516"/>
+    <nd ref="1756301709"/>
+    <nd ref="1756301710"/>
+    <nd ref="1920865881"/>
+    <nd ref="1756301712"/>
+    <tag k="highway" v="residential"/>
+    <tag k="loc_name" v="Breite Straße"/>
+    <tag k="name" v="Kurpfalzstraße"/>
+  </way>
+  <way id="53040718">
+    <nd ref="266760116"/>
+    <nd ref="1161197972"/>
+    <nd ref="930371703"/>
+    <nd ref="1161197957"/>
+    <nd ref="930372431"/>
+    <nd ref="266760117"/>
+    <nd ref="266760118"/>
+    <nd ref="1795029933"/>
+    <nd ref="300376703"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Hebelstraße"/>
+  </way>
+  <way id="57846800">
+    <nd ref="266024358"/>
+    <nd ref="262466249"/>
+    <nd ref="262466250"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Moltkestraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="59836517">
+    <nd ref="306472239"/>
+    <nd ref="248539900"/>
+    <nd ref="1743822832"/>
+    <nd ref="1743822830"/>
+    <nd ref="412123597"/>
+    <nd ref="1743822714"/>
+    <nd ref="1743822696"/>
+    <nd ref="1665161338"/>
+    <nd ref="1743822678"/>
+    <nd ref="412123598"/>
+    <nd ref="412181178"/>
+    <nd ref="491489396"/>
+    <nd ref="1743822601"/>
+    <nd ref="412123603"/>
+    <nd ref="412181177"/>
+    <nd ref="412181185"/>
+    <tag k="highway" v="residential"/>
+    <tag k="loc_name" v="Breite Straße"/>
+    <tag k="name" v="Kurpfalzstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="79683431">
+    <nd ref="43457527"/>
+    <nd ref="251716287"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Tattersallstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="84176718">
+    <nd ref="979228849"/>
+    <nd ref="979228864"/>
+    <nd ref="1300860402"/>
+    <nd ref="1300859940"/>
+    <nd ref="1300860371"/>
+    <nd ref="1300859965"/>
+    <nd ref="1300860589"/>
+    <nd ref="1300860184"/>
+    <nd ref="1300860521"/>
+    <nd ref="1300860168"/>
+    <nd ref="1300860115"/>
+    <nd ref="1300859980"/>
+    <nd ref="1300860323"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Im Zollhof"/>
+  </way>
+  <way id="85287421">
+    <nd ref="282448306"/>
+    <nd ref="1204024599"/>
+    <nd ref="186083622"/>
+    <tag k="highway" v="residential"/>
+    <tag k="layer" v="0"/>
+    <tag k="name" v="Akademiestraße"/>
+  </way>
+  <way id="97301292">
+    <nd ref="1756290981"/>
+    <nd ref="25422070"/>
+    <nd ref="1924123421"/>
+    <nd ref="1920843207"/>
+    <nd ref="1643932782"/>
+    <tag k="cycleway" v="lane"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Marktstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="101624753">
+    <nd ref="281171145"/>
+    <nd ref="1202433060"/>
+    <nd ref="1202454153"/>
+    <nd ref="1202433049"/>
+    <nd ref="1202433057"/>
+    <nd ref="1202433047"/>
+    <nd ref="1202433035"/>
+    <nd ref="281170879"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Elfenstraße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="102486913">
+    <nd ref="27194987"/>
+    <nd ref="27194932"/>
+    <nd ref="1200013732"/>
+    <nd ref="1200013733"/>
+    <nd ref="266024669"/>
+    <nd ref="21686594"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Berliner Straße"/>
+    <tag k="oneway" v="no"/>
+  </way>
+  <way id="103821556">
+    <nd ref="1014994990"/>
+    <nd ref="1014994986"/>
+    <nd ref="1014994979"/>
+    <nd ref="1184448967"/>
+    <nd ref="1014994956"/>
+    <nd ref="1184448926"/>
+    <nd ref="1014994983"/>
+    <nd ref="282546340"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Lutherstraße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="103821557">
+    <nd ref="1184448936"/>
+    <nd ref="281765232"/>
+    <nd ref="281765235"/>
+    <nd ref="281765237"/>
+    <nd ref="281765239"/>
+    <nd ref="281765241"/>
+    <nd ref="281765243"/>
+    <nd ref="1886590238"/>
+    <nd ref="281762598"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Langstraße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="104211826">
+    <nd ref="281765232"/>
+    <nd ref="281171370"/>
+    <nd ref="283537475"/>
+    <nd ref="1652063517"/>
+    <nd ref="1652063549"/>
+    <nd ref="1652063554"/>
+    <nd ref="1652063551"/>
+    <nd ref="1652063553"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Elfenstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="104363155">
+    <nd ref="1204043070"/>
+    <nd ref="1416157294"/>
+    <nd ref="1416157296"/>
+    <nd ref="353975977"/>
+    <nd ref="301142362"/>
+    <nd ref="186083614"/>
+    <nd ref="282448304"/>
+    <tag k="highway" v="residential"/>
+    <tag k="layer" v="-1"/>
+    <tag k="name" v="Hafenstraße"/>
+  </way>
+  <way id="104363158">
+    <nd ref="282448304"/>
+    <nd ref="1204043071"/>
+    <nd ref="301142366"/>
+    <nd ref="299487288"/>
+    <nd ref="823456442"/>
+    <nd ref="877901017"/>
+    <nd ref="1928067799"/>
+    <nd ref="387384342"/>
+    <nd ref="299489185"/>
+    <nd ref="299488664"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Hafenstraße"/>
+  </way>
+  <way id="108404027">
+    <nd ref="266024348"/>
+    <nd ref="989001350"/>
+    <nd ref="266024347"/>
+    <nd ref="266024346"/>
+    <nd ref="266024345"/>
+    <nd ref="266024344"/>
+    <nd ref="1205993406"/>
+    <nd ref="266024343"/>
+    <nd ref="1205993545"/>
+    <nd ref="1205993559"/>
+    <nd ref="266024342"/>
+    <nd ref="266024364"/>
+    <nd ref="266024340"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Richard-Wagner-Straße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="108404031">
+    <nd ref="27194969"/>
+    <nd ref="27194965"/>
+    <nd ref="266024329"/>
+    <nd ref="27194961"/>
+    <nd ref="27194960"/>
+    <nd ref="475100300"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Werderstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="108404033">
+    <nd ref="262275530"/>
+    <nd ref="266024344"/>
+    <nd ref="262466249"/>
+    <nd ref="262465972"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Werderstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="114198527">
+    <nd ref="1293894414"/>
+    <nd ref="248783357"/>
+    <nd ref="248783355"/>
+    <nd ref="1743821854"/>
+    <nd ref="1743821853"/>
+    <nd ref="1126992308"/>
+    <nd ref="1743821866"/>
+    <nd ref="412350366"/>
+    <tag k="bicycle" v="designated"/>
+    <tag k="bicycle_road" v="yes"/>
+    <tag k="cycleway" v="opposite"/>
+    <tag k="highway" v="residential"/>
+    <tag k="motorcar" v="yes"/>
+    <tag k="name" v="Schlossgartenstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="smoothness" v="good"/>
+  </way>
+  <way id="114928357">
+    <nd ref="1299583282"/>
+    <nd ref="1299583324"/>
+    <nd ref="1299583297"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="Hellingstraße"/>
+  </way>
+  <way id="114928360">
+    <nd ref="1299583282"/>
+    <nd ref="1300500638"/>
+    <nd ref="1176400816"/>
+    <nd ref="1299583280"/>
+    <nd ref="1299583294"/>
+    <nd ref="1299583319"/>
+    <nd ref="1299583328"/>
+    <nd ref="1299583306"/>
+    <nd ref="1299583326"/>
+    <nd ref="1299583272"/>
+    <nd ref="1299583307"/>
+    <nd ref="92370090"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="Hellingstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="127606907">
+    <nd ref="43457551"/>
+    <nd ref="911006623"/>
+    <nd ref="1412026642"/>
+    <nd ref="376075546"/>
+    <nd ref="1531035332"/>
+    <nd ref="1531035343"/>
+    <nd ref="1531035358"/>
+    <nd ref="1553027558"/>
+    <nd ref="989001412"/>
+    <nd ref="420235548"/>
+    <nd ref="43457547"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Tattersallstraße"/>
+  </way>
+  <way id="134396001">
+    <nd ref="1646670585"/>
+    <nd ref="930371580"/>
+    <nd ref="930371248"/>
+    <nd ref="251753075"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="2"/>
+    <tag k="maxspeed" v="50"/>
+    <tag k="name" v="Collinistraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="DE:urban"/>
+  </way>
+  <way id="149905037">
+    <nd ref="1628406128"/>
+    <nd ref="1898987670"/>
+    <nd ref="1628420248"/>
+    <nd ref="1628406126"/>
+    <nd ref="1898987668"/>
+    <nd ref="1628406125"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Fressgasse"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="149942614">
+    <nd ref="27194929"/>
+    <nd ref="27194932"/>
+    <nd ref="1628788389"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Lameystraße"/>
+    <tag k="oneway" v="no"/>
+  </way>
+  <way id="149942615">
+    <nd ref="1628788389"/>
+    <nd ref="1628791274"/>
+    <nd ref="1628788402"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Lameystraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="149956819">
+    <nd ref="301142400"/>
+    <nd ref="1713889071"/>
+    <nd ref="1628947076"/>
+    <nd ref="1628947078"/>
+    <nd ref="412551282"/>
+    <nd ref="412551281"/>
+    <nd ref="410703824"/>
+    <nd ref="448881888"/>
+    <nd ref="412551280"/>
+    <nd ref="448881894"/>
+    <nd ref="410703819"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Verlängerte Jungbuschstraße"/>
+  </way>
+  <way id="149957098">
+    <nd ref="301142402"/>
+    <nd ref="1629006169"/>
+    <nd ref="1629006170"/>
+    <nd ref="301142400"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Verlängerte Jungbuschstraße"/>
+  </way>
+  <way id="150384654">
+    <nd ref="24555473"/>
+    <nd ref="1633031494"/>
+    <nd ref="1299583304"/>
+    <nd ref="1299583351"/>
+    <nd ref="1299583273"/>
+    <nd ref="1299583333"/>
+    <nd ref="1299583308"/>
+    <nd ref="669952048"/>
+    <nd ref="1176400825"/>
+    <nd ref="1299583270"/>
+    <nd ref="1299583344"/>
+    <nd ref="1299583282"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="Hellingstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="150549242">
+    <nd ref="299488664"/>
+    <nd ref="418051691"/>
+    <nd ref="1299583287"/>
+    <nd ref="1300501832"/>
+    <nd ref="1299583297"/>
+    <nd ref="1068953406"/>
+    <nd ref="1283261861"/>
+    <nd ref="448897358"/>
+    <nd ref="669952050"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Hafenstraße"/>
+  </way>
+  <way id="150549252">
+    <nd ref="418968784"/>
+    <nd ref="1282886845"/>
+    <nd ref="1282886811"/>
+    <nd ref="1282886812"/>
+    <nd ref="1282886852"/>
+    <nd ref="908936214"/>
+    <nd ref="1282886670"/>
+    <nd ref="1799098143"/>
+    <nd ref="27428129"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Schanzenstraße"/>
+  </way>
+  <way id="150663778">
+    <nd ref="27194931"/>
+    <nd ref="27194923"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Rathenaustraße"/>
+    <tag k="oneway" v="no"/>
+  </way>
+  <way id="150671086">
+    <nd ref="24958224"/>
+    <nd ref="1635601196"/>
+    <nd ref="267422296"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Chamissostraße"/>
+  </way>
+  <way id="150671091">
+    <nd ref="288909232"/>
+    <nd ref="1187970738"/>
+    <nd ref="1187970725"/>
+    <nd ref="1014994995"/>
+    <nd ref="1187970729"/>
+    <nd ref="1187970727"/>
+    <nd ref="288909235"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Pozzistraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="paved"/>
+  </way>
+  <way id="150674986">
+    <nd ref="192964386"/>
+    <nd ref="1635632223"/>
+    <nd ref="281765237"/>
+    <nd ref="281163310"/>
+    <nd ref="281532943"/>
+    <nd ref="24958212"/>
+    <nd ref="280833694"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Draisstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="150674994">
+    <nd ref="280833596"/>
+    <nd ref="24958217"/>
+    <nd ref="24958205"/>
+    <nd ref="24958203"/>
+    <nd ref="281765235"/>
+    <nd ref="280710434"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Gärtnerstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="150675785">
+    <nd ref="24958210"/>
+    <nd ref="1635645058"/>
+    <nd ref="24958208"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Humboldtstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="150675789">
+    <nd ref="24958197"/>
+    <nd ref="1635645051"/>
+    <nd ref="24958194"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Pestalozzistraße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="150694607">
+    <nd ref="25422081"/>
+    <nd ref="930371630"/>
+    <nd ref="930371831"/>
+    <nd ref="299453436"/>
+    <nd ref="1928913737"/>
+    <nd ref="251753075"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="maxspeed" v="50"/>
+    <tag k="name" v="Mozartstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="DE:urban"/>
+  </way>
+  <way id="150694622">
+    <nd ref="1316106922"/>
+    <nd ref="1838801172"/>
+    <nd ref="1838798045"/>
+    <nd ref="1990941091"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="3"/>
+    <tag k="name" v="Tullastraße"/>
+    <tag k="oneway" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="150697173">
+    <nd ref="63800787"/>
+    <nd ref="266024346"/>
+    <nd ref="262466456"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Mollstraße"/>
+  </way>
+  <way id="150697174">
+    <nd ref="266024575"/>
+    <nd ref="1750750868"/>
+    <nd ref="266024582"/>
+    <nd ref="1637307915"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Roonstraße"/>
+    <tag k="oneway" v="no"/>
+  </way>
+  <way id="152373050">
+    <nd ref="280761196"/>
+    <nd ref="281766208"/>
+    <nd ref="280760873"/>
+    <nd ref="281169674"/>
+    <nd ref="1652004093"/>
+    <nd ref="1652004096"/>
+    <nd ref="921404277"/>
+    <nd ref="1652054927"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Laurentiusstraße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="152378951">
+    <nd ref="27787754"/>
+    <nd ref="1885941740"/>
+    <nd ref="1230341699"/>
+    <nd ref="921135049"/>
+    <nd ref="1838816970"/>
+    <nd ref="24306472"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="2"/>
+    <tag k="name" v="Lange Rötterstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="152385157">
+    <nd ref="314597916"/>
+    <nd ref="1652054920"/>
+    <nd ref="288014410"/>
+    <nd ref="1652054922"/>
+    <nd ref="288014411"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Egellstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="152385159">
+    <nd ref="24958219"/>
+    <nd ref="288013018"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Holzbauerstraße"/>
+  </way>
+  <way id="152385160">
+    <nd ref="281987658"/>
+    <nd ref="1201497460"/>
+    <nd ref="249247096"/>
+    <nd ref="409495032"/>
+    <nd ref="409496324"/>
+    <nd ref="409495865"/>
+    <nd ref="249247530"/>
+    <nd ref="24958178"/>
+    <nd ref="1885653018"/>
+    <nd ref="288518293"/>
+    <nd ref="288014407"/>
+    <nd ref="288013018"/>
+    <nd ref="1207738674"/>
+    <nd ref="288014411"/>
+    <nd ref="288909232"/>
+    <nd ref="1207738426"/>
+    <nd ref="1207738447"/>
+    <nd ref="1207738707"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Max-Joseph-Straße"/>
+  </way>
+  <way id="152385163">
+    <nd ref="1183258778"/>
+    <nd ref="921135055"/>
+    <nd ref="1652054936"/>
+    <nd ref="1652054940"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Spelzenstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="152385164">
+    <nd ref="288014407"/>
+    <nd ref="288014408"/>
+    <nd ref="359216633"/>
+    <nd ref="1207738386"/>
+    <nd ref="1014995001"/>
+    <nd ref="1207738563"/>
+    <nd ref="1652054940"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Spelzenstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="152385165">
+    <nd ref="288014408"/>
+    <nd ref="1652054925"/>
+    <nd ref="288014410"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Stamitzstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="152385166">
+    <nd ref="336028777"/>
+    <nd ref="1885653026"/>
+    <nd ref="1207738705"/>
+    <nd ref="1207738582"/>
+    <nd ref="336028775"/>
+    <nd ref="359216633"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Stamitzstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="152395940">
+    <nd ref="288518293"/>
+    <nd ref="1652142152"/>
+    <nd ref="288518294"/>
+    <nd ref="1207738487"/>
+    <nd ref="288518295"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Fratrelstraße"/>
+  </way>
+  <way id="152395946">
+    <nd ref="24958219"/>
+    <nd ref="1652142142"/>
+    <nd ref="24958221"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Melchiorstraße"/>
+  </way>
+  <way id="152395947">
+    <nd ref="24958180"/>
+    <nd ref="1885653022"/>
+    <nd ref="288518294"/>
+    <nd ref="24958219"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Melchiorstraße"/>
+  </way>
+  <way id="154656276">
+    <nd ref="1671577984"/>
+    <nd ref="1553027446"/>
+    <nd ref="1553027486"/>
+    <nd ref="420235549"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Bismarckplatz"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="164092564">
+    <nd ref="266760151"/>
+    <nd ref="1824762084"/>
+    <nd ref="266760118"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Mozartstraße"/>
+  </way>
+  <way id="165823635">
+    <nd ref="1643932782"/>
+    <nd ref="248539899"/>
+    <tag k="cycleway" v="lane"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Marktstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="171453049">
+    <nd ref="1769789387"/>
+    <nd ref="1838801947"/>
+    <nd ref="1824766761"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Ifflandstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="171453050">
+    <nd ref="1769789387"/>
+    <nd ref="266760907"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Ifflandstraße"/>
+  </way>
+  <way id="173054987">
+    <nd ref="1838798047"/>
+    <nd ref="1838798046"/>
+    <nd ref="1838798045"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Tullastraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="174349519">
+    <nd ref="877579545"/>
+    <nd ref="921135052"/>
+    <nd ref="314597916"/>
+    <nd ref="1652054940"/>
+    <nd ref="1838820540"/>
+    <nd ref="1885648056"/>
+    <nd ref="192992757"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Schimperstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="178199022">
+    <nd ref="24958158"/>
+    <nd ref="281766209"/>
+    <nd ref="24958163"/>
+    <nd ref="24958167"/>
+    <nd ref="1885691184"/>
+    <nd ref="1885689213"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68169"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Lortzingstraße"/>
+    <tag k="postal_code" v="68169"/>
+  </way>
+  <way id="178226651">
+    <nd ref="27787754"/>
+    <nd ref="1160106178"/>
+    <nd ref="288909235"/>
+    <nd ref="24958224"/>
+    <nd ref="24958221"/>
+    <nd ref="267408133"/>
+    <nd ref="30324356"/>
+    <nd ref="34650766"/>
+    <nd ref="27787855"/>
+    <nd ref="915652148"/>
+    <nd ref="249250498"/>
+    <nd ref="27787851"/>
+    <nd ref="1207626751"/>
+    <nd ref="30222167"/>
+    <nd ref="266745694"/>
+    <nd ref="273870575"/>
+    <nd ref="1825219722"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68167"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="2"/>
+    <tag k="name" v="Lange Rötterstraße"/>
+    <tag k="oneway" v="no"/>
+  </way>
+  <way id="178228593">
+    <nd ref="298375758"/>
+    <nd ref="921135048"/>
+    <nd ref="27787754"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="Lange Rötterstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="181337926">
+    <nd ref="248539899"/>
+    <nd ref="1949669636"/>
+    <nd ref="1743822782"/>
+    <nd ref="25422075"/>
+    <tag k="cycleway" v="lane"/>
+    <tag k="hgv" v="no"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="name" v="Marktstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="181844308">
+    <nd ref="251716287"/>
+    <nd ref="43457538"/>
+    <tag k="addr:city" v="Mannheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:postcode" v="68165"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="highway" v="residential"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Tattersallstraße"/>
+  </way>
+  <way id="182489957">
+    <nd ref="1299583354"/>
+    <nd ref="1299583298"/>
+    <nd ref="1299583264"/>
+    <nd ref="1299583266"/>
+    <nd ref="1299583353"/>
+    <nd ref="1299583339"/>
+    <nd ref="1299583332"/>
+    <nd ref="669952050"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Hafenstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="182489958">
+    <nd ref="669952050"/>
+    <nd ref="1928517487"/>
+    <nd ref="1928517485"/>
+    <nd ref="1299583338"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Hafenstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="183413425">
+    <nd ref="1937831627"/>
+    <nd ref="1937831634"/>
+    <nd ref="1937831630"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="maxspeed" v="50"/>
+    <tag k="name" v="Mozartstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="DE:urban"/>
+  </way>
+  <way id="183413878">
+    <nd ref="1937837957"/>
+    <nd ref="1937837960"/>
+    <nd ref="1937837955"/>
+    <nd ref="1937837951"/>
+    <nd ref="1937837946"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Jungbuschstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="183654224">
+    <nd ref="1937831627"/>
+    <nd ref="1937831638"/>
+    <nd ref="35127152"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="1"/>
+    <tag k="maxspeed" v="50"/>
+    <tag k="name" v="Mozartstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="DE:urban"/>
+  </way>
+  <way id="183654500">
+    <nd ref="251753075"/>
+    <nd ref="1937831627"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="2"/>
+    <tag k="maxspeed" v="50"/>
+    <tag k="name" v="Mozartstraße"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="DE:urban"/>
+  </way>
+  <way id="187628749">
+    <nd ref="1937837946"/>
+    <nd ref="299488248"/>
+    <nd ref="1928067796"/>
+    <nd ref="1928067799"/>
+    <tag k="highway" v="residential"/>
+    <tag k="name" v="Jungbuschstraße"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="188466506">
+    <nd ref="1990941091"/>
+    <nd ref="27194987"/>
+    <nd ref="27194940"/>
+    <nd ref="27194941"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="2"/>
+    <tag k="name" v="Tullastraße"/>
+    <tag k="oneway" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
   <node id="21686411" lat="49.4864984" lon="8.4831251"/>
   <node id="21686419" lat="49.4878455" lon="8.4796784"/>
   <node id="21686487" lat="49.4827159" lon="8.4770715"/>
   <node id="21686594" lat="49.4876293" lon="8.4787424"/>
   <node id="21732936" lat="49.4923925" lon="8.4591949"/>
   <node id="21732959" lat="49.4894409" lon="8.4803745"/>
-  <node id="21732984" lat="49.4947516" lon="8.4853340"/>
-  <node id="21732988" lat="49.4958498" lon="8.4863480"/>
+  <node id="21732988" lat="49.4958756" lon="8.4863712"/>
   <node id="24306337" lat="49.4962317" lon="8.4746154"/>
   <node id="24306472" lat="49.4965041" lon="8.4748310"/>
   <node id="24555473" lat="49.4972613" lon="8.4593213"/>
@@ -196,7 +2149,7 @@
   <node id="25422081" lat="49.4901093" lon="8.4780782"/>
   <node id="27194923" lat="49.4868474" lon="8.4797878"/>
   <node id="27194925" lat="49.4867495" lon="8.4800729"/>
-  <node id="27194927" lat="49.4865496" lon="8.4799207"/>
+  <node id="27194927" lat="49.4865451" lon="8.4799015"/>
   <node id="27194928" lat="49.4865687" lon="8.4797145"/>
   <node id="27194929" lat="49.4867027" lon="8.4796103"/>
   <node id="27194930" lat="49.4867558" lon="8.4796283"/>
@@ -205,14 +2158,14 @@
   </node>
   <node id="27194932" lat="49.4867898" lon="8.4781102"/>
   <node id="27194940" lat="49.4854222" lon="8.4786823"/>
-  <node id="27194941" lat="49.4848875" lon="8.4801861"/>
-  <node id="27194943" lat="49.4844517" lon="8.4797756"/>
-  <node id="27194944" lat="49.4843147" lon="8.4796405"/>
+  <node id="27194941" lat="49.4848555" lon="8.4801771"/>
+  <node id="27194943" lat="49.4844449" lon="8.4797916"/>
+  <node id="27194944" lat="49.4843180" lon="8.4796614"/>
   <node id="27194947" lat="49.4841730" lon="8.4791326"/>
-  <node id="27194954" lat="49.4852888" lon="8.4805490"/>
+  <node id="27194954" lat="49.4852962" lon="8.4805030"/>
   <node id="27194958" lat="49.4848605" lon="8.4816170"/>
   <node id="27194959" lat="49.4856996" lon="8.4823892"/>
-  <node id="27194960" lat="49.4856194" lon="8.4826039"/>
+  <node id="27194960" lat="49.4856186" lon="8.4825999"/>
   <node id="27194961" lat="49.4847745" lon="8.4818425"/>
   <node id="27194963" lat="49.4843363" lon="8.4811324"/>
   <node id="27194964" lat="49.4833177" lon="8.4802195"/>
@@ -220,7 +2173,7 @@
   <node id="27194968" lat="49.4826595" lon="8.4796071"/>
   <node id="27194969" lat="49.4825794" lon="8.4798180"/>
   <node id="27194974" lat="49.4866598" lon="8.4800779"/>
-  <node id="27194977" lat="49.4852106" lon="8.4804829"/>
+  <node id="27194977" lat="49.4851742" lon="8.4804726"/>
   <node id="27194979" lat="49.4837517" lon="8.4794734"/>
   <node id="27194980" lat="49.4835722" lon="8.4796918"/>
   <node id="27194987" lat="49.4859433" lon="8.4773384"/>
@@ -300,12 +2253,12 @@
   <node id="266024364" lat="49.4819098" lon="8.4773639"/>
   <node id="266024575" lat="49.4813859" lon="8.4750384"/>
   <node id="266024582" lat="49.4818542" lon="8.4754359"/>
-  <node id="266024669" lat="49.4875708" lon="8.4787390">
+  <node id="266024669" lat="49.4875716" lon="8.4787446">
     <tag k="bicycle" v="yes"/>
     <tag k="crossing" v="traffic_signals"/>
     <tag k="highway" v="traffic_signals"/>
   </node>
-  <node id="266745694" lat="49.4971472" lon="8.4841431"/>
+  <node id="266745694" lat="49.4971515" lon="8.4841362"/>
   <node id="266747461" lat="49.4757202" lon="8.4823707"/>
   <node id="266747470" lat="49.4750257" lon="8.4830240"/>
   <node id="266747471" lat="49.4804855" lon="8.4766966"/>
@@ -342,14 +2295,14 @@
   <node id="267408132" lat="49.4967281" lon="8.4781840"/>
   <node id="267408133" lat="49.4977554" lon="8.4783725"/>
   <node id="267408134" lat="49.4972352" lon="8.4787757"/>
-  <node id="267408135" lat="49.4963956" lon="8.4841390"/>
+  <node id="267408135" lat="49.4964092" lon="8.4841299"/>
   <node id="267408136" lat="49.4966170" lon="8.4832407"/>
   <node id="267422296" lat="49.4964188" lon="8.4771437"/>
   <node id="267422298" lat="49.4960542" lon="8.4780592"/>
   <node id="267422299" lat="49.4957313" lon="8.4805437"/>
   <node id="267422300" lat="49.4954520" lon="8.4824292"/>
   <node id="267423732" lat="49.4968202" lon="8.4783483"/>
-  <node id="267423733" lat="49.4950486" lon="8.4841456"/>
+  <node id="267423733" lat="49.4950577" lon="8.4841239"/>
   <node id="267426602" lat="49.4963903" lon="8.4807694"/>
   <node id="267426604" lat="49.4960371" lon="8.4828397"/>
   <node id="267426606" lat="49.4957351" lon="8.4841256"/>
@@ -365,7 +2318,7 @@
   <node id="271083313" lat="49.4865231" lon="8.4758452">
     <tag k="railway" v="level_crossing"/>
   </node>
-  <node id="273870575" lat="49.4968959" lon="8.4851411"/>
+  <node id="273870575" lat="49.4969053" lon="8.4851432"/>
   <node id="280710434" lat="49.4989698" lon="8.4624609"/>
   <node id="280757006" lat="49.5001543" lon="8.4684031"/>
   <node id="280758129" lat="49.5037832" lon="8.4675114"/>
@@ -425,7 +2378,7 @@
   <node id="298375758" lat="49.4964548" lon="8.4750988"/>
   <node id="299228950" lat="49.4867988" lon="8.4800282"/>
   <node id="299228952" lat="49.4866140" lon="8.4796469"/>
-  <node id="299228954" lat="49.4865435" lon="8.4798169"/>
+  <node id="299228954" lat="49.4865434" lon="8.4798091"/>
   <node id="299228957" lat="49.4868030" lon="8.4796703"/>
   <node id="299453436" lat="49.4901973" lon="8.4784748"/>
   <node id="299453836" lat="49.4896594" lon="8.4803255">
@@ -545,10 +2498,10 @@
   </node>
   <node id="534696598" lat="49.4878860" lon="8.4795128"/>
   <node id="561223426" lat="49.4844837" lon="8.4812712"/>
-  <node id="561223427" lat="49.4847633" lon="8.4800714"/>
+  <node id="561223427" lat="49.4847580" lon="8.4800838"/>
   <node id="561223448" lat="49.4845933" lon="8.4813724"/>
-  <node id="569008571" lat="49.4849003" lon="8.4801976"/>
-  <node id="603622538" lat="49.4849942" lon="8.4802830"/>
+  <node id="569008571" lat="49.4848843" lon="8.4802078"/>
+  <node id="603622538" lat="49.4849876" lon="8.4803047"/>
   <node id="669952048" lat="49.4967281" lon="8.4591630"/>
   <node id="669952050" lat="49.4978878" lon="8.4577925"/>
   <node id="717654730" lat="49.4771513" lon="8.4808119"/>
@@ -557,7 +2510,7 @@
   <node id="823456855" lat="49.4958283" lon="8.4611431"/>
   <node id="823457124" lat="49.4961393" lon="8.4576023"/>
   <node id="823457403" lat="49.4957489" lon="8.4585931"/>
-  <node id="872690872" lat="49.4865746" lon="8.4799934"/>
+  <node id="872690872" lat="49.4865673" lon="8.4799867"/>
   <node id="872690875" lat="49.4867063" lon="8.4800836"/>
   <node id="877579545" lat="49.4967865" lon="8.4736643">
     <tag k="crossing" v="traffic_signals"/>
@@ -683,7 +2636,7 @@
   <node id="1205993406" lat="49.4817435" lon="8.4784824"/>
   <node id="1205993545" lat="49.4818526" lon="8.4780341"/>
   <node id="1205993559" lat="49.4818840" lon="8.4778126"/>
-  <node id="1207626751" lat="49.4974561" lon="8.4828560"/>
+  <node id="1207626751" lat="49.4975017" lon="8.4826708"/>
   <node id="1207626864" lat="49.4966397" lon="8.4783928"/>
   <node id="1207626945" lat="49.4966888" lon="8.4780480"/>
   <node id="1207627022" lat="49.4966517" lon="8.4783277"/>
@@ -772,8 +2725,8 @@
   <node id="1300860699" lat="49.4813148" lon="8.4529041"/>
   <node id="1306086427" lat="49.4795801" lon="8.4781698"/>
   <node id="1316106922" lat="49.4864331" lon="8.4760630"/>
-  <node id="1316107029" lat="49.4865769" lon="8.4758040"/>
-  <node id="1316107047" lat="49.4866400" lon="8.4757896"/>
+  <node id="1316107029" lat="49.4865694" lon="8.4758015"/>
+  <node id="1316107047" lat="49.4866282" lon="8.4757762"/>
   <node id="1316107156" lat="49.4868074" lon="8.4761555"/>
   <node id="1316107267" lat="49.4865289" lon="8.4758368"/>
   <node id="1377397659" lat="49.4908767" lon="8.4754500"/>
@@ -898,9 +2851,8 @@
   <node id="1799098143" lat="49.4946853" lon="8.4619854"/>
   <node id="1824762084" lat="49.4888309" lon="8.4788934"/>
   <node id="1824766761" lat="49.4893070" lon="8.4760777"/>
-  <node id="1825219722" lat="49.4967535" lon="8.4857439"/>
-  <node id="1825221206" lat="49.4958769" lon="8.4862395"/>
-  <node id="1825783184" lat="49.4947888" lon="8.4852359"/>
+  <node id="1825219722" lat="49.4967585" lon="8.4857489"/>
+  <node id="1825221206" lat="49.4959146" lon="8.4862687"/>
   <node id="1825783188" lat="49.4953504" lon="8.4857504"/>
   <node id="1838798045" lat="49.4863493" lon="8.4762840"/>
   <node id="1838798046" lat="49.4863062" lon="8.4761629"/>
@@ -910,7 +2862,6 @@
   <node id="1838801950" lat="49.4892014" lon="8.4762443"/>
   <node id="1838816970" lat="49.4965532" lon="8.4750225"/>
   <node id="1838820540" lat="49.5000203" lon="8.4724657"/>
-  <node id="1843177918" lat="49.4825358" lon="8.4794963"/>
   <node id="1883671762" lat="49.4851338" lon="8.4638651"/>
   <node id="1885648056" lat="49.5000660" lon="8.4724923"/>
   <node id="1885653018" lat="49.4996934" lon="8.4756895"/>
@@ -953,5 +2904,6 @@
   <node id="1949669636" lat="49.4849487" lon="8.4624525"/>
   <node id="1949670169" lat="49.4845878" lon="8.4633775"/>
   <node id="1959164145" lat="49.4932672" lon="8.4796926"/>
+  <node id="1990941091" lat="49.4862637" lon="8.4765063"/>
 
 </osm>

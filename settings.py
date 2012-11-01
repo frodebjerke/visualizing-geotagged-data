@@ -14,7 +14,7 @@ STATIC_PATH = os.path.join(PROJECT_PATH, "static")
 UPLOAD_PATH = os.path.join("upload", "%Y", "%m", "%d")
 RES_DIR = os.path.join(PROJECT_PATH,"res")
 MAP_DIR = os.path.join(RES_DIR,"map")
-
+OUT_DIR = os.path.join(RES_DIR,"out")
 TEST_PATH = os.path.join(RES_DIR, "test")
 
 LOG_PATH = os.path.join(PROJECT_PATH, "main.log")

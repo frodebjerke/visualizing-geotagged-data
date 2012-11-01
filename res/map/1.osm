@@ -1,8 +1,5516 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<osm version="0.6" generator="Overpass API">
+<osm version="0.5" generator="Overpass API">
 <note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
-<meta osm_base="2012-10-29T08:58:02Z"/>
+<meta osm_base="2012-11-01T15:19:02Z"/>
 
+  <way id="4403842">
+    <nd ref="1298546250"/>
+    <nd ref="1298546242"/>
+    <nd ref="244371429"/>
+    <nd ref="1838990116"/>
+    <nd ref="1838990117"/>
+    <nd ref="36134739"/>
+    <nd ref="21686478"/>
+    <nd ref="1838990118"/>
+    <nd ref="1838990119"/>
+    <nd ref="26936842"/>
+    <nd ref="1450517100"/>
+    <nd ref="1746106798"/>
+    <nd ref="1746106803"/>
+    <nd ref="1746106831"/>
+    <nd ref="1746106834"/>
+    <nd ref="1746106838"/>
+    <nd ref="1898987654"/>
+    <nd ref="1898987657"/>
+    <nd ref="1898987663"/>
+    <nd ref="1746106846"/>
+    <nd ref="1746106850"/>
+    <nd ref="1746106853"/>
+    <nd ref="1746106855"/>
+    <nd ref="1746106857"/>
+    <nd ref="1746106866"/>
+    <nd ref="1746106867"/>
+    <nd ref="1838801170"/>
+    <nd ref="1746106869"/>
+    <nd ref="1746106875"/>
+    <nd ref="1746106877"/>
+    <nd ref="1746106884"/>
+    <nd ref="1746106888"/>
+    <nd ref="1746106895"/>
+    <nd ref="1746106899"/>
+    <nd ref="1746106903"/>
+    <nd ref="1746106911"/>
+    <nd ref="1746106915"/>
+    <nd ref="1746106919"/>
+    <nd ref="1746106926"/>
+    <nd ref="1746106928"/>
+    <nd ref="1746106930"/>
+    <nd ref="1746106932"/>
+    <nd ref="1746106937"/>
+    <nd ref="1746106941"/>
+    <nd ref="1746106945"/>
+    <nd ref="1824776085"/>
+    <nd ref="1746106960"/>
+    <nd ref="1824789757"/>
+    <nd ref="1746106977"/>
+    <nd ref="1746106979"/>
+    <nd ref="1746106984"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="5097801">
+    <nd ref="175391563"/>
+    <nd ref="1756265359"/>
+    <nd ref="1634558439"/>
+    <nd ref="1756265380"/>
+    <nd ref="282271441"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="5097802">
+    <nd ref="27088495"/>
+    <nd ref="1757470402"/>
+    <nd ref="27088496"/>
+    <nd ref="298375783"/>
+    <nd ref="1757470419"/>
+    <nd ref="1757470423"/>
+    <nd ref="298375787"/>
+    <nd ref="282070101"/>
+    <nd ref="877579594"/>
+    <nd ref="282348137"/>
+    <nd ref="1757470441"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="5209051">
+    <nd ref="298861282"/>
+    <nd ref="1723755945"/>
+    <nd ref="1723755958"/>
+    <nd ref="1235867270"/>
+    <nd ref="1634401684"/>
+    <nd ref="1633156218"/>
+    <nd ref="1633156222"/>
+    <nd ref="1633156229"/>
+    <nd ref="1633156244"/>
+    <nd ref="1633156268"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="22763389">
+    <nd ref="1628415749"/>
+    <nd ref="1898987661"/>
+    <nd ref="1746106842"/>
+    <nd ref="1746106840"/>
+    <nd ref="1746106836"/>
+    <nd ref="1746106832"/>
+    <nd ref="1746106830"/>
+    <nd ref="1746106829"/>
+    <nd ref="1746106828"/>
+    <nd ref="244371476"/>
+    <nd ref="1628419106"/>
+    <nd ref="1978123434"/>
+    <nd ref="1202797810"/>
+    <nd ref="1200236545"/>
+    <nd ref="26936838"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="24377399">
+    <nd ref="175391584"/>
+    <nd ref="1283057075"/>
+    <nd ref="1283057077"/>
+    <nd ref="271081874"/>
+    <nd ref="1283057104"/>
+    <nd ref="1283057102"/>
+    <nd ref="1283057016"/>
+    <nd ref="1283057117"/>
+    <nd ref="1283057106"/>
+    <nd ref="271081873"/>
+    <nd ref="1283057034"/>
+    <nd ref="1283057023"/>
+    <nd ref="175391588"/>
+    <nd ref="1283078830"/>
+    <nd ref="1283078787"/>
+    <nd ref="1283078754"/>
+    <nd ref="1283078722"/>
+    <nd ref="175391593"/>
+    <nd ref="1283078772"/>
+    <nd ref="1283078814"/>
+    <nd ref="1283078714"/>
+    <nd ref="271081856"/>
+    <nd ref="1283078880"/>
+    <nd ref="1283078821"/>
+    <nd ref="1283078680"/>
+    <nd ref="175391597"/>
+    <nd ref="1283078723"/>
+    <nd ref="1283078697"/>
+    <nd ref="1283078846"/>
+    <nd ref="1283078762"/>
+    <nd ref="1283078766"/>
+    <nd ref="1283078803"/>
+    <nd ref="1283078724"/>
+    <nd ref="1283078848"/>
+    <nd ref="271081853"/>
+    <nd ref="1283078735"/>
+    <nd ref="1283078866"/>
+    <nd ref="1283078870"/>
+    <nd ref="1283078771"/>
+    <nd ref="1283078764"/>
+    <nd ref="175391600"/>
+    <nd ref="1283078770"/>
+    <nd ref="1283078786"/>
+    <nd ref="1283078689"/>
+    <nd ref="175391604"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="-2"/>
+    <tag k="railway" v="tram"/>
+    <tag k="tunnel" v="yes"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="24746618">
+    <nd ref="1756301665"/>
+    <nd ref="1743821910"/>
+    <nd ref="275381950"/>
+    <nd ref="268941312"/>
+    <nd ref="1743821899"/>
+    <nd ref="268941316"/>
+    <nd ref="1756324701"/>
+    <nd ref="271076002"/>
+    <nd ref="1756324700"/>
+    <nd ref="268941320"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="24943855">
+    <nd ref="1756301643"/>
+    <nd ref="1756301642"/>
+    <nd ref="271076011"/>
+    <nd ref="275885480"/>
+    <nd ref="1756301637"/>
+    <nd ref="271076013"/>
+    <nd ref="275885476"/>
+    <nd ref="1756301633"/>
+    <nd ref="271076015"/>
+    <nd ref="275885478"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+  </way>
+  <way id="24943857">
+    <nd ref="1756301613"/>
+    <nd ref="1756301615"/>
+    <nd ref="271076026"/>
+    <nd ref="275885474"/>
+    <nd ref="1743821849"/>
+    <nd ref="271076027"/>
+    <nd ref="275885471"/>
+    <nd ref="271076029"/>
+    <nd ref="1756301623"/>
+    <nd ref="1756320014"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="24943858">
+    <nd ref="271076043"/>
+    <nd ref="1262067992"/>
+    <nd ref="271076041"/>
+    <nd ref="271076040"/>
+    <nd ref="1262067967"/>
+    <nd ref="271076038"/>
+    <nd ref="1262067977"/>
+    <nd ref="271076037"/>
+    <nd ref="1757019823"/>
+    <nd ref="271076035"/>
+    <nd ref="271076020"/>
+    <nd ref="271076018"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="24943924">
+    <nd ref="268941335"/>
+    <nd ref="271076513"/>
+    <nd ref="1019984428"/>
+    <nd ref="1757040922"/>
+    <nd ref="268941333"/>
+    <nd ref="1757040915"/>
+    <nd ref="1757040910"/>
+    <nd ref="271076049"/>
+    <nd ref="1757040904"/>
+    <nd ref="1019984268"/>
+    <nd ref="1757040897"/>
+    <nd ref="268941330"/>
+    <nd ref="268941327"/>
+    <nd ref="268941324"/>
+    <nd ref="268941320"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="24943957">
+    <nd ref="271077995"/>
+    <nd ref="1757040858"/>
+    <nd ref="1757040859"/>
+    <nd ref="268941383"/>
+    <nd ref="268941381"/>
+    <nd ref="1241046093"/>
+    <nd ref="1241046073"/>
+    <nd ref="1757040875"/>
+    <nd ref="268941378"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25621925">
+    <nd ref="26936901"/>
+    <nd ref="1628416022"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25621926">
+    <nd ref="1298546250"/>
+    <nd ref="1450516973"/>
+    <nd ref="1450516979"/>
+    <nd ref="1450516994"/>
+    <nd ref="1450516999"/>
+    <nd ref="1450517016"/>
+    <nd ref="1450517029"/>
+    <nd ref="1450517045"/>
+    <nd ref="1450517049"/>
+    <nd ref="1450517056"/>
+    <nd ref="1450517059"/>
+    <nd ref="1450517065"/>
+    <nd ref="1450517066"/>
+    <nd ref="1450517072"/>
+    <nd ref="1450517082"/>
+    <nd ref="1450517085"/>
+    <nd ref="1450517087"/>
+    <nd ref="1202797811"/>
+    <nd ref="26936841"/>
+    <nd ref="1492307454"/>
+    <nd ref="1978123425"/>
+    <nd ref="1200236552"/>
+    <nd ref="1628359360"/>
+    <nd ref="26936839"/>
+    <nd ref="26936838"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25621927">
+    <nd ref="1746106965"/>
+    <nd ref="1746106958"/>
+    <nd ref="1746106944"/>
+    <nd ref="1626172774"/>
+    <nd ref="1746106922"/>
+    <nd ref="930371918"/>
+    <nd ref="1746106913"/>
+    <nd ref="26936889"/>
+    <nd ref="26936893"/>
+    <nd ref="1746106890"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25621957">
+    <nd ref="26936914"/>
+    <nd ref="248787902"/>
+    <nd ref="248787905"/>
+    <nd ref="1206078860"/>
+    <nd ref="1206078895"/>
+    <nd ref="1910220401"/>
+    <nd ref="1206078840"/>
+    <nd ref="1206078837"/>
+    <nd ref="1908803199"/>
+    <nd ref="1206078867"/>
+    <nd ref="1756280825"/>
+    <nd ref="1756280818"/>
+    <nd ref="1547493660"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25621958">
+    <nd ref="1756265329"/>
+    <nd ref="1756265333"/>
+    <nd ref="1381917338"/>
+    <nd ref="1756265336"/>
+    <nd ref="1756265339"/>
+    <nd ref="1756265342"/>
+    <nd ref="1756265343"/>
+    <nd ref="1756265340"/>
+    <nd ref="1756265338"/>
+    <nd ref="1756265335"/>
+    <nd ref="1756265332"/>
+    <nd ref="1756265326"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25621959">
+    <nd ref="26936913"/>
+    <nd ref="1887371250"/>
+    <nd ref="1756280953"/>
+    <nd ref="1436307388"/>
+    <nd ref="248787903"/>
+    <nd ref="248787904"/>
+    <nd ref="1756265281"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25621960">
+    <nd ref="27088450"/>
+    <nd ref="1115527324"/>
+    <nd ref="1757047657"/>
+    <nd ref="27088453"/>
+    <nd ref="1115527319"/>
+    <nd ref="264667806"/>
+    <nd ref="1634392784"/>
+    <nd ref="318324199"/>
+    <nd ref="175391625"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25702892">
+    <nd ref="27088494"/>
+    <nd ref="27088495"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="name" v="Kurpfalzbrücke"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+    <tag k="wikipedia:de" v="Kurpfalzbrücke"/>
+  </way>
+  <way id="25876770">
+    <nd ref="1757470441"/>
+    <nd ref="282260133"/>
+    <nd ref="298375773"/>
+    <nd ref="298375761"/>
+    <nd ref="1885959477"/>
+    <nd ref="251716146"/>
+    <nd ref="1757470456"/>
+    <nd ref="282261805"/>
+    <nd ref="282260137"/>
+    <nd ref="35674973"/>
+    <nd ref="1838816084"/>
+    <nd ref="1838816091"/>
+    <nd ref="1838816090"/>
+    <nd ref="1757470442"/>
+    <nd ref="1757470437"/>
+    <nd ref="1757470433"/>
+    <nd ref="1757470430"/>
+    <nd ref="282260140"/>
+    <nd ref="1757470415"/>
+    <nd ref="1757470408"/>
+    <nd ref="1757470403"/>
+    <nd ref="1757470399"/>
+    <nd ref="282260143"/>
+    <nd ref="24306395"/>
+    <nd ref="1611159573"/>
+    <nd ref="1757470394"/>
+    <nd ref="282260152"/>
+    <nd ref="282260170"/>
+    <nd ref="1188047832"/>
+    <nd ref="1757470390"/>
+    <nd ref="282260173"/>
+    <nd ref="1757470388"/>
+    <nd ref="282260176"/>
+    <nd ref="282260209"/>
+    <nd ref="282260178"/>
+    <nd ref="282260181"/>
+    <nd ref="282260186"/>
+    <nd ref="282260201"/>
+    <nd ref="282260189"/>
+    <nd ref="282260220"/>
+    <nd ref="282260195"/>
+    <nd ref="1757470374"/>
+    <nd ref="1763718525"/>
+    <nd ref="282260196"/>
+    <nd ref="282260199"/>
+    <nd ref="282260224"/>
+    <nd ref="282260200"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25877596">
+    <nd ref="1756265403"/>
+    <nd ref="1756265396"/>
+    <nd ref="1756265388"/>
+    <nd ref="282271403"/>
+    <nd ref="282271408"/>
+    <nd ref="282271413"/>
+    <nd ref="282271419"/>
+    <nd ref="282271424"/>
+    <nd ref="282271430"/>
+    <nd ref="1756265346"/>
+    <nd ref="1756265341"/>
+    <nd ref="1756265329"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25877597">
+    <nd ref="282271441"/>
+    <nd ref="1756265387"/>
+    <nd ref="1756265385"/>
+    <nd ref="282271446"/>
+    <nd ref="282271450"/>
+    <nd ref="282271457"/>
+    <nd ref="282271461"/>
+    <nd ref="282271464"/>
+    <nd ref="282271469"/>
+    <nd ref="1756265371"/>
+    <nd ref="1756265384"/>
+    <nd ref="282271471"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25883964">
+    <nd ref="282271471"/>
+    <nd ref="1756265397"/>
+    <nd ref="1756960876"/>
+    <nd ref="175391565"/>
+    <nd ref="1756265408"/>
+    <nd ref="1756265413"/>
+    <nd ref="175391568"/>
+    <nd ref="1949686843"/>
+    <nd ref="271081858"/>
+    <nd ref="1634480199"/>
+    <nd ref="1634480204"/>
+    <nd ref="175391571"/>
+    <nd ref="1756265430"/>
+    <nd ref="271081860"/>
+    <nd ref="1756265435"/>
+    <nd ref="175391575"/>
+    <nd ref="271081863"/>
+    <nd ref="601589287"/>
+    <nd ref="1283057036"/>
+    <nd ref="271081865"/>
+    <nd ref="271081895"/>
+    <nd ref="1283057121"/>
+    <nd ref="877579642"/>
+    <nd ref="1283057028"/>
+    <nd ref="271081870"/>
+    <nd ref="175391584"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25883988">
+    <nd ref="282271441"/>
+    <nd ref="1756265403"/>
+    <nd ref="27088494"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25884270">
+    <nd ref="25283572"/>
+    <nd ref="1756265335"/>
+    <nd ref="175391563"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25884298">
+    <nd ref="1381852307"/>
+    <nd ref="1381917338"/>
+    <nd ref="282271435"/>
+    <nd ref="175391563"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+  </way>
+  <way id="25890119">
+    <nd ref="1450516846"/>
+    <nd ref="1450516864"/>
+    <nd ref="271083343"/>
+    <nd ref="282418108"/>
+    <nd ref="282418110"/>
+    <nd ref="282418111"/>
+    <nd ref="1298546234"/>
+    <nd ref="1298546221"/>
+    <nd ref="1298546214"/>
+    <nd ref="282418112"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25890120">
+    <nd ref="282418112"/>
+    <nd ref="1298546205"/>
+    <nd ref="1298546219"/>
+    <nd ref="282418114"/>
+    <nd ref="1298546217"/>
+    <nd ref="282418115"/>
+    <nd ref="282418117"/>
+    <nd ref="282418118"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25890121">
+    <nd ref="271083343"/>
+    <nd ref="1298546233"/>
+    <nd ref="1298546227"/>
+    <nd ref="1298546238"/>
+    <nd ref="1450516942"/>
+    <nd ref="282418118"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25890122">
+    <nd ref="1416832010"/>
+    <nd ref="700754586"/>
+    <nd ref="1450516830"/>
+    <nd ref="1450516836"/>
+    <nd ref="271083343"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="25890123">
+    <nd ref="299049933"/>
+    <nd ref="282420113"/>
+    <nd ref="1757095086"/>
+    <nd ref="1637163944"/>
+    <nd ref="282419258"/>
+    <nd ref="1757085009"/>
+    <nd ref="1637163947"/>
+    <nd ref="1637163949"/>
+    <nd ref="282420114"/>
+    <nd ref="282419257"/>
+    <nd ref="282419256"/>
+    <nd ref="1757097880"/>
+    <nd ref="282419255"/>
+    <nd ref="282419254"/>
+    <nd ref="282418126"/>
+    <nd ref="282419253"/>
+    <nd ref="32175697"/>
+    <nd ref="1772602382"/>
+    <nd ref="1772602387"/>
+    <nd ref="1772602396"/>
+    <nd ref="1772602405"/>
+    <nd ref="1772602413"/>
+    <nd ref="1772602420"/>
+    <nd ref="1772602426"/>
+    <nd ref="1772602432"/>
+    <nd ref="1772602434"/>
+    <nd ref="1757085025"/>
+    <nd ref="1757085033"/>
+    <nd ref="1757085041"/>
+    <nd ref="1757085046"/>
+    <nd ref="1757085055"/>
+    <nd ref="1757085061"/>
+    <nd ref="1757085065"/>
+    <nd ref="1757085070"/>
+    <nd ref="1757085073"/>
+    <nd ref="1757085074"/>
+    <nd ref="1757085076"/>
+    <nd ref="1757085078"/>
+    <nd ref="1757085080"/>
+    <nd ref="1757085081"/>
+    <nd ref="1757085082"/>
+    <nd ref="1757085083"/>
+    <nd ref="1757085084"/>
+    <nd ref="1772602563"/>
+    <nd ref="1757085085"/>
+    <nd ref="1450516865"/>
+    <nd ref="282418112"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+    <tag k="source:geometry" v="HiRes aerial imagery"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="26407781">
+    <nd ref="268941320"/>
+    <nd ref="1756324699"/>
+    <nd ref="289321624"/>
+    <nd ref="1756324696"/>
+    <nd ref="1756301648"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="light_rail"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="26783626">
+    <nd ref="293784475"/>
+    <nd ref="1746107100"/>
+    <nd ref="1377405566"/>
+    <nd ref="270650032"/>
+    <nd ref="293784471"/>
+    <nd ref="293784474"/>
+    <nd ref="1746107065"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+  </way>
+  <way id="27134348">
+    <nd ref="1757040920"/>
+    <nd ref="1743822099"/>
+    <nd ref="268941344"/>
+    <nd ref="1743822138"/>
+    <nd ref="271076502"/>
+    <nd ref="1743822196"/>
+    <nd ref="271076504"/>
+    <nd ref="268941341"/>
+    <nd ref="1743822234"/>
+    <nd ref="271076506"/>
+    <nd ref="1743822243"/>
+    <nd ref="271076508"/>
+    <nd ref="1743822248"/>
+    <nd ref="268941338"/>
+    <nd ref="1757040938"/>
+    <nd ref="1743822242"/>
+    <nd ref="271076510"/>
+    <nd ref="271076511"/>
+    <nd ref="297701080"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="2"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="27134349">
+    <nd ref="297701080"/>
+    <nd ref="268941335"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="2"/>
+    <tag k="railway" v="light_rail"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="27183412">
+    <nd ref="298270761"/>
+    <nd ref="1756291012"/>
+    <nd ref="298270769"/>
+    <nd ref="1756291026"/>
+    <nd ref="298270767"/>
+    <nd ref="1756291029"/>
+    <nd ref="175391625"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+  </way>
+  <way id="27231293">
+    <nd ref="298861281"/>
+    <nd ref="298861250"/>
+    <nd ref="298859116"/>
+    <nd ref="1633129283"/>
+    <nd ref="1633156228"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="27338774">
+    <nd ref="298885040"/>
+    <nd ref="1262067863"/>
+    <nd ref="298885035"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="no"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="27429643">
+    <nd ref="175391604"/>
+    <nd ref="1283078832"/>
+    <nd ref="1283078784"/>
+    <nd ref="264499624"/>
+    <nd ref="1115527318"/>
+    <nd ref="301142383"/>
+    <nd ref="1557071375"/>
+    <nd ref="175391606"/>
+    <nd ref="1557071370"/>
+    <nd ref="175391606"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="-1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="tunnel" v="yes"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="27529606">
+    <nd ref="282430027"/>
+    <nd ref="282429893"/>
+    <nd ref="1757047617"/>
+    <nd ref="282429892"/>
+    <nd ref="282429850"/>
+    <nd ref="1757047621"/>
+    <nd ref="282429849"/>
+    <nd ref="244368511"/>
+    <nd ref="271072973"/>
+    <nd ref="1757047629"/>
+    <nd ref="1757047630"/>
+    <nd ref="1757047632"/>
+    <nd ref="244368505"/>
+    <nd ref="1757047637"/>
+    <nd ref="244368501"/>
+    <nd ref="1757047643"/>
+    <nd ref="271072976"/>
+    <nd ref="1757047648"/>
+    <nd ref="27088440"/>
+    <nd ref="1757047653"/>
+    <nd ref="27088441"/>
+    <nd ref="1757047659"/>
+    <nd ref="27088442"/>
+    <nd ref="1757047664"/>
+    <nd ref="27088443"/>
+    <nd ref="1757047669"/>
+    <nd ref="27088444"/>
+    <nd ref="1757047677"/>
+    <nd ref="27088445"/>
+    <nd ref="301142412"/>
+    <nd ref="27088447"/>
+    <nd ref="1633080710"/>
+    <nd ref="271072980"/>
+    <nd ref="1115527245"/>
+    <nd ref="27088449"/>
+    <nd ref="1115527299"/>
+    <nd ref="27088450"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="2"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="27772704">
+    <nd ref="1636514197"/>
+    <nd ref="1636387806"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="38140468">
+    <nd ref="448886765"/>
+    <nd ref="1633105723"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="no"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="usage" v="industrial"/>
+  </way>
+  <way id="51328089">
+    <nd ref="1756291034"/>
+    <nd ref="1756291032"/>
+    <nd ref="1756291014"/>
+    <nd ref="1756291005"/>
+    <nd ref="1362647461"/>
+    <nd ref="1202764581"/>
+    <nd ref="175404650"/>
+    <nd ref="1756290991"/>
+    <nd ref="1756290989"/>
+    <nd ref="1756290983"/>
+    <nd ref="1202759360"/>
+    <nd ref="1756280927"/>
+    <nd ref="25113922"/>
+    <nd ref="26936914"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="52069504">
+    <nd ref="1416839585"/>
+    <nd ref="1744147988"/>
+    <nd ref="1744148002"/>
+    <nd ref="663679274"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="tram"/>
+  </way>
+  <way id="52362293">
+    <nd ref="60465153"/>
+    <nd ref="271084469"/>
+    <nd ref="1628277499"/>
+    <nd ref="1746106939"/>
+    <nd ref="26936888"/>
+    <nd ref="1746106935"/>
+    <nd ref="1746106924"/>
+    <nd ref="1746106917"/>
+    <nd ref="1746106908"/>
+    <nd ref="1746106901"/>
+    <nd ref="1746106897"/>
+    <nd ref="1746106890"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="52362326">
+    <nd ref="1746106930"/>
+    <nd ref="26936888"/>
+    <nd ref="1746106942"/>
+    <nd ref="666047849"/>
+    <nd ref="1626172783"/>
+    <nd ref="1626172781"/>
+    <nd ref="1745975888"/>
+    <nd ref="1746106981"/>
+    <nd ref="271083311"/>
+    <nd ref="1746107011"/>
+    <nd ref="175391495"/>
+    <nd ref="1746107017"/>
+    <nd ref="175391501"/>
+    <nd ref="1746107026"/>
+    <nd ref="1183590567"/>
+    <nd ref="1838801956"/>
+    <nd ref="175391504"/>
+    <nd ref="175391507"/>
+    <nd ref="1892264599"/>
+    <nd ref="175391535"/>
+    <nd ref="175391540"/>
+    <nd ref="1377407010"/>
+    <nd ref="175391545"/>
+    <nd ref="1746107071"/>
+    <nd ref="1746107086"/>
+    <nd ref="1746107098"/>
+    <nd ref="293784479"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="52362342">
+    <nd ref="666047942"/>
+    <nd ref="666047886"/>
+    <nd ref="666047880"/>
+    <nd ref="666047863"/>
+    <nd ref="60465153"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="52362362">
+    <nd ref="1757015667"/>
+    <nd ref="1757015662"/>
+    <nd ref="1757015660"/>
+    <nd ref="1757015651"/>
+    <nd ref="1757015650"/>
+    <nd ref="1959017789"/>
+    <nd ref="1757015648"/>
+    <nd ref="1757015646"/>
+    <nd ref="1757015645"/>
+    <nd ref="1757015643"/>
+    <nd ref="1757015641"/>
+    <nd ref="1757015640"/>
+    <nd ref="1746107012"/>
+    <nd ref="1746107009"/>
+    <nd ref="1824788661"/>
+    <nd ref="1746107006"/>
+    <nd ref="26936881"/>
+    <nd ref="666048061"/>
+    <nd ref="666048048"/>
+    <nd ref="930372235"/>
+    <nd ref="1824776073"/>
+    <nd ref="666048034"/>
+    <nd ref="666047995"/>
+    <nd ref="666047942"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="52362434">
+    <nd ref="1746106937"/>
+    <nd ref="1746106962"/>
+    <nd ref="271084471"/>
+    <nd ref="1746106973"/>
+    <nd ref="930372392"/>
+    <nd ref="1824776087"/>
+    <nd ref="35674922"/>
+    <nd ref="930371798"/>
+    <nd ref="271084479"/>
+    <nd ref="1746106984"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="55454165">
+    <nd ref="1637279035"/>
+    <nd ref="1637279044"/>
+    <nd ref="1637248436"/>
+    <nd ref="1637119193"/>
+    <nd ref="1637119245"/>
+    <nd ref="1637119303"/>
+    <nd ref="1637095486"/>
+    <nd ref="1637095511"/>
+    <nd ref="1637095525"/>
+    <nd ref="1637095550"/>
+    <nd ref="1637095563"/>
+    <nd ref="1637216726"/>
+    <nd ref="1637215875"/>
+    <nd ref="1637195292"/>
+    <nd ref="1637195319"/>
+    <nd ref="1637195333"/>
+    <nd ref="1637163959"/>
+    <nd ref="1208764211"/>
+    <nd ref="1637095593"/>
+    <nd ref="1744147947"/>
+    <nd ref="1637095606"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="0"/>
+    <tag k="railway" v="rail"/>
+    <tag k="ref" v="Gleis 2"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="55454166">
+    <nd ref="1636514197"/>
+    <nd ref="1636387829"/>
+    <nd ref="1921926173"/>
+    <nd ref="1636387834"/>
+    <nd ref="1921926178"/>
+    <nd ref="1636387851"/>
+    <nd ref="1636387854"/>
+    <nd ref="1636387864"/>
+    <nd ref="1636387880"/>
+    <nd ref="1634425728"/>
+    <nd ref="1634425742"/>
+    <nd ref="1634425751"/>
+    <nd ref="1634425754"/>
+    <nd ref="1634425752"/>
+    <nd ref="1634425747"/>
+    <nd ref="1634425738"/>
+    <nd ref="1921926221"/>
+    <nd ref="1634425723"/>
+    <nd ref="1634401697"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="55454167">
+    <nd ref="1636387811"/>
+    <nd ref="1636387817"/>
+    <nd ref="1921926151"/>
+    <nd ref="1636387832"/>
+    <nd ref="1921926176"/>
+    <nd ref="1636514205"/>
+    <nd ref="1921926185"/>
+    <nd ref="1636387857"/>
+    <nd ref="1636387870"/>
+    <nd ref="1634425724"/>
+    <nd ref="1634425737"/>
+    <nd ref="1634425746"/>
+    <nd ref="1634425749"/>
+    <nd ref="1634425748"/>
+    <nd ref="1634425744"/>
+    <nd ref="1634425733"/>
+    <nd ref="1921926218"/>
+    <nd ref="298859126"/>
+    <nd ref="1633129326"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="55454168">
+    <nd ref="1637095600"/>
+    <nd ref="1744147945"/>
+    <nd ref="1637095596"/>
+    <nd ref="1208764235"/>
+    <nd ref="1637163964"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Gleis 1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="55454169">
+    <nd ref="1637095610"/>
+    <nd ref="1636387811"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="55785646">
+    <nd ref="663679282"/>
+    <nd ref="1743821850"/>
+    <nd ref="1743821852"/>
+    <nd ref="1743821855"/>
+    <nd ref="700747893"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="tram"/>
+  </way>
+  <way id="56810796">
+    <nd ref="1636514199"/>
+    <nd ref="1636463034"/>
+    <nd ref="1636463038"/>
+    <nd ref="1921926183"/>
+    <nd ref="1208850487"/>
+    <nd ref="1634430366"/>
+    <nd ref="1636352467"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="56810814">
+    <nd ref="1636387839"/>
+    <nd ref="1636463042"/>
+    <nd ref="1636352466"/>
+    <nd ref="1921926189"/>
+    <nd ref="1636352468"/>
+    <nd ref="1634401686"/>
+    <nd ref="1634401688"/>
+    <nd ref="1634401698"/>
+    <nd ref="1634401699"/>
+    <nd ref="1633156286"/>
+    <nd ref="1633156284"/>
+    <nd ref="1633156281"/>
+    <nd ref="1633156280"/>
+    <nd ref="1633156277"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="56810824">
+    <nd ref="1636527752"/>
+    <nd ref="1636498995"/>
+    <nd ref="1636498993"/>
+    <nd ref="1208850503"/>
+    <nd ref="298721740"/>
+    <nd ref="1637119439"/>
+    <nd ref="1637119435"/>
+    <nd ref="1637119398"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="68643669">
+    <nd ref="622171461"/>
+    <nd ref="25439439"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="note" v="Gleis 3"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="68643680">
+    <nd ref="668086094"/>
+    <nd ref="1636387811"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="68643690">
+    <nd ref="1636352469"/>
+    <nd ref="1636387867"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="68643712">
+    <nd ref="1637095610"/>
+    <nd ref="1636514197"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="94563905">
+    <nd ref="1633105705"/>
+    <nd ref="1633105704"/>
+    <nd ref="1633105701"/>
+    <nd ref="1633105697"/>
+    <nd ref="1633105689"/>
+    <nd ref="1262067862"/>
+    <nd ref="298885046"/>
+    <nd ref="1262067676"/>
+    <nd ref="298885040"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="usage" v="industrial"/>
+  </way>
+  <way id="104229437">
+    <nd ref="25113922"/>
+    <nd ref="1756280932"/>
+    <nd ref="26936913"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="104793953">
+    <nd ref="1637119484"/>
+    <nd ref="1637119479"/>
+    <nd ref="1637119447"/>
+    <nd ref="1637119424"/>
+    <nd ref="1637119402"/>
+    <nd ref="1208764238"/>
+    <nd ref="1637119371"/>
+    <nd ref="1637119363"/>
+    <nd ref="1637163956"/>
+    <nd ref="1637215889"/>
+    <nd ref="1637215885"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="note" v="Gleis 7"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="104793962">
+    <nd ref="1636387811"/>
+    <nd ref="1636514199"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="104793964">
+    <nd ref="1636514199"/>
+    <nd ref="1636463005"/>
+    <nd ref="1637119484"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="note" v="Gleis 7"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="104802137">
+    <nd ref="668086115"/>
+    <nd ref="668086110"/>
+    <nd ref="668086064"/>
+    <nd ref="1636387839"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="104802142">
+    <nd ref="668086115"/>
+    <nd ref="1636463005"/>
+    <nd ref="25439438"/>
+    <nd ref="298721726"/>
+    <nd ref="1208764228"/>
+    <nd ref="1637163960"/>
+    <nd ref="1637163954"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="0"/>
+    <tag k="railway" v="rail"/>
+    <tag k="ref" v="Gleis 4"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="104802732">
+    <nd ref="1410606922"/>
+    <nd ref="1712143350"/>
+    <nd ref="1712143349"/>
+    <nd ref="1712143348"/>
+    <nd ref="911006622"/>
+    <nd ref="1712143347"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="104807388">
+    <nd ref="1636387867"/>
+    <nd ref="710677575"/>
+    <nd ref="1636463040"/>
+    <nd ref="1921926180"/>
+    <nd ref="1636463036"/>
+    <nd ref="1636463007"/>
+    <nd ref="1208850509"/>
+    <nd ref="668086115"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="104807389">
+    <nd ref="298721730"/>
+    <nd ref="1208850511"/>
+    <nd ref="1637119421"/>
+    <nd ref="1637119388"/>
+    <nd ref="1208764225"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="104807393">
+    <nd ref="298721730"/>
+    <nd ref="622171428"/>
+    <nd ref="622171393"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="105171944">
+    <nd ref="1384206307"/>
+    <nd ref="1384206306"/>
+    <nd ref="1773388488"/>
+    <nd ref="1384206305"/>
+    <nd ref="1384206304"/>
+    <nd ref="1773388481"/>
+    <nd ref="1384206303"/>
+    <nd ref="1384206301"/>
+    <nd ref="1773388480"/>
+    <nd ref="1773388479"/>
+    <nd ref="1773388478"/>
+    <nd ref="1384206298"/>
+    <nd ref="1773388477"/>
+    <nd ref="1384206297"/>
+    <nd ref="1384206295"/>
+    <nd ref="1384206294"/>
+    <nd ref="1633105720"/>
+    <nd ref="1384206292"/>
+    <nd ref="1773388476"/>
+    <nd ref="1212003672"/>
+    <nd ref="1384206293"/>
+    <nd ref="1212003686"/>
+    <nd ref="1773431767"/>
+    <nd ref="1212003756"/>
+    <nd ref="1212003612"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="124182225">
+    <nd ref="1636352484"/>
+    <nd ref="1382850642"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="124198886">
+    <nd ref="1628868811"/>
+    <nd ref="1695058693"/>
+    <nd ref="1695058688"/>
+    <nd ref="740018272"/>
+    <nd ref="1764301748"/>
+    <nd ref="1384206314"/>
+    <nd ref="1764301735"/>
+    <nd ref="740018019"/>
+    <nd ref="1628881944"/>
+    <nd ref="740017776"/>
+    <nd ref="1628881943"/>
+    <nd ref="1628881942"/>
+    <nd ref="740017790"/>
+    <nd ref="1628881941"/>
+    <nd ref="1628881940"/>
+    <nd ref="1628881939"/>
+    <nd ref="1926821469"/>
+    <nd ref="740018010"/>
+    <nd ref="1926821467"/>
+    <nd ref="1628968713"/>
+    <nd ref="1628968712"/>
+    <nd ref="1628968709"/>
+    <nd ref="1628968703"/>
+    <nd ref="1629006187"/>
+    <nd ref="1629006186"/>
+    <nd ref="1628968697"/>
+    <nd ref="1628968693"/>
+    <nd ref="1628968692"/>
+    <nd ref="1628868537"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="124337951">
+    <nd ref="1212003686"/>
+    <nd ref="1384206299"/>
+    <nd ref="1384206300"/>
+    <nd ref="1773434563"/>
+    <nd ref="1384206302"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="124337952">
+    <nd ref="1212003672"/>
+    <nd ref="1773431766"/>
+    <nd ref="1384206291"/>
+    <nd ref="1384206290"/>
+    <nd ref="1773431765"/>
+    <nd ref="1633105716"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="124337954">
+    <nd ref="740018047"/>
+    <nd ref="1695156422"/>
+    <nd ref="1695156404"/>
+    <nd ref="448886763"/>
+    <nd ref="448886771"/>
+    <nd ref="740018188"/>
+    <nd ref="448886764"/>
+    <nd ref="740017943"/>
+    <nd ref="1628946985"/>
+    <nd ref="448886765"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="yard"/>
+    <tag k="tracks" v="1"/>
+    <tag k="usage" v="industrial"/>
+  </way>
+  <way id="127454273">
+    <nd ref="1416839585"/>
+    <nd ref="1712143360"/>
+    <nd ref="1410606935"/>
+    <nd ref="1410606932"/>
+    <nd ref="1410606922"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+  </way>
+  <way id="127454276">
+    <nd ref="1410606894"/>
+    <nd ref="1410606892"/>
+    <nd ref="1410606891"/>
+    <nd ref="1410606888"/>
+    <nd ref="1410606800"/>
+    <nd ref="1410606786"/>
+    <nd ref="1410606783"/>
+    <nd ref="1410606778"/>
+    <nd ref="1410606777"/>
+    <nd ref="1410606774"/>
+    <nd ref="1531035218"/>
+    <nd ref="1410606772"/>
+    <nd ref="1410606773"/>
+    <nd ref="1410606775"/>
+    <nd ref="1410606781"/>
+    <nd ref="1410606784"/>
+    <nd ref="1410606787"/>
+    <nd ref="1410606799"/>
+    <nd ref="1410606801"/>
+    <nd ref="1410606804"/>
+    <nd ref="1410606822"/>
+    <nd ref="1410606840"/>
+    <nd ref="1531035220"/>
+    <nd ref="1410606843"/>
+    <nd ref="1410606848"/>
+    <nd ref="1410606853"/>
+    <nd ref="1410606855"/>
+    <nd ref="1410606862"/>
+    <nd ref="1410606872"/>
+    <nd ref="1410606910"/>
+    <nd ref="1410606949"/>
+    <nd ref="1450516790"/>
+    <nd ref="1450516795"/>
+    <nd ref="1450516806"/>
+    <nd ref="1531035383"/>
+    <nd ref="1531035385"/>
+    <nd ref="1450516809"/>
+    <nd ref="1531035404"/>
+    <nd ref="1450516817"/>
+    <nd ref="1450516829"/>
+    <nd ref="1450516833"/>
+    <nd ref="1450516845"/>
+    <nd ref="1450516850"/>
+    <nd ref="1450516853"/>
+    <nd ref="1450516867"/>
+    <nd ref="1450516870"/>
+    <nd ref="1450516879"/>
+    <nd ref="1450516889"/>
+    <nd ref="1450516905"/>
+    <nd ref="1450516886"/>
+    <nd ref="1450516883"/>
+    <nd ref="1450516871"/>
+    <nd ref="1450516855"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="128157151">
+    <nd ref="988748045"/>
+    <nd ref="1416832010"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="131849515">
+    <nd ref="1450517073"/>
+    <nd ref="1450517071"/>
+    <nd ref="1450517068"/>
+    <nd ref="21686477"/>
+    <nd ref="1450517064"/>
+    <nd ref="1450517051"/>
+    <nd ref="1450517048"/>
+    <nd ref="1450517032"/>
+    <nd ref="1450517024"/>
+    <nd ref="1450517020"/>
+    <nd ref="1450517004"/>
+    <nd ref="1450516989"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="0"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="131849516">
+    <nd ref="1450517121"/>
+    <nd ref="1450517118"/>
+    <nd ref="1450517113"/>
+    <nd ref="1628359380"/>
+    <nd ref="1450517109"/>
+    <nd ref="1978123424"/>
+    <nd ref="1492307449"/>
+    <nd ref="1450517091"/>
+    <nd ref="1450517088"/>
+    <nd ref="1450517086"/>
+    <nd ref="1450517084"/>
+    <nd ref="1450517073"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="131849517">
+    <nd ref="1450516855"/>
+    <nd ref="1450516872"/>
+    <nd ref="1298546214"/>
+    <nd ref="1450516908"/>
+    <nd ref="1450516909"/>
+    <nd ref="1450516917"/>
+    <nd ref="1450516938"/>
+    <nd ref="1450516939"/>
+    <nd ref="1450516942"/>
+    <nd ref="1450516944"/>
+    <nd ref="1450516947"/>
+    <nd ref="1450516962"/>
+    <nd ref="1450516965"/>
+    <nd ref="1450516971"/>
+    <nd ref="1450516975"/>
+    <nd ref="1450516989"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="131849519">
+    <nd ref="282418118"/>
+    <nd ref="1298546250"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="131849522">
+    <nd ref="1450516855"/>
+    <nd ref="282811321"/>
+    <nd ref="1927733860"/>
+    <nd ref="1637262242"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="131849523">
+    <nd ref="1450516836"/>
+    <nd ref="1450516843"/>
+    <nd ref="1450516845"/>
+    <tag k="FIXME" v="Gleisverbindungen fehlen, Relationen"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="131849524">
+    <nd ref="26936838"/>
+    <nd ref="1450517126"/>
+    <nd ref="25422078"/>
+    <nd ref="1547493660"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="131849525">
+    <nd ref="1450516846"/>
+    <nd ref="1450516835"/>
+    <nd ref="1450516832"/>
+    <nd ref="1450516826"/>
+    <nd ref="1450516815"/>
+    <nd ref="1531035409"/>
+    <nd ref="1450516793"/>
+    <nd ref="1450516792"/>
+    <nd ref="1410606950"/>
+    <nd ref="1410606878"/>
+    <nd ref="1410606869"/>
+    <nd ref="1410606864"/>
+    <nd ref="1410606859"/>
+    <nd ref="1410606856"/>
+    <nd ref="1410606854"/>
+    <nd ref="1410606851"/>
+    <nd ref="1410606849"/>
+    <nd ref="1410606846"/>
+    <nd ref="1410606844"/>
+    <nd ref="1410606842"/>
+    <nd ref="1410606837"/>
+    <nd ref="1531035231"/>
+    <nd ref="1410606828"/>
+    <nd ref="1410606821"/>
+    <nd ref="1410606818"/>
+    <nd ref="1410606816"/>
+    <nd ref="1410606806"/>
+    <nd ref="1410606808"/>
+    <nd ref="1410606817"/>
+    <nd ref="1410606820"/>
+    <nd ref="1410606826"/>
+    <nd ref="1410606835"/>
+    <nd ref="1410606896"/>
+    <nd ref="1410606908"/>
+    <nd ref="1410606913"/>
+    <nd ref="1531035260"/>
+    <nd ref="1410606916"/>
+    <nd ref="1410606917"/>
+    <nd ref="1410606920"/>
+    <nd ref="1410606921"/>
+    <nd ref="1410606923"/>
+    <nd ref="1410606924"/>
+    <nd ref="1712143352"/>
+    <nd ref="1712143353"/>
+    <nd ref="1712143354"/>
+    <nd ref="1712143355"/>
+    <nd ref="1712143356"/>
+    <nd ref="1712143358"/>
+    <nd ref="1712143360"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="131849528">
+    <nd ref="1628416022"/>
+    <nd ref="1450517105"/>
+    <nd ref="1450517090"/>
+    <nd ref="1450517085"/>
+    <nd ref="1450517073"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="131849529">
+    <nd ref="1450516989"/>
+    <nd ref="1450516968"/>
+    <nd ref="1450516948"/>
+    <nd ref="1450516946"/>
+    <nd ref="1450516920"/>
+    <nd ref="1450516912"/>
+    <nd ref="1450516882"/>
+    <nd ref="1450516846"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="142250899">
+    <nd ref="248780656"/>
+    <nd ref="1557191214"/>
+    <nd ref="1557069049"/>
+    <nd ref="1557191213"/>
+    <nd ref="301232259"/>
+    <nd ref="1557191212"/>
+    <nd ref="248780657"/>
+    <nd ref="1557191211"/>
+    <nd ref="1362647459"/>
+    <nd ref="1557191209"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="149948459">
+    <nd ref="1628868537"/>
+    <nd ref="1628868509"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="no"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149948460">
+    <nd ref="448886763"/>
+    <nd ref="1628868414"/>
+    <nd ref="1695156403"/>
+    <nd ref="1628868452"/>
+    <nd ref="1628868499"/>
+    <nd ref="1628868540"/>
+    <nd ref="1628868569"/>
+    <nd ref="1628868624"/>
+    <nd ref="1628868658"/>
+    <nd ref="1628868672"/>
+    <nd ref="1628868689"/>
+    <nd ref="1628868700"/>
+    <nd ref="1628868736"/>
+    <nd ref="1695058690"/>
+    <nd ref="1628868816"/>
+    <nd ref="1695058737"/>
+    <nd ref="1628868818"/>
+    <nd ref="1695058745"/>
+    <nd ref="1695058757"/>
+    <nd ref="1628868825"/>
+    <nd ref="1695058764"/>
+    <nd ref="1628868837"/>
+    <nd ref="1628868841"/>
+    <nd ref="1628868850"/>
+    <nd ref="1695058865"/>
+    <nd ref="1628868859"/>
+    <nd ref="1628868865"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="yard"/>
+    <tag k="tracks" v="1"/>
+    <tag k="usage" v="industrial"/>
+  </way>
+  <way id="149948465">
+    <nd ref="1628868495"/>
+    <nd ref="1761373212"/>
+    <nd ref="1628868488"/>
+    <nd ref="1628868464"/>
+    <nd ref="1628868422"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149948472">
+    <nd ref="1628868505"/>
+    <nd ref="1761373216"/>
+    <nd ref="1628868503"/>
+    <nd ref="1628868495"/>
+    <nd ref="1761373214"/>
+    <nd ref="1628868491"/>
+    <nd ref="1628868470"/>
+    <nd ref="1628868423"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149948482">
+    <nd ref="1628868509"/>
+    <nd ref="1628868505"/>
+    <nd ref="1628868467"/>
+    <nd ref="1628868460"/>
+    <nd ref="1628868457"/>
+    <nd ref="1628868447"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149951192">
+    <nd ref="448886764"/>
+    <nd ref="1926912505"/>
+    <nd ref="265625264"/>
+    <nd ref="1695156406"/>
+    <nd ref="740018289"/>
+    <nd ref="740018047"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="yard"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956796">
+    <nd ref="740018010"/>
+    <nd ref="1926821465"/>
+    <nd ref="1926821464"/>
+    <nd ref="1628947196"/>
+    <nd ref="1695226711"/>
+    <nd ref="1926881848"/>
+    <nd ref="1628947184"/>
+    <nd ref="1926821459"/>
+    <nd ref="1926881847"/>
+    <nd ref="1926881845"/>
+    <nd ref="1628947182"/>
+    <nd ref="1628947169"/>
+    <nd ref="1628947162"/>
+    <nd ref="1628947136"/>
+    <nd ref="1926881842"/>
+    <nd ref="1628947128"/>
+    <nd ref="1695125540"/>
+    <nd ref="1695125539"/>
+    <nd ref="1628947118"/>
+    <nd ref="1628947116"/>
+    <nd ref="1926881750"/>
+    <nd ref="1628947112"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956797">
+    <nd ref="1628947080"/>
+    <nd ref="1628947085"/>
+    <nd ref="1628947089"/>
+    <nd ref="1628947091"/>
+    <nd ref="1628947134"/>
+    <nd ref="1628947154"/>
+    <nd ref="1628947160"/>
+    <nd ref="1628947199"/>
+    <nd ref="1628947208"/>
+    <nd ref="1628947214"/>
+    <nd ref="1628947218"/>
+    <nd ref="1628947222"/>
+    <nd ref="1764301638"/>
+    <nd ref="1628947223"/>
+    <nd ref="1628947225"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956798">
+    <nd ref="1628946997"/>
+    <nd ref="1628947017"/>
+    <nd ref="1628947026"/>
+    <nd ref="1926912604"/>
+    <nd ref="1711624784"/>
+    <nd ref="1628947072"/>
+    <nd ref="1711624871"/>
+    <nd ref="1628947074"/>
+    <nd ref="1628947078"/>
+    <nd ref="1628947083"/>
+    <nd ref="1628947087"/>
+    <nd ref="1628947125"/>
+    <nd ref="1628947157"/>
+    <nd ref="1628947186"/>
+    <nd ref="1628947201"/>
+    <nd ref="1628947209"/>
+    <nd ref="1628947211"/>
+    <nd ref="1628947216"/>
+    <nd ref="1628947220"/>
+    <nd ref="1695158164"/>
+    <nd ref="1628947224"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956800">
+    <nd ref="1628947020"/>
+    <nd ref="1926912599"/>
+    <nd ref="1628947066"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="siding"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956801">
+    <nd ref="1628947125"/>
+    <nd ref="1628947134"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956802">
+    <nd ref="1628947162"/>
+    <nd ref="1628947158"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956803">
+    <nd ref="1628947087"/>
+    <nd ref="1628947091"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956805">
+    <nd ref="1628947029"/>
+    <nd ref="1628947037"/>
+    <nd ref="1628947048"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956806">
+    <nd ref="1628947032"/>
+    <nd ref="1926912611"/>
+    <nd ref="1628947042"/>
+    <nd ref="1628947070"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956807">
+    <nd ref="1628947018"/>
+    <nd ref="1628947029"/>
+    <nd ref="1926912606"/>
+    <nd ref="1628947045"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956808">
+    <nd ref="1628947016"/>
+    <nd ref="1628947023"/>
+    <nd ref="1926912601"/>
+    <nd ref="1628947064"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="siding"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956811">
+    <nd ref="1628947178"/>
+    <nd ref="1628947158"/>
+    <nd ref="1628947139"/>
+    <nd ref="1628947128"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956812">
+    <nd ref="1628947051"/>
+    <nd ref="1628947039"/>
+    <nd ref="1628947035"/>
+    <nd ref="1628947000"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956813">
+    <nd ref="1628947017"/>
+    <nd ref="1628947018"/>
+    <nd ref="1628947032"/>
+    <nd ref="1926912633"/>
+    <nd ref="1628947068"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956814">
+    <nd ref="1628946997"/>
+    <nd ref="1628947016"/>
+    <nd ref="1628947020"/>
+    <nd ref="1926912609"/>
+    <nd ref="1628947050"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="siding"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956816">
+    <nd ref="1628947139"/>
+    <nd ref="1926881843"/>
+    <nd ref="1628947131"/>
+    <nd ref="1628947123"/>
+    <nd ref="1695125538"/>
+    <nd ref="1695125537"/>
+    <nd ref="1628947114"/>
+    <nd ref="1926881747"/>
+    <nd ref="1628947109"/>
+    <nd ref="1628947093"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956817">
+    <nd ref="1628947003"/>
+    <nd ref="1628947051"/>
+    <nd ref="1628947121"/>
+    <nd ref="1628947130"/>
+    <nd ref="1628947166"/>
+    <nd ref="1628947204"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149956818">
+    <nd ref="1628946985"/>
+    <nd ref="1628946986"/>
+    <nd ref="1628946987"/>
+    <nd ref="1926912502"/>
+    <nd ref="1628946988"/>
+    <nd ref="1926912507"/>
+    <nd ref="1926912509"/>
+    <nd ref="1628946989"/>
+    <nd ref="1628946991"/>
+    <nd ref="1926912533"/>
+    <nd ref="1628946993"/>
+    <nd ref="1628946997"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="siding"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149959678">
+    <nd ref="1628968714"/>
+    <nd ref="669952060"/>
+    <nd ref="669952058"/>
+    <nd ref="1773434540"/>
+    <nd ref="669952056"/>
+    <nd ref="669952055"/>
+    <nd ref="669952052"/>
+    <nd ref="669952045"/>
+    <nd ref="669952044"/>
+    <nd ref="669952043"/>
+    <nd ref="669952041"/>
+    <nd ref="1773433956"/>
+    <nd ref="669952040"/>
+    <nd ref="669952037"/>
+    <nd ref="669952036"/>
+    <nd ref="669952033"/>
+    <nd ref="1773433953"/>
+    <nd ref="1773433951"/>
+    <nd ref="1773433935"/>
+    <nd ref="668086163"/>
+    <nd ref="1773433930"/>
+    <nd ref="668086162"/>
+    <nd ref="668086159"/>
+    <nd ref="1383029772"/>
+    <nd ref="668086154"/>
+    <nd ref="1383029764"/>
+    <nd ref="668086166"/>
+    <nd ref="668086165"/>
+    <nd ref="668086150"/>
+    <nd ref="1773433924"/>
+    <nd ref="668086148"/>
+    <nd ref="1383029746"/>
+    <nd ref="668086145"/>
+    <nd ref="668086146"/>
+    <nd ref="668086122"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="149959682">
+    <nd ref="264499117"/>
+    <nd ref="668086147"/>
+    <nd ref="25629162"/>
+    <nd ref="1383029748"/>
+    <nd ref="25629161"/>
+    <nd ref="1773433926"/>
+    <nd ref="668086149"/>
+    <nd ref="25629160"/>
+    <nd ref="301143360"/>
+    <nd ref="1383029769"/>
+    <nd ref="301143359"/>
+    <nd ref="1383029773"/>
+    <nd ref="25629159"/>
+    <nd ref="668086160"/>
+    <nd ref="1773433928"/>
+    <nd ref="877901098"/>
+    <nd ref="1773433933"/>
+    <nd ref="25629158"/>
+    <nd ref="1773433954"/>
+    <nd ref="669952032"/>
+    <nd ref="25629157"/>
+    <nd ref="669952035"/>
+    <nd ref="669952038"/>
+    <nd ref="1773433955"/>
+    <nd ref="669952039"/>
+    <nd ref="25629156"/>
+    <nd ref="669952042"/>
+    <nd ref="132610728"/>
+    <nd ref="669952051"/>
+    <nd ref="25629155"/>
+    <nd ref="669952054"/>
+    <nd ref="1773434539"/>
+    <nd ref="25629154"/>
+    <nd ref="669952059"/>
+    <nd ref="132610740"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="149959685">
+    <nd ref="1628968709"/>
+    <nd ref="1628968707"/>
+    <nd ref="1628968705"/>
+    <nd ref="1628968701"/>
+    <nd ref="1628968699"/>
+    <nd ref="1628968694"/>
+    <nd ref="1628968692"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149963323">
+    <nd ref="1629006187"/>
+    <nd ref="410703821"/>
+    <nd ref="1629006184"/>
+    <nd ref="1629006183"/>
+    <nd ref="1629006182"/>
+    <nd ref="1629006180"/>
+    <nd ref="1629006178"/>
+    <nd ref="1629006176"/>
+    <nd ref="1761387213"/>
+    <nd ref="1629006174"/>
+    <nd ref="1629006171"/>
+    <nd ref="1629006170"/>
+    <nd ref="1629006167"/>
+    <nd ref="1629006157"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149963324">
+    <nd ref="1629006171"/>
+    <nd ref="1629006172"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149963325">
+    <nd ref="1629006173"/>
+    <nd ref="1629006174"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149963326">
+    <nd ref="1629006168"/>
+    <nd ref="1629006167"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="149963327">
+    <nd ref="1629006158"/>
+    <nd ref="1629006168"/>
+    <nd ref="1629006169"/>
+    <nd ref="1629006172"/>
+    <nd ref="1629006173"/>
+    <nd ref="1629006175"/>
+    <nd ref="1629006177"/>
+    <nd ref="1761387219"/>
+    <nd ref="1629006179"/>
+    <nd ref="1629006181"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389407">
+    <nd ref="1633080871"/>
+    <nd ref="1695074420"/>
+    <nd ref="1633080861"/>
+    <nd ref="1633080838"/>
+    <nd ref="1633080783"/>
+    <nd ref="1633080745"/>
+    <nd ref="1633080739"/>
+    <nd ref="1633080718"/>
+    <nd ref="1633080684"/>
+    <nd ref="1633080646"/>
+    <nd ref="1926998238"/>
+    <nd ref="1633080585"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389411">
+    <nd ref="1633080820"/>
+    <nd ref="1695074417"/>
+    <nd ref="1633080810"/>
+    <nd ref="1633080714"/>
+    <nd ref="1633080683"/>
+    <nd ref="1633080671"/>
+    <nd ref="1633080653"/>
+    <nd ref="1633080592"/>
+    <nd ref="1926998230"/>
+    <nd ref="1633080585"/>
+    <nd ref="1633080584"/>
+    <nd ref="1926998223"/>
+    <nd ref="1633080581"/>
+    <nd ref="1633080576"/>
+    <nd ref="1633080570"/>
+    <nd ref="1633080568"/>
+    <nd ref="1633080563"/>
+    <nd ref="1633105718"/>
+    <nd ref="1633080560"/>
+    <nd ref="1633080558"/>
+    <nd ref="1633080554"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389419">
+    <nd ref="1633080542"/>
+    <nd ref="1633080546"/>
+    <nd ref="1633080567"/>
+    <nd ref="1633080601"/>
+    <nd ref="1633080606"/>
+    <nd ref="1633080620"/>
+    <nd ref="1633080637"/>
+    <nd ref="1633080655"/>
+    <nd ref="1633080664"/>
+    <nd ref="1633080682"/>
+    <nd ref="1633080738"/>
+    <nd ref="1633080762"/>
+    <nd ref="1633080768"/>
+    <nd ref="1633080785"/>
+    <nd ref="1633080805"/>
+    <nd ref="1633080812"/>
+    <nd ref="1633080845"/>
+    <nd ref="1633080870"/>
+    <nd ref="1633080886"/>
+    <nd ref="1764301562"/>
+    <nd ref="1633080898"/>
+    <nd ref="1633080911"/>
+    <nd ref="1764301593"/>
+    <nd ref="1633080933"/>
+    <nd ref="1764301612"/>
+    <nd ref="1764301618"/>
+    <nd ref="1633080938"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389420">
+    <nd ref="1633080509"/>
+    <nd ref="1633080527"/>
+    <nd ref="1633080549"/>
+    <nd ref="1633080566"/>
+    <nd ref="1633080597"/>
+    <nd ref="1633080605"/>
+    <nd ref="1633080618"/>
+    <nd ref="1633080630"/>
+    <nd ref="1633080650"/>
+    <nd ref="1633080663"/>
+    <nd ref="1633080681"/>
+    <nd ref="1633080736"/>
+    <nd ref="1633080761"/>
+    <nd ref="1633080766"/>
+    <nd ref="1633080784"/>
+    <nd ref="1633080804"/>
+    <nd ref="1633080813"/>
+    <nd ref="1633080826"/>
+    <nd ref="1633080844"/>
+    <nd ref="1633080864"/>
+    <nd ref="1633080890"/>
+    <nd ref="1764301561"/>
+    <nd ref="1633080896"/>
+    <nd ref="1633080903"/>
+    <nd ref="1633080917"/>
+    <nd ref="1764301603"/>
+    <nd ref="1764301611"/>
+    <nd ref="1633080938"/>
+    <nd ref="1695058558"/>
+    <nd ref="1633080965"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389421">
+    <nd ref="1633080859"/>
+    <nd ref="1764301487"/>
+    <nd ref="1633080850"/>
+    <nd ref="1633080842"/>
+    <nd ref="1926970231"/>
+    <nd ref="1633080827"/>
+    <nd ref="1633080825"/>
+    <nd ref="1633080818"/>
+    <nd ref="1633080798"/>
+    <nd ref="1633080780"/>
+    <nd ref="1633080764"/>
+    <nd ref="1633080755"/>
+    <nd ref="1633080743"/>
+    <nd ref="1633080699"/>
+    <nd ref="1633080680"/>
+    <nd ref="1633080667"/>
+    <nd ref="1633080648"/>
+    <nd ref="1633080632"/>
+    <nd ref="1633080616"/>
+    <nd ref="1633080582"/>
+    <nd ref="1633080564"/>
+    <nd ref="1633080557"/>
+    <nd ref="1633080555"/>
+    <nd ref="1633080553"/>
+    <nd ref="1633080551"/>
+    <nd ref="1633080547"/>
+    <nd ref="1633080534"/>
+    <nd ref="1633080531"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389422">
+    <nd ref="1633080513"/>
+    <nd ref="1633080519"/>
+    <nd ref="1633080527"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389424">
+    <nd ref="1633080573"/>
+    <nd ref="1633080574"/>
+    <nd ref="1633080577"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389425">
+    <nd ref="1633080508"/>
+    <nd ref="1633080511"/>
+    <nd ref="1633080515"/>
+    <nd ref="1633080520"/>
+    <nd ref="1633080533"/>
+    <nd ref="1633080544"/>
+    <nd ref="1633080550"/>
+    <nd ref="1633080552"/>
+    <nd ref="1633080556"/>
+    <nd ref="1633080559"/>
+    <nd ref="1633080622"/>
+    <nd ref="1633080641"/>
+    <nd ref="1633080662"/>
+    <nd ref="1633080673"/>
+    <nd ref="1633080705"/>
+    <nd ref="1633080751"/>
+    <nd ref="1633080765"/>
+    <nd ref="1633080787"/>
+    <nd ref="1633080800"/>
+    <nd ref="1633080817"/>
+    <nd ref="1633080828"/>
+    <nd ref="1764301468"/>
+    <nd ref="1633080846"/>
+    <nd ref="1633080859"/>
+    <nd ref="1695058520"/>
+    <nd ref="1633080888"/>
+    <nd ref="1633080891"/>
+    <nd ref="1633105740"/>
+    <nd ref="1633080916"/>
+    <nd ref="1633080921"/>
+    <nd ref="1633080936"/>
+    <nd ref="1633080945"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389426">
+    <nd ref="1633080592"/>
+    <nd ref="1926998229"/>
+    <nd ref="1633080583"/>
+    <nd ref="1926998204"/>
+    <nd ref="1633080579"/>
+    <nd ref="1633080561"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389428">
+    <nd ref="1633080653"/>
+    <nd ref="1633080644"/>
+    <nd ref="1926998338"/>
+    <nd ref="1633080635"/>
+    <nd ref="1926998287"/>
+    <nd ref="1633080623"/>
+    <nd ref="1633080612"/>
+    <nd ref="1633080599"/>
+    <nd ref="1633080586"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389429">
+    <nd ref="1633080520"/>
+    <nd ref="1633080529"/>
+    <nd ref="1633080530"/>
+    <nd ref="1633080532"/>
+    <nd ref="1633080536"/>
+    <nd ref="1633080542"/>
+    <nd ref="1633080549"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150389430">
+    <nd ref="1633080563"/>
+    <nd ref="1633080565"/>
+    <nd ref="1633080569"/>
+    <nd ref="1633080571"/>
+    <nd ref="1633080573"/>
+    <nd ref="1633080575"/>
+    <nd ref="1633080578"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150393264">
+    <nd ref="668086122"/>
+    <nd ref="668086128"/>
+    <nd ref="668086126"/>
+    <nd ref="668086123"/>
+    <nd ref="668086120"/>
+    <nd ref="1633105711"/>
+    <nd ref="1633105708"/>
+    <nd ref="1633105706"/>
+    <nd ref="1633105702"/>
+    <nd ref="1633105699"/>
+    <nd ref="1633105696"/>
+    <nd ref="1634425740"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="0"/>
+    <tag k="note" v="Gleis 4"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150393265">
+    <nd ref="1634425745"/>
+    <nd ref="1633105698"/>
+    <nd ref="1633105700"/>
+    <nd ref="1633105703"/>
+    <nd ref="1633105707"/>
+    <nd ref="1633105709"/>
+    <nd ref="1633105713"/>
+    <nd ref="668086125"/>
+    <nd ref="34022410"/>
+    <nd ref="34022407"/>
+    <nd ref="668086129"/>
+    <nd ref="264499117"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150393266">
+    <nd ref="1633105723"/>
+    <nd ref="448886767"/>
+    <nd ref="448886768"/>
+    <nd ref="448886769"/>
+    <nd ref="448886770"/>
+    <nd ref="1633105717"/>
+    <nd ref="1633080554"/>
+    <nd ref="1633105716"/>
+    <nd ref="448886786"/>
+    <nd ref="448886787"/>
+    <nd ref="448886788"/>
+    <nd ref="448886789"/>
+    <nd ref="448886790"/>
+    <nd ref="1633080508"/>
+    <nd ref="1633105714"/>
+    <nd ref="1633105712"/>
+    <nd ref="1633105710"/>
+    <nd ref="1633105705"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="usage" v="industrial"/>
+  </way>
+  <way id="150395812">
+    <nd ref="1633129313"/>
+    <nd ref="1633129310"/>
+    <nd ref="1633129306"/>
+    <nd ref="1921926190"/>
+    <nd ref="1633129301"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150395814">
+    <nd ref="1633129326"/>
+    <nd ref="1633129308"/>
+    <nd ref="1633129306"/>
+    <nd ref="1633156228"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150398311">
+    <nd ref="1633156277"/>
+    <nd ref="1633156269"/>
+    <nd ref="1633156241"/>
+    <nd ref="1633156234"/>
+    <nd ref="1633156228"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150398314">
+    <nd ref="1634401678"/>
+    <nd ref="1633156219"/>
+    <nd ref="1633156227"/>
+    <nd ref="1633156236"/>
+    <nd ref="1633156247"/>
+    <nd ref="1633156275"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150541500">
+    <nd ref="1634401698"/>
+    <nd ref="1634401703"/>
+    <nd ref="1634401707"/>
+    <nd ref="1634401704"/>
+    <nd ref="1634401700"/>
+    <nd ref="1634401696"/>
+    <nd ref="1633129313"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150541503">
+    <nd ref="1634401697"/>
+    <nd ref="1633129311"/>
+    <nd ref="1633129304"/>
+    <nd ref="1633129301"/>
+    <nd ref="1633129286"/>
+    <nd ref="1633129245"/>
+    <nd ref="715909553"/>
+    <nd ref="1723755926"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150543797">
+    <nd ref="1634425740"/>
+    <nd ref="1634425731"/>
+    <nd ref="1634425726"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="-1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="tunnel" v="yes"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150543799">
+    <nd ref="1634425730"/>
+    <nd ref="1634425735"/>
+    <nd ref="1634425745"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="-1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="tunnel" v="yes"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150544178">
+    <nd ref="1634430366"/>
+    <nd ref="1921926188"/>
+    <nd ref="710677584"/>
+    <nd ref="1262067908"/>
+    <nd ref="668086024"/>
+    <nd ref="668086028"/>
+    <nd ref="1262067674"/>
+    <nd ref="1262067915"/>
+    <nd ref="668086018"/>
+    <nd ref="1634430371"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="siding"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150554187">
+    <nd ref="26936914"/>
+    <nd ref="1634524487"/>
+    <nd ref="26936916"/>
+    <nd ref="1202759358"/>
+    <nd ref="1202759351"/>
+    <nd ref="1202759362"/>
+    <nd ref="26936915"/>
+    <nd ref="26936913"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="light_rail"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="150661821">
+    <nd ref="1756265281"/>
+    <nd ref="1756265308"/>
+    <nd ref="1756265310"/>
+    <nd ref="1756265318"/>
+    <nd ref="1756265328"/>
+    <nd ref="282271368"/>
+    <nd ref="282271371"/>
+    <nd ref="282271393"/>
+    <nd ref="1756265337"/>
+    <nd ref="282271373"/>
+    <nd ref="282271376"/>
+    <nd ref="282271399"/>
+    <nd ref="1756265330"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="150663770">
+    <nd ref="293784479"/>
+    <nd ref="293784478"/>
+    <nd ref="293784477"/>
+    <nd ref="1377405567"/>
+    <nd ref="1230314875"/>
+    <nd ref="1377405569"/>
+    <nd ref="1746107109"/>
+    <nd ref="1746107111"/>
+    <nd ref="293784475"/>
+    <nd ref="1746107142"/>
+    <nd ref="270650030"/>
+    <nd ref="1230314952"/>
+    <nd ref="293784467"/>
+    <nd ref="1746107155"/>
+    <nd ref="270650029"/>
+    <nd ref="270951856"/>
+    <nd ref="1377397712"/>
+    <nd ref="270650022"/>
+    <nd ref="1377397710"/>
+    <nd ref="1746107131"/>
+    <nd ref="1746107078"/>
+    <nd ref="1746107061"/>
+    <nd ref="1746107050"/>
+    <nd ref="1746107046"/>
+    <nd ref="270650027"/>
+    <nd ref="1808541819"/>
+    <nd ref="270650320"/>
+    <nd ref="270650321"/>
+    <nd ref="1757009030"/>
+    <nd ref="1757009026"/>
+    <nd ref="36301170"/>
+    <nd ref="1757009023"/>
+    <nd ref="36301169"/>
+    <nd ref="1755305951"/>
+    <nd ref="1757009018"/>
+    <nd ref="1757009014"/>
+    <nd ref="1755308197"/>
+    <nd ref="1757008996"/>
+    <nd ref="30561581"/>
+    <nd ref="1757008990"/>
+    <nd ref="1755308195"/>
+    <nd ref="1757008986"/>
+    <nd ref="1755308196"/>
+    <nd ref="60458776"/>
+    <nd ref="1757008981"/>
+    <nd ref="1687158342"/>
+    <nd ref="1757008977"/>
+    <nd ref="1757008973"/>
+    <nd ref="1687158341"/>
+    <nd ref="1757008966"/>
+    <nd ref="1757008951"/>
+    <nd ref="1757008949"/>
+    <nd ref="1757008941"/>
+    <nd ref="1757008930"/>
+    <nd ref="1757008906"/>
+    <nd ref="1757008896"/>
+    <nd ref="270652317"/>
+    <nd ref="30561588"/>
+    <nd ref="1756709822"/>
+    <nd ref="1756936011"/>
+    <nd ref="1756709820"/>
+    <nd ref="244372398"/>
+    <nd ref="1757008859"/>
+    <nd ref="1756574794"/>
+    <nd ref="1756574792"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="light_rail"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="150663772">
+    <nd ref="666047942"/>
+    <nd ref="1635553413"/>
+    <nd ref="666048164"/>
+    <nd ref="1824771783"/>
+    <nd ref="1746106967"/>
+    <nd ref="1746106965"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="150694606">
+    <nd ref="1746106984"/>
+    <nd ref="1824788660"/>
+    <nd ref="26936876"/>
+    <nd ref="1635848180"/>
+    <nd ref="1635848190"/>
+    <nd ref="1757015642"/>
+    <nd ref="1757015644"/>
+    <nd ref="26936872"/>
+    <nd ref="1757015647"/>
+    <nd ref="1757015649"/>
+    <nd ref="1959017786"/>
+    <nd ref="1635803754"/>
+    <nd ref="1757015652"/>
+    <nd ref="258933791"/>
+    <nd ref="270647705"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="150747544">
+    <nd ref="1633156275"/>
+    <nd ref="1921926195"/>
+    <nd ref="1636352479"/>
+    <nd ref="1636352480"/>
+    <nd ref="1921926197"/>
+    <nd ref="1636352474"/>
+    <nd ref="1636352471"/>
+    <nd ref="1382850641"/>
+    <nd ref="668086035"/>
+    <nd ref="1636352465"/>
+    <nd ref="1921926184"/>
+    <nd ref="1636352462"/>
+    <nd ref="1636352460"/>
+    <nd ref="1636352458"/>
+    <nd ref="1921926148"/>
+    <nd ref="1636352457"/>
+    <nd ref="1636352455"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150747547">
+    <nd ref="1633156268"/>
+    <nd ref="1921926192"/>
+    <nd ref="1636352476"/>
+    <nd ref="1636352475"/>
+    <nd ref="1921926194"/>
+    <nd ref="1636352470"/>
+    <nd ref="1382850640"/>
+    <nd ref="25439436"/>
+    <nd ref="1636352463"/>
+    <nd ref="1921926182"/>
+    <nd ref="1636352461"/>
+    <nd ref="1636352459"/>
+    <nd ref="1750711522"/>
+    <nd ref="1636527732"/>
+    <nd ref="1636352455"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150747552">
+    <nd ref="1636352469"/>
+    <nd ref="1636352467"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150747554">
+    <nd ref="1636352471"/>
+    <nd ref="1636352468"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150747556">
+    <nd ref="298885035"/>
+    <nd ref="1262067880"/>
+    <nd ref="1262067876"/>
+    <nd ref="1262068012"/>
+    <nd ref="1262067927"/>
+    <nd ref="1262067800"/>
+    <nd ref="1262067683"/>
+    <nd ref="298721749"/>
+    <nd ref="1262067744"/>
+    <nd ref="1262067739"/>
+    <nd ref="1262067719"/>
+    <nd ref="298721748"/>
+    <nd ref="1262067685"/>
+    <nd ref="1262067824"/>
+    <nd ref="1636352456"/>
+    <nd ref="1636527727"/>
+    <nd ref="1636533770"/>
+    <nd ref="1636563325"/>
+    <tag k="electrified" v="no"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150747561">
+    <nd ref="1636352466"/>
+    <nd ref="1921926187"/>
+    <nd ref="1636352464"/>
+    <nd ref="1636352462"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150747563">
+    <nd ref="1634425726"/>
+    <nd ref="1636352483"/>
+    <nd ref="1921926199"/>
+    <nd ref="1382850642"/>
+    <nd ref="1636352478"/>
+    <nd ref="1636352472"/>
+    <nd ref="1636352469"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="0"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150747567">
+    <nd ref="1636352467"/>
+    <nd ref="1636352473"/>
+    <nd ref="1636352477"/>
+    <nd ref="1636352481"/>
+    <nd ref="1636352482"/>
+    <nd ref="1636352484"/>
+    <nd ref="1634425730"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150751852">
+    <nd ref="1636387880"/>
+    <nd ref="1636387870"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150751853">
+    <nd ref="1636387829"/>
+    <nd ref="1921926174"/>
+    <nd ref="1636387836"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="siding"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150751857">
+    <nd ref="1636387814"/>
+    <nd ref="1636387808"/>
+    <nd ref="1636387800"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="siding"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150751859">
+    <nd ref="1636387839"/>
+    <nd ref="1636387837"/>
+    <nd ref="1636527752"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150751861">
+    <nd ref="1636387808"/>
+    <nd ref="1636387802"/>
+    <nd ref="1636387798"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="siding"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150751865">
+    <nd ref="1636387839"/>
+    <nd ref="1921926186"/>
+    <nd ref="1636387862"/>
+    <nd ref="1636387867"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150751867">
+    <nd ref="1636387806"/>
+    <nd ref="1636387814"/>
+    <nd ref="1636387831"/>
+    <nd ref="1636387836"/>
+    <nd ref="1636387841"/>
+    <nd ref="1636387855"/>
+    <nd ref="1636387859"/>
+    <nd ref="1636387881"/>
+    <nd ref="1636387882"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="siding"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150770412">
+    <nd ref="1636514205"/>
+    <nd ref="1636514203"/>
+    <nd ref="1636514202"/>
+    <nd ref="1636514199"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150770980">
+    <nd ref="1636527732"/>
+    <nd ref="1636527731"/>
+    <nd ref="1636527729"/>
+    <nd ref="1636550901"/>
+    <nd ref="1636550897"/>
+    <nd ref="1636550895"/>
+    <nd ref="1636550885"/>
+    <nd ref="1636550883"/>
+    <nd ref="1637215861"/>
+    <nd ref="1637215858"/>
+    <nd ref="1637215856"/>
+    <nd ref="1637215851"/>
+    <nd ref="1637215835"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150770981">
+    <nd ref="1636527752"/>
+    <nd ref="1636527738"/>
+    <nd ref="1636527734"/>
+    <nd ref="1636527717"/>
+    <nd ref="298721730"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150770983">
+    <nd ref="1636527717"/>
+    <nd ref="1636527730"/>
+    <nd ref="1636527733"/>
+    <nd ref="1636527736"/>
+    <nd ref="1636527746"/>
+    <nd ref="1636527756"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150771940">
+    <nd ref="1636550896"/>
+    <nd ref="1636550897"/>
+    <nd ref="1636550900"/>
+    <nd ref="1636550902"/>
+    <nd ref="1636550911"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="150841120">
+    <nd ref="1637095606"/>
+    <nd ref="1637095610"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="layer" v="0"/>
+    <tag k="note" v="Gleis 2"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150841121">
+    <nd ref="668086094"/>
+    <nd ref="622171461"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="note" v="Gleis 3"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150841122">
+    <nd ref="1637095606"/>
+    <nd ref="1637095600"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150841126">
+    <nd ref="298721726"/>
+    <nd ref="668086094"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150841129">
+    <nd ref="1636387806"/>
+    <nd ref="1637095608"/>
+    <nd ref="1637095600"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Gleis 1"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150841133">
+    <nd ref="1637095610"/>
+    <nd ref="1637095603"/>
+    <nd ref="622171461"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150843829">
+    <nd ref="1637119479"/>
+    <nd ref="1637119453"/>
+    <nd ref="1637119449"/>
+    <nd ref="1637119427"/>
+    <nd ref="1637119417"/>
+    <nd ref="1208764237"/>
+    <nd ref="1637119375"/>
+    <nd ref="1637119341"/>
+    <nd ref="1637163953"/>
+    <nd ref="622584005"/>
+    <nd ref="1383029742"/>
+    <nd ref="1637215879"/>
+    <nd ref="1637215876"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="note" v="Gleis 6 (ohne Bahnsteig)"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150843837">
+    <nd ref="1637119474"/>
+    <nd ref="1637119443"/>
+    <nd ref="1637163967"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150843844">
+    <nd ref="622171393"/>
+    <nd ref="668086086"/>
+    <nd ref="1637119439"/>
+    <nd ref="1637119474"/>
+    <nd ref="1637119484"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="150843846">
+    <nd ref="25439438"/>
+    <nd ref="1637119451"/>
+    <nd ref="1637119431"/>
+    <nd ref="1637119419"/>
+    <nd ref="1208764223"/>
+    <nd ref="1637119380"/>
+    <nd ref="1637119364"/>
+    <nd ref="1637119343"/>
+    <nd ref="1637163954"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="note" v="Gleis 5"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="152373047">
+    <nd ref="1757470402"/>
+    <nd ref="1757470411"/>
+    <nd ref="1757470414"/>
+    <nd ref="1757470417"/>
+    <nd ref="1757470421"/>
+    <nd ref="1757470424"/>
+    <nd ref="1757470428"/>
+    <nd ref="1757470431"/>
+    <nd ref="1757470434"/>
+    <nd ref="1757470439"/>
+    <nd ref="282070278"/>
+    <nd ref="298375777"/>
+    <nd ref="1757470450"/>
+    <nd ref="1757470451"/>
+    <nd ref="298375774"/>
+    <nd ref="1757470466"/>
+    <nd ref="282070279"/>
+    <nd ref="1757470469"/>
+    <nd ref="1757470471"/>
+    <nd ref="1757470473"/>
+    <nd ref="1651952615"/>
+    <nd ref="1651952629"/>
+    <nd ref="1651952631"/>
+    <nd ref="1757470480"/>
+    <nd ref="1651952632"/>
+    <nd ref="1652004005"/>
+    <nd ref="1652004011"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="152378943">
+    <nd ref="1652004011"/>
+    <nd ref="1652004015"/>
+    <nd ref="1757470489"/>
+    <nd ref="1652004062"/>
+    <nd ref="1885385610"/>
+    <nd ref="1757470497"/>
+    <nd ref="1652004069"/>
+    <nd ref="1885634476"/>
+    <nd ref="1652054929"/>
+    <nd ref="1183258919"/>
+    <nd ref="1652132275"/>
+    <nd ref="1183258948"/>
+    <nd ref="1771675138"/>
+    <nd ref="1885689205"/>
+    <nd ref="1183258922"/>
+    <nd ref="1885689209"/>
+    <nd ref="1184178034"/>
+    <nd ref="1183258897"/>
+    <nd ref="1771675150"/>
+    <nd ref="1184178039"/>
+    <nd ref="1184171068"/>
+    <nd ref="1771675159"/>
+    <nd ref="1652132305"/>
+    <nd ref="1771675166"/>
+    <nd ref="1652132310"/>
+    <nd ref="1771675184"/>
+    <nd ref="1771675197"/>
+    <nd ref="1652132341"/>
+    <nd ref="1771675204"/>
+    <nd ref="1771675210"/>
+    <nd ref="1771675212"/>
+    <nd ref="1652054976"/>
+    <nd ref="1771675214"/>
+    <nd ref="1652132348"/>
+    <nd ref="1771675215"/>
+    <nd ref="1771675216"/>
+    <nd ref="1184158202"/>
+    <nd ref="1183258700"/>
+    <nd ref="1184158226"/>
+    <nd ref="1771675217"/>
+    <nd ref="1183258707"/>
+    <nd ref="1184158230"/>
+    <nd ref="1183258812"/>
+    <nd ref="1184158236"/>
+    <nd ref="1771675218"/>
+    <nd ref="1737640043"/>
+    <nd ref="1771675219"/>
+    <nd ref="1737640051"/>
+    <nd ref="1771675220"/>
+    <nd ref="1771675221"/>
+    <nd ref="1183258716"/>
+    <nd ref="1771675222"/>
+    <nd ref="1771675223"/>
+    <nd ref="1771675224"/>
+    <nd ref="1771675225"/>
+    <nd ref="1183258796"/>
+    <nd ref="1184158182"/>
+    <nd ref="1183258964"/>
+    <nd ref="1184158209"/>
+    <nd ref="1771675226"/>
+    <nd ref="1771675227"/>
+    <nd ref="1771675228"/>
+    <nd ref="1771675229"/>
+    <nd ref="1771675230"/>
+    <nd ref="1738586112"/>
+    <nd ref="1771675231"/>
+    <nd ref="1771675232"/>
+    <nd ref="1183259012"/>
+    <nd ref="1183258719"/>
+    <nd ref="1171635507"/>
+    <nd ref="1771675233"/>
+    <nd ref="282214371"/>
+    <nd ref="1771675234"/>
+    <nd ref="1738619497"/>
+    <nd ref="1771675237"/>
+    <nd ref="1771675242"/>
+    <nd ref="1771675243"/>
+    <nd ref="282214373"/>
+    <nd ref="282214374"/>
+    <nd ref="282214375"/>
+    <nd ref="1771675306"/>
+    <nd ref="282214376"/>
+    <nd ref="282214377"/>
+    <nd ref="1771675337"/>
+    <nd ref="282214378"/>
+    <nd ref="1771736665"/>
+    <nd ref="1771675409"/>
+    <nd ref="1771736671"/>
+    <nd ref="1771736678"/>
+    <nd ref="1742822179"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="157296912">
+    <nd ref="1628868624"/>
+    <nd ref="1695058589"/>
+    <nd ref="1695058587"/>
+    <nd ref="1695058578"/>
+    <nd ref="1695058573"/>
+    <nd ref="1695058572"/>
+    <nd ref="1695058571"/>
+    <nd ref="1695058570"/>
+    <nd ref="1695058569"/>
+    <nd ref="1695058554"/>
+    <nd ref="1695058553"/>
+    <nd ref="1695058528"/>
+    <nd ref="1695058518"/>
+    <nd ref="1695058435"/>
+    <nd ref="1695058403"/>
+    <tag k="electrified" v="no"/>
+    <tag k="railway" v="rail"/>
+    <tag k="service" v="spur"/>
+    <tag k="tracks" v="1"/>
+  </way>
+  <way id="159114523">
+    <nd ref="1756301634"/>
+    <nd ref="1756301632"/>
+    <nd ref="1756301622"/>
+    <nd ref="1756301620"/>
+    <nd ref="1756301616"/>
+    <nd ref="1756301614"/>
+    <nd ref="1756301613"/>
+    <nd ref="1744148009"/>
+    <nd ref="1744148003"/>
+    <nd ref="1744147978"/>
+    <nd ref="1744147951"/>
+    <nd ref="1712143351"/>
+    <nd ref="1712143346"/>
+    <nd ref="1712143343"/>
+    <nd ref="1712143341"/>
+    <nd ref="1712143340"/>
+    <nd ref="1712143342"/>
+    <nd ref="1410606906"/>
+    <nd ref="1712143344"/>
+    <nd ref="1712143345"/>
+    <nd ref="1712143347"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+  </way>
+  <way id="159114524">
+    <nd ref="1712143353"/>
+    <nd ref="1712143357"/>
+    <nd ref="1712143359"/>
+    <nd ref="1712143361"/>
+    <nd ref="1744147959"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+  </way>
+  <way id="159114525">
+    <nd ref="1712143343"/>
+    <nd ref="1712143338"/>
+    <nd ref="1712143336"/>
+    <nd ref="1712143335"/>
+    <nd ref="1410606885"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+  </way>
+  <way id="162546767">
+    <nd ref="1744147959"/>
+    <nd ref="1744147984"/>
+    <nd ref="1744147995"/>
+    <nd ref="1744148005"/>
+    <nd ref="1744148007"/>
+    <nd ref="1744148012"/>
+    <nd ref="1744148030"/>
+    <nd ref="663679275"/>
+    <nd ref="700747861"/>
+    <nd ref="663679276"/>
+    <nd ref="663679277"/>
+    <nd ref="700747864"/>
+    <nd ref="663679278"/>
+    <nd ref="663679279"/>
+    <nd ref="663679280"/>
+    <nd ref="663679281"/>
+    <nd ref="663679282"/>
+    <nd ref="1416839586"/>
+    <nd ref="663679274"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+  </way>
+  <way id="162546768">
+    <nd ref="1712143360"/>
+    <nd ref="1744147962"/>
+    <nd ref="1744147963"/>
+    <nd ref="1744147986"/>
+    <nd ref="1744147998"/>
+    <nd ref="1744148006"/>
+    <nd ref="1744148010"/>
+    <nd ref="1744148034"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="162791131">
+    <nd ref="175391545"/>
+    <nd ref="1746107067"/>
+    <nd ref="1746107073"/>
+    <nd ref="1746107076"/>
+    <nd ref="1746107085"/>
+    <nd ref="1746107087"/>
+    <nd ref="1746107096"/>
+    <nd ref="1746107109"/>
+    <nd ref="1746107120"/>
+    <nd ref="1746107129"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+  </way>
+  <way id="162791132">
+    <nd ref="1450517121"/>
+    <nd ref="1746106809"/>
+    <nd ref="26936839"/>
+    <nd ref="1746106805"/>
+    <nd ref="1746106801"/>
+    <nd ref="1746106799"/>
+    <nd ref="1978123433"/>
+    <nd ref="1746106800"/>
+    <nd ref="1746106807"/>
+    <nd ref="1746106825"/>
+    <nd ref="26936901"/>
+    <nd ref="1746106831"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="162791133">
+    <nd ref="1746107065"/>
+    <nd ref="1746107054"/>
+    <nd ref="1746120565"/>
+    <nd ref="1746120564"/>
+    <nd ref="1746120563"/>
+    <nd ref="1746120562"/>
+    <nd ref="1746120561"/>
+    <nd ref="1746120560"/>
+    <nd ref="1746107032"/>
+    <nd ref="1746107030"/>
+    <nd ref="1746107028"/>
+    <nd ref="1746107023"/>
+    <nd ref="1746107019"/>
+    <nd ref="1746107015"/>
+    <nd ref="1746107013"/>
+    <nd ref="1757563885"/>
+    <nd ref="1746107004"/>
+    <nd ref="1746106983"/>
+    <nd ref="1746106954"/>
+    <nd ref="1746106913"/>
+    <nd ref="1746106901"/>
+    <nd ref="1746106893"/>
+    <nd ref="1746106886"/>
+    <nd ref="1746106880"/>
+    <nd ref="1746106873"/>
+    <nd ref="1746106871"/>
+    <nd ref="1838801167"/>
+    <nd ref="1746106868"/>
+    <nd ref="1746106867"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="162791135">
+    <nd ref="543868244"/>
+    <nd ref="1772602065"/>
+    <nd ref="1772602070"/>
+    <nd ref="1772602072"/>
+    <nd ref="1772602074"/>
+    <nd ref="1772602076"/>
+    <nd ref="1772602078"/>
+    <nd ref="1772602080"/>
+    <nd ref="1772602086"/>
+    <nd ref="1772602088"/>
+    <nd ref="1772602090"/>
+    <nd ref="1772602092"/>
+    <nd ref="1772602097"/>
+    <nd ref="1772602101"/>
+    <nd ref="1772602102"/>
+    <nd ref="1772602104"/>
+    <nd ref="1772602106"/>
+    <nd ref="1772602108"/>
+    <nd ref="1772602111"/>
+    <nd ref="1772602113"/>
+    <nd ref="1772602115"/>
+    <nd ref="1772602117"/>
+    <nd ref="1772602118"/>
+    <nd ref="1772602119"/>
+    <nd ref="1772602120"/>
+    <nd ref="1772602123"/>
+    <nd ref="1772602127"/>
+    <nd ref="1772602129"/>
+    <nd ref="1772602133"/>
+    <nd ref="1772602135"/>
+    <nd ref="1772602139"/>
+    <nd ref="1772602141"/>
+    <nd ref="1772602145"/>
+    <nd ref="1772602151"/>
+    <nd ref="1772602155"/>
+    <nd ref="1772602159"/>
+    <nd ref="1772602162"/>
+    <nd ref="1772602164"/>
+    <nd ref="1772602173"/>
+    <nd ref="1772602177"/>
+    <nd ref="1772602183"/>
+    <nd ref="1772602187"/>
+    <nd ref="1772602191"/>
+    <nd ref="1772602195"/>
+    <nd ref="1772602197"/>
+    <nd ref="1772602201"/>
+    <nd ref="1772602204"/>
+    <nd ref="1772602208"/>
+    <nd ref="1772602212"/>
+    <nd ref="651540147"/>
+    <nd ref="1772602217"/>
+    <nd ref="1772602220"/>
+    <nd ref="1772602221"/>
+    <nd ref="1772602225"/>
+    <nd ref="1772602231"/>
+    <nd ref="1772602234"/>
+    <nd ref="1772602236"/>
+    <nd ref="1772602239"/>
+    <nd ref="1772602245"/>
+    <nd ref="1772602252"/>
+    <nd ref="1772602255"/>
+    <nd ref="1772602257"/>
+    <nd ref="1772602258"/>
+    <nd ref="1772602260"/>
+    <nd ref="1791370507"/>
+    <nd ref="1772602263"/>
+    <nd ref="1772602265"/>
+    <nd ref="1772602268"/>
+    <nd ref="1791370556"/>
+    <nd ref="1772602270"/>
+    <nd ref="1772602273"/>
+    <nd ref="1772602280"/>
+    <nd ref="1772602285"/>
+    <nd ref="1772602289"/>
+    <nd ref="1772602290"/>
+    <nd ref="1772602292"/>
+    <nd ref="1772602294"/>
+    <nd ref="1772602295"/>
+    <nd ref="1772602297"/>
+    <nd ref="1772602298"/>
+    <nd ref="1772602300"/>
+    <nd ref="1772602301"/>
+    <nd ref="1772602302"/>
+    <nd ref="1772602303"/>
+    <nd ref="1772602305"/>
+    <nd ref="1772602306"/>
+    <nd ref="1772602308"/>
+    <nd ref="1772602309"/>
+    <nd ref="1772602310"/>
+    <nd ref="1772602312"/>
+    <nd ref="1772602314"/>
+    <nd ref="1772602315"/>
+    <nd ref="1772602318"/>
+    <nd ref="1772602319"/>
+    <nd ref="1772602321"/>
+    <nd ref="1772602322"/>
+    <nd ref="1772602324"/>
+    <nd ref="1772602325"/>
+    <nd ref="1772602326"/>
+    <nd ref="1772602334"/>
+    <nd ref="1772602336"/>
+    <nd ref="1772602339"/>
+    <nd ref="1772602345"/>
+    <nd ref="1772602355"/>
+    <nd ref="1772602357"/>
+    <nd ref="1772602359"/>
+    <nd ref="1772602361"/>
+    <nd ref="1772602363"/>
+    <nd ref="1772602364"/>
+    <nd ref="1772602365"/>
+    <nd ref="1772602371"/>
+    <nd ref="1772602372"/>
+    <nd ref="1772602374"/>
+    <nd ref="1772602375"/>
+    <nd ref="1772602376"/>
+    <nd ref="1772602377"/>
+    <nd ref="1772602379"/>
+    <nd ref="1772602380"/>
+    <nd ref="1772602383"/>
+    <nd ref="1772602384"/>
+    <nd ref="1772602386"/>
+    <nd ref="1772602388"/>
+    <nd ref="1772602390"/>
+    <nd ref="1772602394"/>
+    <nd ref="1772602395"/>
+    <nd ref="1772602397"/>
+    <nd ref="1772602399"/>
+    <nd ref="1772602401"/>
+    <nd ref="1772602403"/>
+    <nd ref="1772602404"/>
+    <nd ref="1772602406"/>
+    <nd ref="1772602408"/>
+    <nd ref="1772602409"/>
+    <nd ref="1772602411"/>
+    <nd ref="1772602412"/>
+    <nd ref="1772602415"/>
+    <nd ref="1772602416"/>
+    <nd ref="1772602418"/>
+    <nd ref="1772602419"/>
+    <nd ref="1772602421"/>
+    <nd ref="1772602423"/>
+    <nd ref="1772602425"/>
+    <nd ref="1772602427"/>
+    <nd ref="1772602429"/>
+    <nd ref="1772602431"/>
+    <nd ref="1772602433"/>
+    <nd ref="1772602435"/>
+    <nd ref="1772602437"/>
+    <nd ref="1757008823"/>
+    <nd ref="1757008834"/>
+    <nd ref="1757008844"/>
+    <nd ref="1757008862"/>
+    <nd ref="1757008864"/>
+    <nd ref="1757008867"/>
+    <nd ref="1757008881"/>
+    <nd ref="1757008883"/>
+    <nd ref="1757008885"/>
+    <nd ref="1757008889"/>
+    <nd ref="1757008894"/>
+    <nd ref="1757008901"/>
+    <nd ref="1757008908"/>
+    <nd ref="1757008932"/>
+    <nd ref="1757008950"/>
+    <nd ref="1757008953"/>
+    <nd ref="1757008968"/>
+    <nd ref="1757008971"/>
+    <nd ref="1757008975"/>
+    <nd ref="1757008979"/>
+    <nd ref="1757008980"/>
+    <nd ref="1757008982"/>
+    <nd ref="1757008983"/>
+    <nd ref="1757008984"/>
+    <nd ref="1757008985"/>
+    <nd ref="1757008987"/>
+    <nd ref="1757008989"/>
+    <nd ref="1757008992"/>
+    <nd ref="1757008994"/>
+    <nd ref="1757009010"/>
+    <nd ref="1757009012"/>
+    <nd ref="1757009016"/>
+    <nd ref="1757009020"/>
+    <nd ref="1757009021"/>
+    <nd ref="1757009022"/>
+    <nd ref="1757009024"/>
+    <nd ref="1757009025"/>
+    <nd ref="1757009028"/>
+    <nd ref="1757009032"/>
+    <nd ref="1757009034"/>
+    <nd ref="1757009036"/>
+    <nd ref="1931063330"/>
+    <nd ref="1808541820"/>
+    <nd ref="1757009038"/>
+    <nd ref="1746107047"/>
+    <nd ref="1746107048"/>
+    <nd ref="1746107049"/>
+    <nd ref="1746107052"/>
+    <nd ref="1746107056"/>
+    <nd ref="1746107063"/>
+    <nd ref="1746107069"/>
+    <nd ref="1746107094"/>
+    <nd ref="1746107136"/>
+    <nd ref="1746107144"/>
+    <nd ref="1746107159"/>
+    <nd ref="1746107161"/>
+    <nd ref="1746107163"/>
+    <nd ref="1746107162"/>
+    <nd ref="1746107160"/>
+    <nd ref="1746107153"/>
+    <nd ref="1746107150"/>
+    <nd ref="1746107148"/>
+    <nd ref="1746107146"/>
+    <nd ref="1746107138"/>
+    <nd ref="1746107129"/>
+    <nd ref="1746107122"/>
+    <nd ref="1746107113"/>
+    <nd ref="1746107107"/>
+    <nd ref="1746107102"/>
+    <nd ref="1746107105"/>
+    <nd ref="1746107115"/>
+    <nd ref="1746107124"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="light_rail"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="162791136">
+    <nd ref="1746107061"/>
+    <nd ref="1746107058"/>
+    <nd ref="1746107056"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="light_rail"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="162791138">
+    <nd ref="1746107078"/>
+    <nd ref="1746107089"/>
+    <nd ref="1746107094"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="light_rail"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="162791141">
+    <nd ref="1746107124"/>
+    <nd ref="1746107118"/>
+    <nd ref="1746107092"/>
+    <nd ref="1746107073"/>
+    <nd ref="1746107065"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="162791144">
+    <nd ref="1746106939"/>
+    <nd ref="1746106943"/>
+    <nd ref="1746106956"/>
+    <nd ref="1746106971"/>
+    <nd ref="1746106976"/>
+    <nd ref="1745975887"/>
+    <nd ref="1746106983"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163970103">
+    <nd ref="1756265291"/>
+    <nd ref="1756265290"/>
+    <nd ref="1756265289"/>
+    <nd ref="1756265288"/>
+    <nd ref="1756265287"/>
+    <nd ref="1756265286"/>
+    <nd ref="1756265285"/>
+    <nd ref="1756265283"/>
+    <nd ref="1756265284"/>
+    <nd ref="1756265283"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="-1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="tunnel" v="yes"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163970104">
+    <nd ref="1756265401"/>
+    <nd ref="1756265391"/>
+    <nd ref="1756265380"/>
+    <nd ref="1756265369"/>
+    <nd ref="1756265365"/>
+    <nd ref="1756265355"/>
+    <nd ref="1756265350"/>
+    <nd ref="1756265347"/>
+    <nd ref="1756265344"/>
+    <nd ref="282271435"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163970105">
+    <nd ref="1756265330"/>
+    <nd ref="1381852307"/>
+    <nd ref="1757455816"/>
+    <nd ref="175391562"/>
+    <nd ref="1756265321"/>
+    <nd ref="1756265315"/>
+    <nd ref="1183642941"/>
+    <nd ref="1757468382"/>
+    <nd ref="1757473740"/>
+    <nd ref="1756265305"/>
+    <nd ref="930371766"/>
+    <nd ref="1756265298"/>
+    <nd ref="175391555"/>
+    <nd ref="175391549"/>
+    <nd ref="293784479"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163970106">
+    <nd ref="1756265394"/>
+    <nd ref="1756265389"/>
+    <nd ref="1756265383"/>
+    <nd ref="1756265375"/>
+    <nd ref="1756265372"/>
+    <nd ref="1756265373"/>
+    <nd ref="1756265378"/>
+    <nd ref="1756265386"/>
+    <nd ref="1756265390"/>
+    <nd ref="1756265395"/>
+    <nd ref="1756265400"/>
+    <nd ref="1756265405"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163970108">
+    <nd ref="1756265341"/>
+    <nd ref="1756265347"/>
+    <nd ref="1756265349"/>
+    <nd ref="1756265357"/>
+    <nd ref="1756265359"/>
+    <nd ref="1756265362"/>
+    <nd ref="1756265364"/>
+    <nd ref="1756265368"/>
+    <nd ref="1756265371"/>
+    <nd ref="1756265394"/>
+    <nd ref="1756265402"/>
+    <nd ref="1756265404"/>
+    <nd ref="1756265407"/>
+    <nd ref="1756265410"/>
+    <nd ref="1756265412"/>
+    <nd ref="1756265414"/>
+    <nd ref="1756265416"/>
+    <nd ref="1756265418"/>
+    <nd ref="1756265420"/>
+    <nd ref="1756265423"/>
+    <nd ref="1756265426"/>
+    <nd ref="1756265428"/>
+    <nd ref="1756265431"/>
+    <nd ref="1756265433"/>
+    <nd ref="1756265436"/>
+    <nd ref="1756265438"/>
+    <nd ref="1756265440"/>
+    <nd ref="1756265442"/>
+    <nd ref="1756265443"/>
+    <nd ref="1756265445"/>
+    <nd ref="1756265446"/>
+    <nd ref="1756265447"/>
+    <nd ref="1756265449"/>
+    <nd ref="1756265451"/>
+    <nd ref="1756265453"/>
+    <nd ref="1756265452"/>
+    <nd ref="1756265448"/>
+    <nd ref="1756265444"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163970109">
+    <nd ref="1756265444"/>
+    <nd ref="1756265441"/>
+    <nd ref="1756265439"/>
+    <nd ref="1756265437"/>
+    <nd ref="1756265434"/>
+    <nd ref="1756265432"/>
+    <nd ref="1756265429"/>
+    <nd ref="1756265427"/>
+    <nd ref="1756265425"/>
+    <nd ref="1756265424"/>
+    <nd ref="1756265422"/>
+    <nd ref="1756265421"/>
+    <nd ref="1756265419"/>
+    <nd ref="1756265417"/>
+    <nd ref="1756265415"/>
+    <nd ref="1756265411"/>
+    <nd ref="1756265409"/>
+    <nd ref="1756265282"/>
+    <nd ref="1756265392"/>
+    <nd ref="1756265381"/>
+    <nd ref="1756265370"/>
+    <nd ref="1756265367"/>
+    <nd ref="1756265363"/>
+    <nd ref="1756265360"/>
+    <nd ref="1756265351"/>
+    <nd ref="1756265348"/>
+    <nd ref="1756265345"/>
+    <nd ref="1756265334"/>
+    <nd ref="1756265327"/>
+    <nd ref="1756265323"/>
+    <nd ref="1756265319"/>
+    <nd ref="1756265316"/>
+    <nd ref="1756265314"/>
+    <nd ref="1756265312"/>
+    <nd ref="1756265309"/>
+    <nd ref="1756265306"/>
+    <nd ref="1756265303"/>
+    <nd ref="1756265301"/>
+    <nd ref="1756265300"/>
+    <nd ref="1756265297"/>
+    <nd ref="1756265296"/>
+    <nd ref="1756265294"/>
+    <nd ref="1756265293"/>
+    <nd ref="1756265292"/>
+    <nd ref="1756265291"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="-2"/>
+    <tag k="railway" v="tram"/>
+    <tag k="tunnel" v="yes"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163970110">
+    <nd ref="1756265405"/>
+    <nd ref="1756265401"/>
+    <nd ref="1756265385"/>
+    <nd ref="1756265362"/>
+    <nd ref="1756265358"/>
+    <nd ref="1756265326"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163972096">
+    <nd ref="1756280939"/>
+    <nd ref="1756280935"/>
+    <nd ref="1756280933"/>
+    <nd ref="1756280932"/>
+    <nd ref="1756280928"/>
+    <nd ref="1756280903"/>
+    <nd ref="1756280894"/>
+    <nd ref="1756280888"/>
+    <nd ref="1756280883"/>
+    <nd ref="1756280878"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="light_rail"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163972097">
+    <nd ref="175391625"/>
+    <nd ref="1756291030"/>
+    <nd ref="298270765"/>
+    <nd ref="1756291011"/>
+    <nd ref="1756291007"/>
+    <nd ref="1756290993"/>
+    <nd ref="1756290992"/>
+    <nd ref="1756290990"/>
+    <nd ref="1756290988"/>
+    <nd ref="1756290984"/>
+    <nd ref="1756280936"/>
+    <nd ref="1756280934"/>
+    <nd ref="1756280929"/>
+    <nd ref="1756280897"/>
+    <nd ref="1756280878"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163972801">
+    <nd ref="1756291002"/>
+    <nd ref="1756291006"/>
+    <nd ref="1756291010"/>
+    <nd ref="1756291018"/>
+    <nd ref="1756291024"/>
+    <nd ref="1756291025"/>
+    <nd ref="1756291028"/>
+    <nd ref="1756291030"/>
+    <nd ref="1756291033"/>
+    <nd ref="1756291034"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+  </way>
+  <way id="163972804">
+    <nd ref="1557071370"/>
+    <nd ref="248780654"/>
+    <nd ref="301232247"/>
+    <nd ref="248780655"/>
+    <nd ref="1557191217"/>
+    <nd ref="301232250"/>
+    <nd ref="1557191216"/>
+    <nd ref="175391611"/>
+    <nd ref="1557191215"/>
+    <nd ref="248780656"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="-1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163972805">
+    <nd ref="1756291011"/>
+    <nd ref="1756291016"/>
+    <nd ref="1756291019"/>
+    <nd ref="1756291017"/>
+    <nd ref="1756291015"/>
+    <nd ref="1756291009"/>
+    <nd ref="1756291002"/>
+    <nd ref="1764569939"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="-1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163973888">
+    <nd ref="1744148034"/>
+    <nd ref="1756301618"/>
+    <nd ref="1756301626"/>
+    <nd ref="1756301631"/>
+    <nd ref="1756301635"/>
+    <nd ref="1756301638"/>
+    <nd ref="1756301640"/>
+    <nd ref="1756301643"/>
+    <nd ref="1756301645"/>
+    <nd ref="1756301647"/>
+    <nd ref="1756301649"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163976014">
+    <nd ref="275885478"/>
+    <nd ref="271076018"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163976015">
+    <nd ref="1756301619"/>
+    <nd ref="1756320013"/>
+    <nd ref="1757019824"/>
+    <nd ref="1757019822"/>
+    <nd ref="1757019820"/>
+    <nd ref="1757019819"/>
+    <nd ref="1757019818"/>
+    <nd ref="1757019817"/>
+    <nd ref="1757019816"/>
+    <nd ref="1757019815"/>
+    <nd ref="1757019814"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163976016">
+    <nd ref="1756320018"/>
+    <nd ref="1756320016"/>
+    <nd ref="1756301619"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163976017">
+    <nd ref="1756301625"/>
+    <nd ref="1756301621"/>
+    <nd ref="1756301619"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163976018">
+    <nd ref="1756320014"/>
+    <nd ref="275885469"/>
+    <nd ref="271076018"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163976019">
+    <nd ref="1756320031"/>
+    <nd ref="1756320029"/>
+    <nd ref="1756320027"/>
+    <nd ref="1756320026"/>
+    <nd ref="1756320024"/>
+    <nd ref="1756320022"/>
+    <nd ref="1756320020"/>
+    <nd ref="1126992284"/>
+    <nd ref="1756320018"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+  </way>
+  <way id="163976638">
+    <nd ref="1756324712"/>
+    <nd ref="1756324711"/>
+    <nd ref="1756324709"/>
+    <nd ref="1756324707"/>
+    <nd ref="1756324705"/>
+    <nd ref="1756324703"/>
+    <nd ref="1756324702"/>
+    <nd ref="1756324704"/>
+    <nd ref="1756324706"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="163976639">
+    <nd ref="1756324706"/>
+    <nd ref="271076002"/>
+    <nd ref="1756324698"/>
+    <nd ref="1756324697"/>
+    <nd ref="1756301653"/>
+    <nd ref="1756301649"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="light_rail"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164043797">
+    <nd ref="268941378"/>
+    <nd ref="268941376"/>
+    <nd ref="1757040882"/>
+    <nd ref="1347168258"/>
+    <nd ref="1757040885"/>
+    <nd ref="268941368"/>
+    <nd ref="268941366"/>
+    <nd ref="1743821901"/>
+    <nd ref="268941358"/>
+    <nd ref="268941355"/>
+    <nd ref="1757040892"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164043798">
+    <nd ref="1757040895"/>
+    <nd ref="1757040891"/>
+    <nd ref="1757040890"/>
+    <nd ref="1757040889"/>
+    <nd ref="1757040888"/>
+    <nd ref="1757040887"/>
+    <nd ref="1757040886"/>
+    <nd ref="1757040884"/>
+    <nd ref="1757040883"/>
+    <nd ref="1757040881"/>
+    <nd ref="1757040880"/>
+    <nd ref="1757040879"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164043799">
+    <nd ref="1757040879"/>
+    <nd ref="1757040878"/>
+    <nd ref="1757040877"/>
+    <nd ref="1757040876"/>
+    <nd ref="1757040874"/>
+    <nd ref="1757040872"/>
+    <nd ref="1757040870"/>
+    <nd ref="1757040868"/>
+    <nd ref="1757040865"/>
+    <nd ref="1757040863"/>
+    <nd ref="1757040860"/>
+    <nd ref="1757040861"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164043801">
+    <nd ref="1757040932"/>
+    <nd ref="1757040934"/>
+    <nd ref="1757040936"/>
+    <nd ref="1757040939"/>
+    <nd ref="1757040941"/>
+    <nd ref="1757040943"/>
+    <nd ref="1757040944"/>
+    <nd ref="1757040942"/>
+    <nd ref="1757040940"/>
+    <nd ref="1757040937"/>
+    <nd ref="1757040935"/>
+    <nd ref="1757040933"/>
+    <nd ref="1757040931"/>
+    <nd ref="1757040928"/>
+    <nd ref="1757040926"/>
+    <nd ref="1757040925"/>
+    <nd ref="1757040923"/>
+    <nd ref="1757040921"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="2"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164043803">
+    <nd ref="1757040921"/>
+    <nd ref="1757040919"/>
+    <nd ref="1757040917"/>
+    <nd ref="1757040911"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164043805">
+    <nd ref="1757040913"/>
+    <nd ref="268941346"/>
+    <nd ref="297701017"/>
+    <nd ref="1757040920"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164043806">
+    <nd ref="1757040892"/>
+    <nd ref="1102342544"/>
+    <nd ref="297699656"/>
+    <nd ref="268941351"/>
+    <nd ref="268941348"/>
+    <nd ref="1757040913"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="2"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164043807">
+    <nd ref="1757040911"/>
+    <nd ref="1757040908"/>
+    <nd ref="1757040907"/>
+    <nd ref="1757040905"/>
+    <nd ref="1757040902"/>
+    <nd ref="1757040899"/>
+    <nd ref="1757040898"/>
+    <nd ref="1757040895"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="2"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164044471">
+    <nd ref="1756291034"/>
+    <nd ref="1757047641"/>
+    <nd ref="1757047644"/>
+    <nd ref="1757047646"/>
+    <nd ref="1757047650"/>
+    <nd ref="1757047652"/>
+    <nd ref="1757047655"/>
+    <nd ref="1757047660"/>
+    <nd ref="1757047662"/>
+    <nd ref="1757047665"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164044474">
+    <nd ref="1757047665"/>
+    <nd ref="1757047666"/>
+    <nd ref="1757047668"/>
+    <nd ref="1757047671"/>
+    <nd ref="1757047673"/>
+    <nd ref="1757047678"/>
+    <nd ref="1757047680"/>
+    <nd ref="1757047682"/>
+    <nd ref="1757047684"/>
+    <nd ref="1757047685"/>
+    <nd ref="1757047683"/>
+    <nd ref="1757047681"/>
+    <nd ref="1757047679"/>
+    <nd ref="1757047676"/>
+    <nd ref="1757047672"/>
+    <nd ref="1757047667"/>
+    <nd ref="1757047663"/>
+    <nd ref="1757047661"/>
+    <nd ref="1757047656"/>
+    <nd ref="1757047654"/>
+    <nd ref="1757047651"/>
+    <nd ref="1757047649"/>
+    <nd ref="1757047647"/>
+    <nd ref="1757047645"/>
+    <nd ref="1757047642"/>
+    <nd ref="1757047640"/>
+    <nd ref="1757047639"/>
+    <nd ref="1757047636"/>
+    <nd ref="1757047635"/>
+    <nd ref="1757047634"/>
+    <nd ref="1757047633"/>
+    <nd ref="1757047631"/>
+    <nd ref="1757047628"/>
+    <nd ref="1757047627"/>
+    <nd ref="1757047626"/>
+    <nd ref="1757047624"/>
+    <nd ref="1757047623"/>
+    <nd ref="1757047622"/>
+    <nd ref="1757047620"/>
+    <nd ref="1757047619"/>
+    <nd ref="1757047618"/>
+    <nd ref="1757047616"/>
+    <nd ref="1757047615"/>
+    <nd ref="1757047614"/>
+    <nd ref="1757047612"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="2"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164049212">
+    <nd ref="1637262242"/>
+    <nd ref="1637262240"/>
+    <nd ref="1637307667"/>
+    <nd ref="63800848"/>
+    <nd ref="270813283"/>
+    <nd ref="63800836"/>
+    <nd ref="1757085071"/>
+    <nd ref="288581729"/>
+    <nd ref="288581725"/>
+    <nd ref="303549810"/>
+    <nd ref="266747590"/>
+    <nd ref="717649816"/>
+    <nd ref="266921502"/>
+    <nd ref="266982631"/>
+    <nd ref="717654736"/>
+    <nd ref="1757085030"/>
+    <nd ref="1757085028"/>
+    <nd ref="1772602430"/>
+    <nd ref="1772602008"/>
+    <nd ref="1772602410"/>
+    <nd ref="1772602402"/>
+    <nd ref="1772602393"/>
+    <nd ref="1772602385"/>
+    <nd ref="1772602381"/>
+    <nd ref="1861497872"/>
+    <nd ref="1861497873"/>
+    <nd ref="1861574173"/>
+    <nd ref="1757097883"/>
+    <nd ref="1757097882"/>
+    <nd ref="1757097881"/>
+    <nd ref="1757097879"/>
+    <nd ref="1757097878"/>
+    <nd ref="1757097877"/>
+    <nd ref="1757097876"/>
+    <nd ref="1757097863"/>
+    <nd ref="1757097862"/>
+    <nd ref="1757097861"/>
+    <nd ref="1757097860"/>
+    <nd ref="1757097859"/>
+    <nd ref="1757095084"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+    <tag k="source:geometry" v="HiRes aerial imagery"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164088418">
+    <nd ref="1757470397"/>
+    <nd ref="1756265406"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="name" v="Kurpfalzbrücke"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+    <tag k="wikipedia:de" v="Kurpfalzbrücke"/>
+  </way>
+  <way id="164088421">
+    <nd ref="1757015687"/>
+    <nd ref="1757470376"/>
+    <nd ref="1757470375"/>
+    <nd ref="1757470372"/>
+    <nd ref="1757470371"/>
+    <nd ref="1757470373"/>
+    <nd ref="1757470377"/>
+    <nd ref="1763724393"/>
+    <nd ref="1757470378"/>
+    <nd ref="1757470379"/>
+    <nd ref="1757470381"/>
+    <nd ref="1757470382"/>
+    <nd ref="1757470383"/>
+    <nd ref="1757470384"/>
+    <nd ref="1757470385"/>
+    <nd ref="1757470386"/>
+    <nd ref="1757470387"/>
+    <nd ref="1757470389"/>
+    <nd ref="1757470391"/>
+    <nd ref="1757470392"/>
+    <nd ref="1757470393"/>
+    <nd ref="1757470395"/>
+    <nd ref="1757470396"/>
+    <nd ref="1757470398"/>
+    <nd ref="1757470401"/>
+    <nd ref="1757470404"/>
+    <nd ref="1757470407"/>
+    <nd ref="1757470409"/>
+    <nd ref="1757470412"/>
+    <nd ref="1757470416"/>
+    <nd ref="1757470420"/>
+    <nd ref="1757470426"/>
+    <nd ref="1757470429"/>
+    <nd ref="1757470432"/>
+    <nd ref="1757470435"/>
+    <nd ref="1757470438"/>
+    <nd ref="1757470440"/>
+    <nd ref="1838816089"/>
+    <nd ref="1757470446"/>
+    <nd ref="1838816082"/>
+    <nd ref="1757470449"/>
+    <nd ref="1757470458"/>
+    <nd ref="1757470461"/>
+    <nd ref="1885959480"/>
+    <nd ref="1885959478"/>
+    <nd ref="1757470464"/>
+    <nd ref="1757470462"/>
+    <nd ref="1757470460"/>
+    <nd ref="1757470457"/>
+    <nd ref="1757470451"/>
+    <nd ref="1757470447"/>
+    <nd ref="1757470443"/>
+    <nd ref="1757470436"/>
+    <nd ref="1757470425"/>
+    <nd ref="1757470422"/>
+    <nd ref="1757470418"/>
+    <nd ref="1757470413"/>
+    <nd ref="1757470410"/>
+    <nd ref="1757470406"/>
+    <nd ref="1757470400"/>
+    <nd ref="1757470397"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164088714">
+    <nd ref="1652004011"/>
+    <nd ref="1757470483"/>
+    <nd ref="1757470485"/>
+    <nd ref="1757470488"/>
+    <nd ref="1652004054"/>
+    <nd ref="1885719182"/>
+    <nd ref="1652004058"/>
+    <nd ref="1652004067"/>
+    <nd ref="1771675108"/>
+    <nd ref="1771675110"/>
+    <nd ref="1771675113"/>
+    <nd ref="1771675115"/>
+    <nd ref="1771675119"/>
+    <nd ref="1771675123"/>
+    <nd ref="1771675126"/>
+    <nd ref="1771675099"/>
+    <nd ref="1771675130"/>
+    <nd ref="1771675133"/>
+    <nd ref="1771675139"/>
+    <nd ref="1771675146"/>
+    <nd ref="1771675149"/>
+    <nd ref="1771675153"/>
+    <nd ref="1771675098"/>
+    <nd ref="1771675155"/>
+    <nd ref="1771675158"/>
+    <nd ref="1771675163"/>
+    <nd ref="1771675169"/>
+    <nd ref="1771675175"/>
+    <nd ref="1771675191"/>
+    <nd ref="281763344"/>
+    <nd ref="281766732"/>
+    <nd ref="281766406"/>
+    <nd ref="282227389"/>
+    <nd ref="1771675208"/>
+    <nd ref="1771675209"/>
+    <nd ref="281766622"/>
+    <nd ref="1771675207"/>
+    <nd ref="282227383"/>
+    <nd ref="1771675205"/>
+    <nd ref="281766623"/>
+    <nd ref="281766409"/>
+    <nd ref="1771675200"/>
+    <nd ref="1771675199"/>
+    <nd ref="1771675198"/>
+    <nd ref="281766410"/>
+    <nd ref="1771675190"/>
+    <nd ref="281766624"/>
+    <nd ref="1737622828"/>
+    <nd ref="1737622823"/>
+    <nd ref="1771675176"/>
+    <nd ref="281766412"/>
+    <nd ref="281766733"/>
+    <nd ref="1771675173"/>
+    <nd ref="281766414"/>
+    <nd ref="1771675174"/>
+    <nd ref="1771675180"/>
+    <nd ref="281766626"/>
+    <nd ref="282227398"/>
+    <nd ref="281766416"/>
+    <nd ref="282227394"/>
+    <nd ref="1771675195"/>
+    <nd ref="281766734"/>
+    <nd ref="1771675194"/>
+    <nd ref="1771675193"/>
+    <nd ref="1771675186"/>
+    <nd ref="1771675172"/>
+    <nd ref="1771675167"/>
+    <nd ref="1771675162"/>
+    <nd ref="1771675157"/>
+    <nd ref="1771675154"/>
+    <nd ref="1771675151"/>
+    <nd ref="1771675147"/>
+    <nd ref="1771675137"/>
+    <nd ref="1771675132"/>
+    <nd ref="1771675129"/>
+    <nd ref="1771675127"/>
+    <nd ref="1771675125"/>
+    <nd ref="1771675122"/>
+    <nd ref="1771675121"/>
+    <nd ref="1771675118"/>
+    <nd ref="1771675116"/>
+    <nd ref="1771675114"/>
+    <nd ref="1771675112"/>
+    <nd ref="1771675111"/>
+    <nd ref="1771675107"/>
+    <nd ref="1771675105"/>
+    <nd ref="1757473144"/>
+    <nd ref="1885719186"/>
+    <nd ref="1757473143"/>
+    <nd ref="1885719184"/>
+    <nd ref="1757473142"/>
+    <nd ref="1757473141"/>
+    <nd ref="1757473140"/>
+    <nd ref="1757470482"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164152502">
+    <nd ref="1757095165"/>
+    <nd ref="1758134219"/>
+    <nd ref="1758134215"/>
+    <nd ref="1758134212"/>
+    <nd ref="1758134209"/>
+    <nd ref="1758134206"/>
+    <nd ref="1758134203"/>
+    <nd ref="1758134200"/>
+    <nd ref="1758134196"/>
+    <nd ref="1772602440"/>
+    <nd ref="1772602441"/>
+    <nd ref="1772602443"/>
+    <nd ref="1772602445"/>
+    <nd ref="1772602446"/>
+    <nd ref="1772602447"/>
+    <nd ref="1772602449"/>
+    <nd ref="1772602451"/>
+    <nd ref="1772602452"/>
+    <nd ref="1772602454"/>
+    <nd ref="1772602457"/>
+    <nd ref="1772602458"/>
+    <nd ref="1772602460"/>
+    <nd ref="1772602462"/>
+    <nd ref="1772602467"/>
+    <nd ref="1772602515"/>
+    <nd ref="1772602517"/>
+    <nd ref="1772602520"/>
+    <nd ref="1772602521"/>
+    <nd ref="1772602523"/>
+    <nd ref="1772602525"/>
+    <nd ref="1772602528"/>
+    <nd ref="1772602530"/>
+    <nd ref="1772602531"/>
+    <nd ref="1772602533"/>
+    <nd ref="1772602535"/>
+    <nd ref="1772602537"/>
+    <nd ref="1772602538"/>
+    <nd ref="1772602541"/>
+    <nd ref="1772602544"/>
+    <nd ref="1772602546"/>
+    <nd ref="1772602547"/>
+    <nd ref="1772602548"/>
+    <nd ref="1772602549"/>
+    <nd ref="1772602551"/>
+    <nd ref="1772602552"/>
+    <nd ref="1772602554"/>
+    <nd ref="1772602556"/>
+    <nd ref="1772602561"/>
+    <nd ref="1772602562"/>
+    <nd ref="1772602564"/>
+    <nd ref="1927748178"/>
+    <nd ref="1772602560"/>
+    <nd ref="1772602558"/>
+    <nd ref="1772602557"/>
+    <nd ref="1772602559"/>
+    <nd ref="1772602563"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164862085">
+    <nd ref="248780660"/>
+    <nd ref="298270761"/>
+    <nd ref="1756291010"/>
+    <nd ref="298270763"/>
+    <nd ref="1756291021"/>
+    <nd ref="298270764"/>
+    <nd ref="1756291022"/>
+    <nd ref="298270765"/>
+    <nd ref="1756291020"/>
+    <nd ref="1756291014"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164862086">
+    <nd ref="1756290995"/>
+    <nd ref="1756290994"/>
+    <nd ref="1756290997"/>
+    <nd ref="1756290999"/>
+    <nd ref="1756291001"/>
+    <nd ref="1756291004"/>
+    <nd ref="1756291008"/>
+    <nd ref="1756291013"/>
+    <nd ref="1756291023"/>
+    <nd ref="1756291027"/>
+    <nd ref="1756291031"/>
+    <nd ref="1756291035"/>
+    <nd ref="1756291036"/>
+    <nd ref="1756291037"/>
+    <nd ref="1756265284"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="-1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164862087">
+    <nd ref="1764569939"/>
+    <nd ref="1764569935"/>
+    <nd ref="1756291000"/>
+    <nd ref="1756290998"/>
+    <nd ref="1756290996"/>
+    <nd ref="1764569931"/>
+    <nd ref="1756290995"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="164862088">
+    <nd ref="1557191209"/>
+    <nd ref="175391616"/>
+    <nd ref="1557191210"/>
+    <nd ref="248780658"/>
+    <nd ref="248780659"/>
+    <nd ref="175391621"/>
+    <nd ref="1756291003"/>
+    <nd ref="248780660"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="165634319">
+    <nd ref="1771736690"/>
+    <nd ref="1771736684"/>
+    <nd ref="1771736676"/>
+    <nd ref="1771675415"/>
+    <nd ref="1771736668"/>
+    <nd ref="1771736661"/>
+    <nd ref="1771736657"/>
+    <nd ref="1771736654"/>
+    <nd ref="1771736647"/>
+    <nd ref="1771736644"/>
+    <nd ref="1771736639"/>
+    <nd ref="1771736636"/>
+    <nd ref="1771736633"/>
+    <nd ref="1771736629"/>
+    <nd ref="1771736625"/>
+    <nd ref="1771736622"/>
+    <nd ref="1771675238"/>
+    <nd ref="1771736619"/>
+    <nd ref="1771736615"/>
+    <nd ref="1771736611"/>
+    <nd ref="1771736608"/>
+    <nd ref="1771736605"/>
+    <nd ref="1886080385"/>
+    <nd ref="1771736601"/>
+    <nd ref="1771736598"/>
+    <nd ref="1771736594"/>
+    <nd ref="1974220311"/>
+    <nd ref="1771736593"/>
+    <nd ref="1771736592"/>
+    <nd ref="1771736591"/>
+    <nd ref="1771736590"/>
+    <nd ref="1771736574"/>
+    <nd ref="1771736571"/>
+    <nd ref="1771736568"/>
+    <nd ref="1771736565"/>
+    <nd ref="1771736562"/>
+    <nd ref="1771736559"/>
+    <nd ref="1771736556"/>
+    <nd ref="1771736553"/>
+    <nd ref="1771736550"/>
+    <nd ref="1771736547"/>
+    <nd ref="1771736544"/>
+    <nd ref="1771736541"/>
+    <nd ref="1771736539"/>
+    <nd ref="1771736538"/>
+    <nd ref="1771736536"/>
+    <nd ref="1771736534"/>
+    <nd ref="1771736533"/>
+    <nd ref="1771736532"/>
+    <nd ref="1771736531"/>
+    <nd ref="1771736530"/>
+    <nd ref="1771736503"/>
+    <nd ref="1771736499"/>
+    <nd ref="1771736496"/>
+    <nd ref="1787901068"/>
+    <nd ref="1771736493"/>
+    <nd ref="1771736491"/>
+    <nd ref="1771721315"/>
+    <nd ref="1771721313"/>
+    <nd ref="1771675213"/>
+    <nd ref="1771675211"/>
+    <nd ref="1771675202"/>
+    <nd ref="1771675201"/>
+    <nd ref="1771675187"/>
+    <nd ref="1771675171"/>
+    <nd ref="1771675170"/>
+    <nd ref="1771675168"/>
+    <nd ref="1771675165"/>
+    <nd ref="1771675164"/>
+    <nd ref="1771675161"/>
+    <nd ref="1771675160"/>
+    <nd ref="1771675156"/>
+    <nd ref="1184171071"/>
+    <nd ref="1885921405"/>
+    <nd ref="1771675152"/>
+    <nd ref="1771675148"/>
+    <nd ref="1771675145"/>
+    <nd ref="1771675144"/>
+    <nd ref="1771675143"/>
+    <nd ref="1771675141"/>
+    <nd ref="1885689207"/>
+    <nd ref="1771675140"/>
+    <nd ref="1771675136"/>
+    <nd ref="1771675135"/>
+    <nd ref="1771675134"/>
+    <nd ref="1771675131"/>
+    <nd ref="1771675128"/>
+    <nd ref="1771675124"/>
+    <nd ref="1885634485"/>
+    <nd ref="1771675120"/>
+    <nd ref="1771675117"/>
+    <nd ref="1757470499"/>
+    <nd ref="1757470495"/>
+    <nd ref="1757470493"/>
+    <nd ref="1757470491"/>
+    <nd ref="1757470486"/>
+    <nd ref="1757470485"/>
+    <nd ref="1757470482"/>
+    <nd ref="1885722196"/>
+    <nd ref="1757470481"/>
+    <nd ref="1757470478"/>
+    <nd ref="1757470477"/>
+    <nd ref="1757470476"/>
+    <nd ref="1757470474"/>
+    <nd ref="1757470472"/>
+    <nd ref="1757470470"/>
+    <nd ref="1757470468"/>
+    <nd ref="1757470465"/>
+    <nd ref="1757470459"/>
+    <nd ref="1757470452"/>
+    <nd ref="1757470448"/>
+    <nd ref="1757470447"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="165720108">
+    <nd ref="1758134170"/>
+    <nd ref="1758134168"/>
+    <nd ref="1772602438"/>
+    <nd ref="1772602439"/>
+    <nd ref="1772602056"/>
+    <nd ref="1772602442"/>
+    <nd ref="1772602444"/>
+    <nd ref="1617380142"/>
+    <nd ref="1772602448"/>
+    <nd ref="1772602450"/>
+    <nd ref="1772602453"/>
+    <nd ref="1772602455"/>
+    <nd ref="1772602456"/>
+    <nd ref="1772602459"/>
+    <nd ref="1772602461"/>
+    <nd ref="1772602463"/>
+    <nd ref="1772602465"/>
+    <nd ref="1772602021"/>
+    <nd ref="1772602516"/>
+    <nd ref="1772602518"/>
+    <nd ref="1772602519"/>
+    <nd ref="1772602522"/>
+    <nd ref="1772602524"/>
+    <nd ref="1772602526"/>
+    <nd ref="1772602527"/>
+    <nd ref="1772602529"/>
+    <nd ref="1772602532"/>
+    <nd ref="1772602534"/>
+    <nd ref="1772602536"/>
+    <nd ref="1772602539"/>
+    <nd ref="1772602540"/>
+    <nd ref="1772602542"/>
+    <nd ref="1772602543"/>
+    <nd ref="1772602545"/>
+    <nd ref="1772602060"/>
+    <nd ref="1772602550"/>
+    <nd ref="1772602553"/>
+    <nd ref="1772602555"/>
+    <nd ref="1750750863"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="165720115">
+    <nd ref="1637262242"/>
+    <nd ref="1757085083"/>
+    <nd ref="1637262241"/>
+    <nd ref="420276676"/>
+    <nd ref="1750750850"/>
+    <nd ref="1750750863"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="165734803">
+    <nd ref="1490496843"/>
+    <nd ref="1772706863"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="tunnel" v="yes"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="165734805">
+    <nd ref="1772706866"/>
+    <nd ref="268941388"/>
+    <nd ref="1772706872"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="tunnel" v="yes"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="165734808">
+    <nd ref="1772706872"/>
+    <nd ref="1507199664"/>
+    <nd ref="1772706879"/>
+    <nd ref="1772706881"/>
+    <nd ref="1772706884"/>
+    <nd ref="1772706886"/>
+    <nd ref="1772706888"/>
+    <nd ref="1772706897"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174743987">
+    <nd ref="1746107124"/>
+    <nd ref="1746107133"/>
+    <nd ref="1746107140"/>
+    <nd ref="1746107157"/>
+    <nd ref="1756265299"/>
+    <nd ref="1756265302"/>
+    <nd ref="1756265307"/>
+    <nd ref="1757473741"/>
+    <nd ref="1756265311"/>
+    <nd ref="1756265313"/>
+    <nd ref="1756265317"/>
+    <nd ref="1756265324"/>
+    <nd ref="1757455770"/>
+    <nd ref="1756265329"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174743988">
+    <nd ref="1410606922"/>
+    <nd ref="1410606919"/>
+    <nd ref="1410606915"/>
+    <nd ref="1410606912"/>
+    <nd ref="1410606906"/>
+    <nd ref="1410606893"/>
+    <nd ref="1410606890"/>
+    <nd ref="1410606885"/>
+    <nd ref="1410606883"/>
+    <nd ref="1712143334"/>
+    <nd ref="1712143333"/>
+    <nd ref="1712143332"/>
+    <nd ref="1712143331"/>
+    <nd ref="1712143329"/>
+    <nd ref="1410606894"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+  </way>
+  <way id="174743990">
+    <nd ref="1746106890"/>
+    <nd ref="1316106811"/>
+    <nd ref="1746106882"/>
+    <nd ref="1316107101"/>
+    <nd ref="1316107242"/>
+    <nd ref="271083313"/>
+    <nd ref="1316107162"/>
+    <nd ref="1316107113"/>
+    <nd ref="1316107099"/>
+    <nd ref="1316107264"/>
+    <nd ref="1316107179"/>
+    <nd ref="1316107251"/>
+    <nd ref="1316106790"/>
+    <nd ref="1316106785"/>
+    <nd ref="1316106863"/>
+    <nd ref="1746106848"/>
+    <nd ref="1628415749"/>
+    <nd ref="1628414090"/>
+    <nd ref="1628411128"/>
+    <nd ref="1628413766"/>
+    <nd ref="1746106833"/>
+    <nd ref="26936901"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174743991">
+    <nd ref="1712143347"/>
+    <nd ref="1531035258"/>
+    <nd ref="1712143339"/>
+    <nd ref="1531035256"/>
+    <nd ref="1712143337"/>
+    <nd ref="1531035247"/>
+    <nd ref="1531035243"/>
+    <nd ref="280441885"/>
+    <nd ref="1712143321"/>
+    <nd ref="1712143320"/>
+    <nd ref="988747951"/>
+    <nd ref="1531035222"/>
+    <nd ref="1712143318"/>
+    <nd ref="1712143319"/>
+    <nd ref="280441879"/>
+    <nd ref="1712143322"/>
+    <nd ref="1531035227"/>
+    <nd ref="911006640"/>
+    <nd ref="1712143323"/>
+    <nd ref="1712143324"/>
+    <nd ref="1712143325"/>
+    <nd ref="275381951"/>
+    <nd ref="1712143326"/>
+    <nd ref="1712143327"/>
+    <nd ref="1712143328"/>
+    <nd ref="280441883"/>
+    <nd ref="988748045"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174743996">
+    <nd ref="1756265281"/>
+    <nd ref="1378555193"/>
+    <nd ref="25283572"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174743997">
+    <nd ref="1744148034"/>
+    <nd ref="271076024"/>
+    <nd ref="1756301620"/>
+    <nd ref="1756301624"/>
+    <nd ref="1756301627"/>
+    <nd ref="1756301629"/>
+    <nd ref="1756301630"/>
+    <nd ref="1756301628"/>
+    <nd ref="1756301625"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="note" v="Busline 60 fährt im Gleisbereich"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174845336">
+    <nd ref="1756265326"/>
+    <nd ref="1756265322"/>
+    <nd ref="1756265304"/>
+    <nd ref="1756265295"/>
+    <nd ref="1756280988"/>
+    <nd ref="1756280987"/>
+    <nd ref="1756280986"/>
+    <nd ref="1756280964"/>
+    <nd ref="1756280961"/>
+    <nd ref="1756280959"/>
+    <nd ref="1756280950"/>
+    <nd ref="1756280939"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174845344">
+    <nd ref="1756280878"/>
+    <nd ref="1756280833"/>
+    <nd ref="1908803203"/>
+    <nd ref="1910220397"/>
+    <nd ref="1910220393"/>
+    <nd ref="1756280830"/>
+    <nd ref="1908803196"/>
+    <nd ref="1756280828"/>
+    <nd ref="1756280820"/>
+    <nd ref="1756280816"/>
+    <nd ref="1756280814"/>
+    <nd ref="1450517121"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174845345">
+    <nd ref="1756324706"/>
+    <nd ref="1756324708"/>
+    <nd ref="1756324710"/>
+    <nd ref="1757040893"/>
+    <nd ref="1757040896"/>
+    <nd ref="1757040900"/>
+    <nd ref="1757040901"/>
+    <nd ref="1757040903"/>
+    <nd ref="1757040906"/>
+    <nd ref="1757040909"/>
+    <nd ref="1757040914"/>
+    <nd ref="1757040916"/>
+    <nd ref="1757040918"/>
+    <nd ref="1757040924"/>
+    <nd ref="1757040927"/>
+    <nd ref="1757040929"/>
+    <nd ref="1757040932"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174845351">
+    <nd ref="1756265406"/>
+    <nd ref="1756265405"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174845354">
+    <nd ref="1756280939"/>
+    <nd ref="1756280927"/>
+    <nd ref="1202759350"/>
+    <nd ref="1756280873"/>
+    <nd ref="1756280870"/>
+    <nd ref="1756324722"/>
+    <nd ref="1756324721"/>
+    <nd ref="1756324719"/>
+    <nd ref="1756324718"/>
+    <nd ref="1756324717"/>
+    <nd ref="1756324716"/>
+    <nd ref="1756324715"/>
+    <nd ref="1756324714"/>
+    <nd ref="1756324713"/>
+    <nd ref="1756301707"/>
+    <nd ref="1756301706"/>
+    <nd ref="1756301705"/>
+    <nd ref="1756301702"/>
+    <nd ref="1756301701"/>
+    <nd ref="1756301700"/>
+    <nd ref="25113885"/>
+    <nd ref="1756301698"/>
+    <nd ref="271075996"/>
+    <nd ref="1743822205"/>
+    <nd ref="1756301694"/>
+    <nd ref="1756301691"/>
+    <nd ref="1756301690"/>
+    <nd ref="1756301688"/>
+    <nd ref="1756301687"/>
+    <nd ref="1756301685"/>
+    <nd ref="1756301683"/>
+    <nd ref="1756301681"/>
+    <nd ref="1756301679"/>
+    <nd ref="1756301677"/>
+    <nd ref="1756301675"/>
+    <nd ref="1756301612"/>
+    <nd ref="1756301673"/>
+    <nd ref="1756301670"/>
+    <nd ref="1756301669"/>
+    <nd ref="1756301667"/>
+    <nd ref="1756324712"/>
+    <nd ref="1756301666"/>
+    <nd ref="1756301664"/>
+    <nd ref="1743821910"/>
+    <nd ref="1756301662"/>
+    <nd ref="1756301659"/>
+    <nd ref="1756301657"/>
+    <nd ref="1756301655"/>
+    <nd ref="1756301653"/>
+    <nd ref="1756301650"/>
+    <nd ref="1756301648"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174845357">
+    <nd ref="1756301649"/>
+    <nd ref="1756301651"/>
+    <nd ref="1756301652"/>
+    <nd ref="1756301654"/>
+    <nd ref="1756301656"/>
+    <nd ref="1756301658"/>
+    <nd ref="1756301660"/>
+    <nd ref="1756301661"/>
+    <nd ref="1756301663"/>
+    <nd ref="1756301665"/>
+    <nd ref="1756301668"/>
+    <nd ref="1756301671"/>
+    <nd ref="1756301672"/>
+    <nd ref="1756301674"/>
+    <nd ref="1756301676"/>
+    <nd ref="1756301678"/>
+    <nd ref="1756301680"/>
+    <nd ref="1756301682"/>
+    <nd ref="1756301684"/>
+    <nd ref="1756301686"/>
+    <nd ref="1756301689"/>
+    <nd ref="1756301692"/>
+    <nd ref="1756301693"/>
+    <nd ref="1756301695"/>
+    <nd ref="1756301696"/>
+    <nd ref="1756301697"/>
+    <nd ref="1756301699"/>
+    <nd ref="1756301703"/>
+    <nd ref="1756301704"/>
+    <nd ref="1120310800"/>
+    <nd ref="1743822504"/>
+    <nd ref="1743822541"/>
+    <nd ref="1743822546"/>
+    <nd ref="1743822551"/>
+    <nd ref="1634545538"/>
+    <nd ref="1634545540"/>
+    <nd ref="1634545542"/>
+    <nd ref="1743822650"/>
+    <nd ref="1634545546"/>
+    <nd ref="1743822676"/>
+    <nd ref="1634545548"/>
+    <nd ref="1743822690"/>
+    <nd ref="1743822699"/>
+    <nd ref="269015002"/>
+    <nd ref="248539901"/>
+    <nd ref="1756301708"/>
+    <nd ref="1756301711"/>
+    <nd ref="1404289129"/>
+    <nd ref="248787901"/>
+    <nd ref="1069901589"/>
+    <nd ref="1202759357"/>
+    <nd ref="1756280897"/>
+    <nd ref="25113922"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174845368">
+    <nd ref="1772706895"/>
+    <nd ref="1772706893"/>
+    <nd ref="1772706889"/>
+    <nd ref="1772706885"/>
+    <nd ref="1772706882"/>
+    <nd ref="1772706880"/>
+    <nd ref="1772706875"/>
+    <nd ref="1490496843"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="174845375">
+    <nd ref="1756301648"/>
+    <nd ref="1756301646"/>
+    <nd ref="1756301644"/>
+    <nd ref="1756320031"/>
+    <nd ref="1756301641"/>
+    <nd ref="271076011"/>
+    <nd ref="1756301639"/>
+    <nd ref="1756301636"/>
+    <nd ref="1756301634"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="0"/>
+    <tag k="gauge" v="1000"/>
+    <tag k="layer" v="1"/>
+    <tag k="railway" v="tram"/>
+    <tag k="voltage" v="750"/>
+  </way>
+  <way id="181753883">
+    <nd ref="1921926148"/>
+    <nd ref="1636527732"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
+  <way id="181760294">
+    <nd ref="1636352455"/>
+    <nd ref="1636550911"/>
+    <nd ref="298721730"/>
+    <tag k="electrified" v="contact_line"/>
+    <tag k="frequency" v="16.7"/>
+    <tag k="gauge" v="1435"/>
+    <tag k="railway" v="rail"/>
+    <tag k="tracks" v="1"/>
+    <tag k="voltage" v="15000"/>
+  </way>
   <node id="21686477" lat="49.4838269" lon="8.4739804">
     <tag k="railway" v="level_crossing"/>
   </node>

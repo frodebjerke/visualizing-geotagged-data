@@ -7,7 +7,7 @@ Created on Mar 24, 2012
 def videotimes(geocodes):
     videotimes = []
     start = None
-    for (lat,lon,realtime) in geocodes:
+    for (lat,lon,realtime,id) in geocodes:
         if not start:
             start = realtime
             videotime = 0
