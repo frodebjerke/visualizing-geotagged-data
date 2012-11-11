@@ -19,3 +19,6 @@ CACHE/
 .sass-cache
 *.sqlite
 out/
+*.geocode
+*.sql
+*.zip

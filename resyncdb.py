@@ -19,6 +19,6 @@ p.communicate("\q")
 print sub.check_output(SYNCDB,shell = True)
 
 p = sub.Popen(SHELL,shell = True, stdout = sub.PIPE, stdin = sub.PIPE)
-p.stdin.write("from geo.script.filldb import insertevaluation\n")
+p.stdin.write("from geo.script.filldb import insertevaluation,insertall\n")
 #p.communicate("from geo.script.filldb import insertall\n")
-p.communicate("insertevaluation()")
+p.communicate("insertall()")
