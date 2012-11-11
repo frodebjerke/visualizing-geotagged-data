@@ -5,14 +5,15 @@ Created on Mar 23, 2012
 '''
 
 from geo.io.gpx import GPX
-from geo.osm import OSM
+from geo.osm import OSM,calculate_distance
 from geo.models import createvideo
 from geo.routing.points import TracePointDTO
 from geo.io.videotime import videotimes
 
-import os
-import pickle
-import logging
+import numpy as np
+import os, pickle, logging, math, sys, glob
+from numpy.lib.function_base import average
+from decimal import Decimal
 
 logger = logging.getLogger(__name__)
 
@@ -25,6 +26,7 @@ def resolvefile(inpath, outpath,mode):
         raise RuntimeError, "gpx file is not valid"
     coordinates = gpx.gettrackpoints()
     geocodes = geocoder.reversegeocode(coordinates)
+    
     
     if os.path.exists(outpath):
         path,ext = os.path.splitext(outpath)
@@ -76,5 +78,101 @@ def resolveall():
         logger.info("Resolving file %s in mode %d" % (trackpath, tracktovideo[trackpath][0]))
         resolvefile(trackpath.replace(".geocode", ".gpx"), trackpath, tracktovideo[trackpath][0])
 
+def resolvetest():
+    from django.conf import settings
+    
+    for trace in glob.glob("%s/*.gpx" % settings.EVALUATION_DIR):
+        logger.info("Resolving file %s." % trace)
+        trace = os.path.join(settings.EVALUATION_DIR,trace)
+        resolvefile(trace,trace.replace(".gpx",".geocode"),0)
+
+def next_different(current, coordinates):
+    for coordinate in coordinates:
+        if coordinate[:2] != current[:2]:
+            return coordinate
+    return None
+
+
+def calculateaverage():
+    from geo.script.filldb import tracktovideo
+    osm = OSM(1) 
+    total_average = 0
+
+    for trackpath in tracktovideo.keys():
+        logger.info("Checking file %s in mode %d" % (trackpath, tracktovideo[trackpath][0]))
+        path,ext = os.path.splitext(trackpath)
+        gpxpath = path+".gpx"
+        gpx = GPX(gpxpath)
+        geocodes = pickle.load(open(trackpath,"r"))
+        coordinates = gpx.gettrackpoints()
+        total_distance = 0
+        for index in range(len(coordinates)):
+            current = geocodes[index]
+            successor = next_different(current, geocodes[index:])
+            tmp = geocodes[:index]
+            tmp.reverse()
+            predecessor = next_different(current,tmp)
+            if index == 0:
+                total_distance += distance_to_line(current, successor, coordinates[index])
+            elif index == len(coordinates) - 1:
+                total_distance += distance_to_line(predecessor,current , coordinates[index])
+            else:
+                if successor:
+                    after = distance_to_line(current, successor, coordinates[index])
+                else:
+                    after = sys.maxint
+                if predecessor:
+                    before = distance_to_line(predecessor,current , coordinates[index])
+                else:
+                    before = sys.maxint
+                total_distance += min(after,before)
+#            total_distance += osm.calculate_distance(geocodes[index], coordinates[index])
+        average = total_distance/len(geocodes)
+        logger.info("Average is %f" % (average))
+        total_average += average
+    
+    logger.info("Total average is %f." % (total_average/5))
+
+
+
+R = 6367
+
+
+def normalize(t):
+    length =  math.sqrt((t[0] **2) + (t[1] **2) + (t[2]**2))
+    return t/length
+
+def deg_to_rad(x):
+    return Decimal(x * Decimal(math.pi/180))
+
+def rad_to_deg(x):
+    return Decimal(x * Decimal(180/math.pi))
+
+def from_cartesian(t):
+    r = math.sqrt(t[0]**2 + t[1]**2 + t[2]**2);
+    lat = rad_to_deg(Decimal(math.asin(t[2] / r)))
+    lon = rad_to_deg(Decimal(math.atan2(t[1], t[0])))
+    return (lat,lon)
+
+
+def distance_to_line(a,b,c):
+    a = np.array(to_cartesian(a))
+    b = np.array(to_cartesian(b))
+    c = np.array(to_cartesian(c))
+    g = np.cross(a,b)
+    f = np.cross(c,g)
+    t = np.cross(g,f)
+    t = normalize(t) * R #normalize
+    return calculate_distance(from_cartesian(c),from_cartesian(t))
+    
+
+def to_cartesian(coordinate):
+    lat = deg_to_rad(coordinate[0])
+    lon = deg_to_rad(coordinate[1])
+    x = R * math.cos(lat) * math.cos(lon)
+    y = R * math.cos(lat) * math.sin(lon)
+    z = R * math.sin(lat)
+    return (x,y,z)
+
 if __name__ == "__main__":
-    resolveall()
+    resolvetest()

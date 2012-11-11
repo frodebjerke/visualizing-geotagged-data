@@ -20,6 +20,18 @@ from decimal import Decimal
 import logging
 import copy
 
+def calculate_distance(coord1,coord2):
+    lat1,lon1 = (coord1[0],coord1[1])
+    lat2,lon2 = (coord2[0],coord2[1])
+    lon1, lat1, lon2, lat2 = map(math.radians , [lon1, lat1, lon2, lat2])
+    # haversine formula 
+    dlon = lon2 - lon1 
+    dlat = lat2 - lat1 
+    a = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    c = 2 * math.asin(math.sqrt(a)) 
+    km = 6367 * c
+    return km 
+
 class OSM():
     """
     @author: Frederik Claus
@@ -74,7 +86,7 @@ class OSM():
         
             else:
                 predecessor = predecessors[-1]
-                predecessor_distance = self.calculate_distance(predecessor, coordinate)
+                predecessor_distance = calculate_distance(predecessor, coordinate)
                 try:
                     current = self.graph_resolve(predecessor, coordinate, blacklist)
                 except OSMException, e:
@@ -89,16 +101,16 @@ class OSM():
                         ignore_distance = True
                         current = self.simple_resolve(coordinate)
                         
-                current_distance = self.calculate_distance(current, coordinate)
+                current_distance = calculate_distance(current, coordinate)
         
                 """ looking backward """
                 if predecessor_distance < current_distance: #we are going in the wrong way or are still at the same point
 #                    if abs(self.calculate_distance(predecessor, coordinates[index-1]) - predecessor_distance) < self.calculate_distance(predecessor, current): #still at the same point
-                    if abs(current_distance - predecessor_distance) < self.calculate_distance(predecessor, current): #still at the same point
+                    if abs(current_distance - predecessor_distance) < calculate_distance(predecessor, current): #still at the same point
 #                    if (self.calculate_distance(predecessor, coordinates[index+1]) - predecessor_distance) < self.SIGMA:
                         self.logger.debug("Staying on the same node.")
                         current = (predecessor[0],predecessor[1],current[2],predecessor[3])
-                    elif self.calculate_distance(predecessor, coordinates[index+1]) < predecessor_distance:
+                    elif calculate_distance(predecessor, coordinates[index+1]) < predecessor_distance:
                         self.logger.debug("Waiting for the trace to catch up")
                         current = (predecessor[0],predecessor[1],current[2],predecessor[3])
                     else: #going the wrong way, only in train mode
@@ -138,10 +150,7 @@ class OSM():
             if index >= n_coordinates:
                 finished = True
                 
-        return predecessors
-    
-    def calculate_distance(self,coord1, coord2):
-        return self.graph._getdistance(coord1[0], coord1[1], coord2[0], coord2[1])     
+        return predecessors 
         
     def gapping_apart(self,distances):
         bigger = False
@@ -169,7 +178,7 @@ class OSM():
                 predecessor = successors[-1 ]
             current = self.graph_resolve(predecessor, coordinate)
             successors.append(current) 
-            distance = self.calculate_distance(current, coordinate)
+            distance = calculate_distance(current, coordinate)
             distances.append(distance)
 
         return distances
@@ -259,7 +268,7 @@ class OSMGraph():
                 self.logger.debug("Skipping blacklisted node %s." % str(node))
                 continue
             
-            distance = self._getdistance(coordinate[0], coordinate[1], node.lat, node.lon)
+            distance = calculate_distance(coordinate, (node.lat, node.lon))
 #            self.logger.debug("Comparing %f to %f." % (distance, min_distance))
             if distance < min_distance:
                 min_distance = distance
@@ -269,15 +278,6 @@ class OSMGraph():
             raise OSMException, "Could not find a nearby node!"    
         return (min_node.lat,min_node.lon,coordinate[2],min_node.id)
     
-    def _getdistance(self, lat1, lon1, lat2, lon2):
-        lon1, lat1, lon2, lat2 = map(math.radians , [lon1, lat1, lon2, lat2])
-        # haversine formula 
-        dlon = lon2 - lon1 
-        dlat = lat2 - lat1 
-        a = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
-        c = 2 * math.asin(math.sqrt(a)) 
-        km = 6367 * c
-        return km 
 
 class OSMNode():
     def __init__(self, node, relabel = False):

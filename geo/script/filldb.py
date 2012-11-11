@@ -8,7 +8,7 @@ from geo.routing.graph import Graph
 from django.conf import settings
 from geo.script.gpxtogeocode import filetodto
 from geo.routing.util import ConnectionMode
-import os
+import os,glob
 
 
 TRACK_PATH = os.path.join(settings.TEST_PATH, "tracks")
@@ -41,7 +41,7 @@ tracktovideo = {
                 PARADEPLATZ_WASSERTURM_TRAM_TRACK : [ConnectionMode.TRAIN, PARADEPLATZ_WASSERTURM_TRAM_VIDEO],
                 SCHLOSS_MARKTPLATZ_FUSS_TRACK : [ConnectionMode.WALK, SCHLOSS_MARKTPLATZ_FUSS_VIDEO],
                 SCHLOSS_MARKTPLATZ_TRAM_TRACK : [ConnectionMode.TRAIN, SCHLOSS_MARKTPLATZ_TRAM_VIDEO],
-                SCHLOSS_PARADEPLATZ_FUSS_TRACK : [ConnectionMode.WALK, SCHLOSS_PARADEPLATZ_FUSS_VIDEO],
+#                SCHLOSS_PARADEPLATZ_FUSS_TRACK : [ConnectionMode.WALK, SCHLOSS_PARADEPLATZ_FUSS_VIDEO],
 #                SCHLOSS_PARADEPLATZ_TRAM_TRACK : [ConnectionMode.TRAIN, SCHLOSS_PARADEPLATZ_TRAM_VIDEO]
                 }
 
@@ -54,5 +54,12 @@ def insertall():
         map = Graph.getinstance(tracktovideo[trackpath][0])
         map.inserttracepoints(dtos)
 
+def insertevaluation():
+    from geo.test.map import VIDEO_PATH
+    for trace in glob.glob("%s/*.geocode" % settings.EVALUATION_DIR):
+        dtos = filetodto(open(trace,"r"),VIDEO_PATH)
+        map = Graph.getinstance(0)
+        map.inserttracepoints(dtos)
+        
 if __name__ == "__main__":
     insertall()

@@ -1,18 +1,18 @@
 <!-- WALK MODE -->
 <query type="way">
-  <has-kv k="name" />
   <has-kv k="highway" v="pedestrian" />
   <has-kv k="area" modv="not" v="yes"/>
   <bbox-query s="49.48" n="49.5" w="8.45" e="8.48"/>
 </query>
+<print/>
 <recurse type="way-node"/>
 <print/>
 <query type="way">
-  <has-kv k="name" />
   <has-kv k="highway" v="residential"/>
   <has-kv k="area" modv="not" v="yes"/>
   <bbox-query s="49.48" n="49.5" w="8.45" e="8.48"/>
 </query>
+<print/>
 <recurse type="way-node"/>
 <print/>
 

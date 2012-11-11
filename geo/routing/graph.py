@@ -398,6 +398,7 @@ class Graph:
         node_colors = []
         map_edge_colors = []
         trace_edge_colors = []
+        edge_colors = []
 
         for point in self.mappoints:
             label = point.getlabel()
@@ -415,10 +416,12 @@ class Graph:
             if isinstance(connection, TracePointConnection):
                 trace_edge_colors.append(trace_edge_color)
                 graph = traceconnectiongraph
+                edge_colors.append(trace_edge_color)
 
             else:
                 graph = mapconnectiongraph
                 map_edge_colors.append(map_edge_color)
+                edge_colors.append(map_edge_color)
 
             graph.add_edge(connection.mapsource.getlabel(), connection.maptarget.getlabel(), cost=connection.cost)
 
@@ -430,7 +433,7 @@ class Graph:
             figure.set_size_inches(20, 20)
             plt.figure(figure.number)
 
-        nx.draw_networkx(mapconnectiongraph, pos, False, node_color=node_colors, edge_color=map_edge_colors)
+        nx.draw_networkx(mapconnectiongraph, pos, False, node_color=node_colors, edge_color=map_edge_color)
         nx.draw_networkx_edge_labels(mapconnectiongraph, pos, font_size=5)
 
         plt.savefig(path + "_map.png")
