@@ -11,29 +11,29 @@ from geo.routing.util import ConnectionMode
 import os,glob
 
 
-TRACK_PATH = os.path.join(settings.TEST_PATH, "tracks")
-VIDEO_PATH = os.path.join(settings.STATIC_PATH, "upload")
+TRACK_DIR = os.path.join(settings.TEST_PATH, "tracks")
+VIDEO_DIR = os.path.join(settings.STATIC_PATH, "upload")
 
 #===============================================================================
 # Track paths
 #===============================================================================
-PARADEPLATZ_WASSERTURM_FUSS_TRACK = os.path.join(TRACK_PATH, "t2.geocode")
-SCHLOSS_MARKTPLATZ_FUSS_TRACK = os.path.join(TRACK_PATH, "t4.geocode")
-SCHLOSS_PARADEPLATZ_FUSS_TRACK = os.path.join(TRACK_PATH, "t5.geocode")
+PARADEPLATZ_WASSERTURM_FUSS_TRACK = os.path.join(TRACK_DIR, "t2.geocode")
+SCHLOSS_MARKTPLATZ_FUSS_TRACK = os.path.join(TRACK_DIR, "t4.geocode")
+SCHLOSS_PARADEPLATZ_FUSS_TRACK = os.path.join(TRACK_DIR, "t5.geocode")
 
-PARADEPLATZ_WASSERTURM_TRAM_TRACK = os.path.join(TRACK_PATH, "t1.geocode")
-SCHLOSS_MARKTPLATZ_TRAM_TRACK = os.path.join(TRACK_PATH, "t3.geocode")
-SCHLOSS_PARADEPLATZ_TRAM_TRACK = os.path.join(TRACK_PATH, "t6.geocode")
+PARADEPLATZ_WASSERTURM_TRAM_TRACK = os.path.join(TRACK_DIR, "t1.geocode")
+SCHLOSS_MARKTPLATZ_TRAM_TRACK = os.path.join(TRACK_DIR, "t3.geocode")
+SCHLOSS_PARADEPLATZ_TRAM_TRACK = os.path.join(TRACK_DIR, "t6.geocode")
 #===============================================================================
 # Video paths
 #===============================================================================
-PARADEPLATZ_WASSERTURM_FUSS_VIDEO = os.path.join(VIDEO_PATH, "v5.ogv")
-SCHLOSS_MARKTPLATZ_FUSS_VIDEO = os.path.join(VIDEO_PATH, "v4.ogv")
-SCHLOSS_PARADEPLATZ_FUSS_VIDEO = os.path.join(VIDEO_PATH, "v2.ogv")
+PARADEPLATZ_WASSERTURM_FUSS_VIDEO = os.path.join(VIDEO_DIR, "v5.ogv")
+SCHLOSS_MARKTPLATZ_FUSS_VIDEO = os.path.join(VIDEO_DIR, "v4.ogv")
+SCHLOSS_PARADEPLATZ_FUSS_VIDEO = os.path.join(VIDEO_DIR, "v2.ogv")
 
-PARADEPLATZ_WASSERTURM_TRAM_VIDEO = os.path.join(VIDEO_PATH, "v1.ogv")
-SCHLOSS_MARKTPLATZ_TRAM_VIDEO = os.path.join(VIDEO_PATH, "v3.ogv")
-SCHLOSS_PARADEPLATZ_TRAM_VIDEO = os.path.join(VIDEO_PATH, "v6.ogv")
+PARADEPLATZ_WASSERTURM_TRAM_VIDEO = os.path.join(VIDEO_DIR, "v1.ogv")
+SCHLOSS_MARKTPLATZ_TRAM_VIDEO = os.path.join(VIDEO_DIR, "v3.ogv")
+SCHLOSS_PARADEPLATZ_TRAM_VIDEO = os.path.join(VIDEO_DIR, "v6.ogv")
 
 
 tracktovideo = {
@@ -55,11 +55,19 @@ def insertall():
         map.inserttracepoints(dtos)
 
 def insertevaluation():
-    from geo.test.map import VIDEO_PATH
-    for trace in glob.glob("%s/*.geocode" % settings.EVALUATION_DIR):
-        dtos = filetodto(open(trace,"r"),VIDEO_PATH)
+    insertdir(settings.EVALUATION_DIR)
+
+from geo.test.map import VIDEO_PATH 
+        
+def insertdir(geocodepath, videopath = VIDEO_PATH, afterinsert = False ):
+    count = 0
+    for trace in glob.glob("%s/*.geocode" % geocodepath):
+        dtos = filetodto(open(trace,"r"), videopath)
         map = Graph.getinstance(0)
         map.inserttracepoints(dtos)
+        if afterinsert:
+            yield "%d-%s" % (count, os.path.basename(trace))
+            count += 1
         
 if __name__ == "__main__":
     insertall()

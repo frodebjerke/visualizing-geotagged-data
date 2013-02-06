@@ -15,6 +15,7 @@ from util import MapConnectionTrace, MapPointTrace, ConnectionMode
 from django.core.exceptions import ObjectDoesNotExist
 import logging
 
+import matplotlib.pyplot as plt
 
 """Datastructure that hold Points and PointConnection"""
 class Graph:
@@ -379,8 +380,7 @@ class Graph:
 
     def draw(self, path, node_color=None, trace_edge_color=None, map_edge_color=None, reset=True, draw_tracepoints=True):
 
-        from decimal import Decimal
-        import matplotlib.pyplot as plt
+        
 
         if not node_color:
             node_color = self.NODE_COLOR
@@ -391,22 +391,24 @@ class Graph:
 
         mapconnectiongraph = nx.DiGraph()
         traceconnectiongraph = nx.DiGraph()
-        (x0, y0) = (Decimal("49.48155") * 100, Decimal("8.45499") * 100)
-        (x1, y1) = (Decimal("49.49092") * 100, Decimal("8.47102") * 100)
+#        (x0, y0) = (Decimal("49.48155") * 100, Decimal("8.45499") * 100)
+#        (x1, y1) = (Decimal("49.49092") * 100, Decimal("8.47102") * 100)
 
         pos = {}
         node_colors = []
         map_edge_colors = []
         trace_edge_colors = []
         edge_colors = []
+        
+        (commonplaceslat, commonplaceslon) = self.getcommondecimalplaces()
 
         for point in self.mappoints:
-            label = point.getlabel()
-            coords = [float(point.lat * 100 - x0) * 1000 , float(y1 - point.lon * 100) * 1000 ]
-            pos[label] = coords
+            name = point.getlabel()
+            coord = self._cutdecimalplaces(point, commonplaceslat, commonplaceslon)
+            pos[name] = [float(x) for x in coord]
             node_colors.append(node_color)
-            mapconnectiongraph.add_node(label)
-            traceconnectiongraph.add_node(label)
+            mapconnectiongraph.add_node(name)
+            traceconnectiongraph.add_node(name)
 
 
         for connection in self.connections:
@@ -447,6 +449,63 @@ class Graph:
             nx.draw_networkx_edge_labels(traceconnectiongraph, pos, font_size=5)
 
             plt.savefig(path + "_trace.png")
+    
+    def getcommondecimalplaces(self):
+        commonplaceslat = Decimal("inf")
+        commonplaceslon = Decimal("inf")
+        for point in self.mappoints:
+            (lat,lon) = point.asquantizedtuple()
+            for opoint in self.mappoints:
+                if opoint == point:
+                    continue
+                (olat, olon) = opoint.asquantizedtuple()
+                placeslat = self.cmpdecimalplaces(lat, olat)
+                placeslon = self.cmpdecimalplaces(lon, olon)
+                
+                if placeslat < commonplaceslat:
+                    commonplaceslat = placeslat
+                if placeslon < commonplaceslon:
+                    commonplaceslon = placeslon
+        return (commonplaceslat, commonplaceslon)
+                
+    def cmpdecimalplaces(self, x, y):
+        assert isinstance(x, Decimal)
+        assert isinstance(y, Decimal)
+        
+        digitsx = x.as_tuple().digits
+        digitsy = y.as_tuple().digits
+        
+        for i in range(len(digitsx)):
+            if digitsx[i] != digitsy[i]:
+                return i
+        return len(digitsx)
+    
+    def _cutdecimalplaces(self, point, placeslat, placeslon):
+        assert not (placeslat is None)
+        assert not (placeslon is None)
+        (lat, lon ) = point.asquantizedtuple()
+        return [self._cutdecimalplace(lat, placeslat), 
+                self._cutdecimalplace(lon, placeslon)]
+    
+    '''
+    @summary: Cut n digits from decimal x starting at the front
+    '''
+    def _cutdecimalplace(self, x, n):
+        assert isinstance(x, Decimal)
+        # try to keep 2 decimal places max
+        ndigits = len(x.as_tuple().digits)
+        if n > ndigits:
+            pass
+        assert not n > ndigits
+        
+        digits = x.as_tuple().digits[n:]
+        nremainingdigits = len(digits)
+                
+        if nremainingdigits >= 4: exp = -2
+        elif nremainingdigits == 3: exp = -1
+        else: exp = 0
+        return Decimal((0, digits, exp))
+                
 
     def getallconnections(self, source=None, target=None):
         connections = []

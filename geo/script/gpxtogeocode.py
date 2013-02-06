@@ -80,10 +80,17 @@ def resolveall():
 
 def resolvetest():
     from django.conf import settings
+    resolvedir(settings.EVALUATION_DIR)
     
-    for trace in glob.glob("%s/*.gpx" % settings.EVALUATION_DIR):
+        
+def resolvedir(path):
+    
+    assert os.path.exists(path)
+    path = os.path.abspath(path)
+    
+    for trace in glob.glob("%s/*.gpx" % path):
         logger.info("Resolving file %s." % trace)
-        trace = os.path.join(settings.EVALUATION_DIR,trace)
+        trace = os.path.join(path,trace)
         resolvefile(trace,trace.replace(".gpx",".geocode"),0)
 
 def next_different(current, coordinates):

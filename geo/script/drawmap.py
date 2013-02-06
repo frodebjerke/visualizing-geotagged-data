@@ -10,15 +10,16 @@ from filldb import tracktovideo
 from django.conf import settings
 import os
 
-def drawmap():
-    mode = 1
+def drawmap(mode, filename):
 #    geocoder = OSM(1)
 #    nodes = geocoder.getnodes()
     graph = Graph.getinstance(mode)
 #    for node in nodes:
 #        graph.insertmappoint(node[0],node[1])
-    graph.draw(os.path.join(settings.OUT_DIR,"%d" % mode),reset = False)
+    if filename is None:
+        filename = "%d" % mode
+    graph.draw(os.path.join(settings.OUT_DIR, filename),reset = False)
 
 
 if __name__ == "__main__":
-    drawmap()
+    drawmap(0)

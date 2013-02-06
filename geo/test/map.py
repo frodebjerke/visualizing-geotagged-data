@@ -46,7 +46,7 @@ TRACES = [
 DTO_TRACES = []
 VIDEO_PATH = os.path.join(settings.TEST_PATH, "video.3gp")
 
-#video = createvideo(VIDEO_PATH)
+#video = createvideo(VIDEO_DIR)
 video = None
 
 for trace in TRACES:
@@ -291,7 +291,7 @@ class GraphTest(TransactionTestCase):
 #    def getdtos(self, path):
 #        (name, ext) = os.path.splitext(path)
 #        gpx = GPX(open(name + ".gpx"))
-#        video = createvideo(self.VIDEO_PATH)
+#        video = createvideo(self.VIDEO_DIR)
 #        dtos = []
 #        for (lat, lon, time) in gpx.gettrackpoint():
 #            dto = TracePointDTO(lat, lon, time, 0, video)

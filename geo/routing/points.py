@@ -6,6 +6,7 @@ Created on Oct 28, 2012
 from django.db import models
 from util import ConnectionMode
 from geo.models import Video
+from decimal import Decimal
 import math
 
 #===============================================================================
@@ -18,6 +19,7 @@ class Point(models.Model):
                (ConnectionMode.BIKE,60),
                (ConnectionMode.MOTOR_VEHICLE,200),
                (ConnectionMode.TRAIN,1000))
+    
 
     class Meta:
         app_label ="geo"
@@ -32,6 +34,7 @@ class MapPoint(Point):
     lat = models.DecimalField(decimal_places=26,max_digits=30)
     lon = models.DecimalField(decimal_places=26,max_digits=30)
     address = models.CharField(max_length = 10000,null=True,blank=True)
+    QUANTIZE_EXPONENT = Decimal("0.000001")
 
     def init(self):
         self.tracepoints = []
@@ -46,10 +49,15 @@ class MapPoint(Point):
         a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
         c = 2 * math.asin(math.sqrt(a)) 
         km = 6367 * c
-        return km 
+        return km
+    
+    def asquantizedtuple(self):
+        return (Decimal(self.lat).quantize(self.QUANTIZE_EXPONENT),
+                Decimal(self.lon).quantize(self.QUANTIZE_EXPONENT))
+ 
 
     def getlabel(self):
-        return "%s,%s"%(self.lat,self.lon)
+        return "%s,%s" % (self.lat,self.lon)
         
     def __unicode__(self):
         if self.address:
