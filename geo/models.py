@@ -3,7 +3,7 @@
 from django.db import models
 from  django.conf import settings
 from django.core.files import File
-
+from geo import loadmodels
 import os
 
 class Video(models.Model):
@@ -28,3 +28,4 @@ def createvideo(path):
     video.save()
     return video
 
+loadmodels()

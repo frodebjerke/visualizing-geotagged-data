@@ -1,34 +1,41 @@
-
 import os
 import appsettings
 import re
 import sys
-from django.core.management import setup_environ
-
-sys.path.append(os.path.realpath(".."))
-import settings
-setup_environ(settings)
+import appsettings
 
 
 
-filename = re.compile("__init__|test")
+def loaddefinitions(packages, importall = False, nglobals = globals()):
+    " Import every module in packages or import every definition from every module in packages. Probably not compatible with nested packages."  
+    
+    filename = re.compile("__init__|test")
+    
+    for package in packages:
+        try :
+            modulepaths = os.listdir(os.path.join(appsettings.APP_PATH,
+                                              package.replace(".", os.sep)))
+            for modulepath in modulepaths:
+                (name, ext) = os.path.splitext(modulepath)
+                if filename.search(name) or ext == ".pyc":
+                    continue
+                modulename = appsettings.APP_NAME + "." + package + "." + name
+#                print "Trying to import %s" % (modulename)
+                __import__(modulename)
+                if importall:
+                    module = sys.modules[modulename]
+                    for k in dir(module):
+#                        print k
+                        nglobals[k] = module.__dict__[k]
+    
+    
+        except Exception as e:
+            raise
 
-for package in appsettings.MODEL_DEFINITION :
-    try :
-        modules = os.listdir(os.path.join(appsettings.APP_PATH,
-                                          package.replace(".", os.sep)))
-        for module in modules:
-            (name, ext) = os.path.splitext(module)
-            if filename.search(name) or ext == ".pyc":
-                continue
-            module = __name__ + "." + package + "." + name
-#            print "Trying to import %s" % (module)
-            __import__(module)
+def loadmodels():
+    loaddefinitions(packages = appsettings.MODEL_DEFINITION)
 
-    except Exception as e:
-        raise
-
-
-
+def loadtests(nglobals):
+    loaddefinitions(packages = appsettings.TEST_DEFINITION, nglobals = nglobals, importall = True)
 
 

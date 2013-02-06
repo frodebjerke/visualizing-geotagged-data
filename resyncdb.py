@@ -12,7 +12,6 @@ DBSHELL = "python manage.py dbshell"
 SHELL = "python manage.py shell"
 
 p = sub.Popen(DBSHELL,shell = True, stdout = sub.PIPE, stdin = sub.PIPE)
-p.stdin.write("django\n")
 p.stdin.write("\i clear.sql\n")
 p.communicate("\q")
 
