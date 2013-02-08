@@ -30,9 +30,10 @@ SCHLOSS_PARADEPLATZ_TRAM_TRACK = os.path.join(TRACK_DIR, "t6.geocode")
 #===============================================================================
 # Video paths
 #===============================================================================
-PARADEPLATZ_WASSERTURM_FUSS_VIDEO = os.path.join(VIDEO_DIR, "v5.ogv")
-SCHLOSS_MARKTPLATZ_FUSS_VIDEO = os.path.join(VIDEO_DIR, "v4.ogv")
-SCHLOSS_PARADEPLATZ_FUSS_VIDEO = os.path.join(VIDEO_DIR, "v2.ogv")
+SCHLOSS_PARADEPLATZ_FUSS_VIDEO = os.path.join(VIDEO_DIR, "schloss_paradeplatz_0.ogv")
+PARADEPLATZ_MARKTPLATZ_FUSS_VIDEO = os.path.join(VIDEO_DIR, "paradeplatz_marktplatz_0.ogv")
+MARKTPLATZ_PARADEPLATZ_FUSS_VIDEO = os.path.join(VIDEO_DIR, "marktplatz_paradeplatz_0.ogv")
+PARADEPLATZ_SCHLOSS_FUSS_VIDEO = os.path.join(VIDEO_DIR, "paradeplatz_schloss_0.ogv")
 
 PARADEPLATZ_WASSERTURM_TRAM_VIDEO = os.path.join(VIDEO_DIR, "v1.ogv")
 SCHLOSS_MARKTPLATZ_TRAM_VIDEO = os.path.join(VIDEO_DIR, "v3.ogv")
@@ -49,10 +50,13 @@ SCHLOSS_PARADEPLATZ_TRAM_VIDEO = os.path.join(VIDEO_DIR, "v6.ogv")
 ##                PARADEPLATZ_WASSERTURM_TRAM_TRACK : [ConnectionMode.TRAIN, PARADEPLATZ_WASSERTURM_TRAM_VIDEO],
 #                }
 tracktovideo = [
-                [SCHLOSS_PARADEPLATZ_FUSS_TRACK, 0, VIDEO_PATH],
-                [PARADEPLATZ_MARKTPLATZ_FUSS_TRACK, 0, VIDEO_PATH],
-                [MARKTPLATZ_PARADEPLATZ_FUSS_TRACK, 0, VIDEO_PATH],
-                [PARADEPLATZ_SCHLOSS_FUSS_TRACK, 0, VIDEO_PATH]
+                [SCHLOSS_PARADEPLATZ_FUSS_TRACK, 0, SCHLOSS_PARADEPLATZ_FUSS_VIDEO],
+                [PARADEPLATZ_MARKTPLATZ_FUSS_TRACK, 0, PARADEPLATZ_MARKTPLATZ_FUSS_VIDEO],
+                [MARKTPLATZ_PARADEPLATZ_FUSS_TRACK, 0, MARKTPLATZ_PARADEPLATZ_FUSS_VIDEO],
+                [PARADEPLATZ_SCHLOSS_FUSS_TRACK, 0, PARADEPLATZ_MARKTPLATZ_FUSS_VIDEO],
+                
+                [SCHLOSS_MARKTPLATZ_TRAM_TRACK, 1, SCHLOSS_MARKTPLATZ_TRAM_VIDEO],
+                [PARADEPLATZ_WASSERTURM_TRAM_TRACK, 1, PARADEPLATZ_WASSERTURM_TRAM_VIDEO],
                 ]
 
 def insertall():

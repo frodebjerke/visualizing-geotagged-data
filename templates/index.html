@@ -1,4 +1,4 @@
-{% extends "start.tpl" %}
+{% extends "base.html" %}
 
 {% block Title %}View Map Tracks{% endblock %}
 
@@ -19,7 +19,7 @@
 				<a href="#tabs-1">View</a>
 			</li>
 			<li>
-				<a href="#tabs-2">Upload</a>
+				<a href="#tabs-2" disabled="disabled">Upload</a>
 			</li>
 		</ul>
 		
@@ -72,11 +72,11 @@
 		</div>
 		
 		<div id="tabs-2">
-		
+			<p>The upload is disabled, because we only have partial osm data from Mannheim.</p>
 	 		<form id="upload" method="POST" action="" enctype="multipart/form-data">
 	 			{% csrf_token %}
 	 			{{ form.as_p }}
-	 			<input type="submit" class="ui-state-default" value="Submit" />
+	 			<input type="submit" class="ui-state-default" value="Submit" disabled="disabled"/>
 			</form>
 		</div>
 	</div>
