@@ -31,26 +31,28 @@ class JSONX():
             data.append(pair)
         self.data = data
 
-    def setconnectiontrack(self, connectiontrack, map):
+    def setconnectiontrack(self, connectiontrack, graph):
         data = []
         
-        self.logger.debug("PROJECT_PATH: %s", settings.PROJECT_PATH)
+#        self.logger.debug("PROJECT_PATH: %s", settings.PROJECT_PATH)
         for connection in connectiontrack:
-            data.append(self.objectifypoint(connection.mapsource, connection, map))
+            data.append(self.objectifypoint(connection.mapsource, connection, graph))
         lastconnection = connectiontrack.getlastconnection()
         if lastconnection:
-            data.append(self.objectifypoint(lastconnection.maptarget, lastconnection, map))
+            data.append(self.objectifypoint(lastconnection.maptarget, lastconnection, graph))
         self.data = data
 
     def objectifypoint(self, point, connection, map):
         jpoint = {
-               "lat" : str(point.lat),
-                "lon" : str(point.lon),
-                "id" : str(point.id)}
+                  "lat" : str(point.lat),
+                  "lon" : str(point.lon),
+                  "id" : str(point.id)
+                }
 
         if isinstance(connection, TracePointConnection):
 
             tracepoint = map.gettracepoint(video=connection.video , point=point)
+            assert tracepoint, "Must get a tracepoint for point %s with video %d." % (point, connection.video.id)
 
             jpoint["videotimestart"] = tracepoint.videotimestart
             jpoint["videotimeend"] = tracepoint.videotimeend

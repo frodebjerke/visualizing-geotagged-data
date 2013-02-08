@@ -10,7 +10,7 @@ from points import TracePoint,MapPoint
 from decimal import Decimal
 import networkx as nx
 import heapq
-from copy import deepcopy
+from copy import copy
 from util import MapConnectionTrace, MapPointTrace, ConnectionMode
 from django.core.exceptions import ObjectDoesNotExist
 import logging
@@ -48,8 +48,8 @@ class Graph:
         self.connections = []
 
         #holds traceconnection as well as mapconnections
-        self.mapconnections = []
-        self.traceconnections = []
+#        self.mapconnections = []
+#        self.traceconnections = []
 
         #fast access with id from mapsource
         self.mapconnections_id = {}
@@ -79,7 +79,7 @@ class Graph:
     @classmethod
     def createmap(cls, mode):
 
-        map = Graph(mode)
+        graph = Graph(mode)
         traceconnections = TracePointConnection.objects.filter(mode=mode)
         #find all tracepoints that are interconnected by a tracepointconnection
         tracepoints = set()
@@ -102,15 +102,15 @@ class Graph:
 
 
         for mappoint in mappoints:
-            map.addmappoint(mappoint)
+            graph.addmappoint(mappoint)
         for connection in mapconnections:
-            map.addmapconnection(connection)
+            graph.addmapconnection(connection)
         for tracepoint in tracepoints:
-            map.addtracepoint(tracepoint)
+            graph.addtracepoint(tracepoint)
         for connection in traceconnections:
-            map.addtraceconnection(connection)
+            graph.addtraceconnection(connection)
 
-        return map
+        return graph
 
     @classmethod
     def setinstance(cls, map, mode):
@@ -122,36 +122,33 @@ class Graph:
 
     def insertmappoint(self, lat, lon, address=None):
         "Adds the point to the map if it does not exist yet and creates a connection to the point itself. Returns the new point"
-        self.logger.debug("Adding %f,%f as mappoint." % (lat,lon))
-        point = self.getmappoint(lat, lon)
-        if point:
-            return point
-
+        self.logger.debug("Adding %s,%s as mappoint." % (lat,lon))
         point = MapPoint(lat=lat, lon=lon, address=address)
-#        point.tracepoints = []
-#        point.tracepoints_id = {}
 
         point.save()
-
         self.addmappoint(point)
 
         return point
 
     def addmappoint(self, point):
-        point.init()
         self.mappoints_id[point.id] = point
         self.graph.add_node(point.id)
         try:
             self.mappoints_latlon[str(point.lat)]
         except KeyError as e:
             self.mappoints_latlon[str(point.lat)] = {}
-
+        
+        assert not self.mappoints_latlon[str(point.lat)].has_key(str(point.lon))
         self.mappoints_latlon[str(point.lat)][str(point.lon)] = point
         self.mappoints.append(point)
 
 
     def getmappoint(self, lat=None, lon=None, pointid=None):
-        "Searches the mappoint with the fastest access possible"
+        '''
+        @summary Searches the mappoint with the fastest access possible
+        @note This caching works fine, because Graph is not a model and manages every other instance
+                @see gettracepoint
+        '''
         point = None
         try:
             if pointid:
@@ -169,7 +166,6 @@ class Graph:
 
     def inserttracepoint(self, dto):
         "Adds the trace point to the map or updates the time of and existing one and creates a map point if it does not exist yet"
-        self.logger.debug("Adding %f,%f as tracepoint." % (dto.getlat(), dto.getlon()))
         mappoint = self.getmappoint(lat=dto.getlat(), lon=dto.getlon())
 
         #try to get mappoint from current map insert it if it does not exist
@@ -181,6 +177,7 @@ class Graph:
 
         tracepoint = self.gettracepoint(video=dto.getvideo(), point=mappoint)
         if not tracepoint:
+            self.logger.debug("Adding %s,%s as tracepoint." % (dto.getlat(), dto.getlon()))
             tracepoint = TracePoint(videotimestart=dto.getvideotime(),
                                     videotimeend=dto.getvideotime(),
                                     realtimestart=dto.getrealtime(),
@@ -188,6 +185,8 @@ class Graph:
                                     video=dto.getvideo(),
                                     mappoint=mappoint)
             add = True
+        else:
+            self.logger.debug("Updating tracepoint %s." % tracepoint)
 
         if tracepoint.videotimeend <= dto.getvideotime():
             tracepoint.videotimeend = dto.getvideotime()
@@ -209,8 +208,9 @@ class Graph:
     def addtracepoint(self, tracepoint):
 
         mappoint = self.getmappoint(pointid=tracepoint.mappoint.id)
-        mappoint.tracepoints_id[tracepoint.video.id] = tracepoint
-        mappoint.tracepoints.append(tracepoint)
+        """ This way of caching does not work @see gettracepoint for details """
+#        mappoint.tracepoints_id[tracepoint.video.id] = tracepoint
+#        mappoint.tracepoints.append(tracepoint)
 
         return tracepoint
 
@@ -228,7 +228,15 @@ class Graph:
         self.__connectmappoints()
 
     def gettracepoint(self, video, lat=None, lon=None, point=None):
-
+        '''
+        @note Caching of instances does not work well with django orm.
+                This is because TracePoint and MapPoint are referenced by other models.
+                Now, because you need to query each individually, you create several instances of 
+                the same record. This will lead you into trouble when you attach some attributes to 
+                one of this instances and try to access it via another model instance. The instance
+                will still hold the old state without the new attribute. This makes for really confusing
+                and hard to discover errors.
+        ''' 
         mappoint = None
         if lat and lon:
             mappoint = self.getmappoint(lat, lon)
@@ -236,14 +244,15 @@ class Graph:
             mappoint = point
         tracepoint = None
         try:
-            tracepoint = mappoint.tracepoints_id[video.id]
+            #get the correct tracepoint from the db
+            tracepoint = TracePoint.objects.get(mappoint = mappoint, video = video)
         except Exception:
             pass
-        if not tracepoint:
-            try:
-                tracepoint = TracePoint.objects.get(video=video, mappoint=point)
-            except ObjectDoesNotExist:
-                pass
+#        if not tracepoint:
+#            try:
+#                tracepoint = TracePoint.objects.get(video=video, mappoint=point)
+#            except ObjectDoesNotExist:
+#                pass
 
         return tracepoint
 
@@ -532,7 +541,7 @@ class Graph:
         startconnections = self.getallconnections(start)
         self.initshortesttrack(startconnections)
 
-        oldconnections = deepcopy(self.connections)
+        oldconnections = copy(self.connections)
         visitedconnections = []
         unvisitedconnections = self.connections
 
@@ -542,6 +551,9 @@ class Graph:
             heapq.heapify(minimalcost)
 
             (cost, connection) = heapq.heappop(minimalcost)
+            # the rest cannot be reached from here
+            if connection.totalcost == Decimal("Infinity"):
+                break
             visitedconnections.append(connection)
             unvisitedconnections.remove(connection)
 
@@ -549,28 +561,30 @@ class Graph:
 
             for successor in successors:
                 self.relax(connection, successor)
+                
+        self.connections = oldconnections
 
     def getshortesttrack(self, source, target):
         self.logger.info("Starting single source shortest path from %d to %d" % (source.id, target.id))
         self.shortesttrack(source)
-        print "Finshed single source shortest path"
+        self.logger.info("Finshed single source shortest path")
         shortesttrack = MapConnectionTrace()
         currentconnection = None
         totalcost = None
         totarget = self.getallconnections(target=target)
 
 
-        print "Searching cheapest end connection"
+        self.logger.info("Searching cheapest end connection")
         for connection in totarget:
             if connection.totalcost < totalcost or totalcost == None:
                 currentconnection = connection
                 totalcost = connection.totalcost
 
         if not totarget or totalcost == Decimal("Infinity"):
-            print "Did not find a connection to the target point"
+            self.logger.info("Did not find a connection to the target point")
             return shortesttrack
 
-        print "Found %s with totalcost %s" % (currentconnection, str(totalcost))
+        self.logger.info("Found %s with totalcost %s" % (currentconnection, str(totalcost)))
         currentpoint = target
         while currentpoint != source and currentconnection != None:
             shortesttrack.addconnection(currentconnection)

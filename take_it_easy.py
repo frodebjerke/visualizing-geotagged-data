@@ -44,9 +44,9 @@ parser.add_argument("--mode",
 
 parser = parser.parse_args()
 
-assert parser.reset or parser.insert or parser.draw_single, "You must specify an action."
-assert (not parser.draw_single) or (not parser.draw_multiple), "You must specify one: draw-single or draw-multiple"
-assert parser.draw_multiple and parser.insert, "draw-multiple is only possible with insert" 
+assert parser.reset or parser.resolve or parser.insert or parser.draw_single, "You must specify an action."
+assert (parser.draw_single) or (not parser.draw_multiple), "You must specify one: draw-single or draw-multiple"
+#assert parser.draw_multiple and parser.insert, "draw-multiple is only possible with insert" 
 
 path = os.path.abspath(parser.directory)
 mode = parser.mode
@@ -69,12 +69,13 @@ if parser.resolve:
 if parser.insert:
     from geo.script import filldb
     print "Inserting all .geocode files from %s" % path
-    for n in filldb.insertdir(path, afterinsert = True):
-        draw(n)
+#    for n in filldb.insertdir(path, afterinsert = True):
+#        draw(n)
+    filldb.insertall()
     
 
 if parser.draw_single:
-    draw(0)
+    draw("0-single_export")
 
     
 print "Finished."

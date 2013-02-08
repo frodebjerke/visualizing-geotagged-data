@@ -31,14 +31,13 @@ class Point(models.Model):
 
 class MapPoint(Point):
 
-    lat = models.DecimalField(decimal_places=26,max_digits=30)
-    lon = models.DecimalField(decimal_places=26,max_digits=30)
+#    lat = models.DecimalField(decimal_places=26,max_digits=30)
+#    lon = models.DecimalField(decimal_places=26,max_digits=30)
+    lat = models.DecimalField(decimal_places = 7, max_digits = 9)
+    lon = models.DecimalField(decimal_places = 7, max_digits = 9)
     address = models.CharField(max_length = 10000,null=True,blank=True)
-    QUANTIZE_EXPONENT = Decimal("0.000001")
+    QUANTIZE_EXPONENT = Decimal("0.0000001")
 
-    def init(self):
-        self.tracepoints = []
-        self.tracepoints_id = {}
         
     def getdistance(self,point):
 
@@ -63,7 +62,7 @@ class MapPoint(Point):
         if self.address:
             return self.address
         else:
-            return "%f,%f" % (self.lat,self.lon)
+            return "%d" % (self.id)
    
     class Meta(Point.Meta):
         pass
@@ -77,7 +76,7 @@ class TracePoint(Point):
     mappoint = models.ForeignKey(MapPoint,on_delete = models.CASCADE)
     
     def __unicode__(self):
-        return "%s TRACE" % self.mappoint.address
+        return "%d TRACE-%d" % (self.mappoint.id, self.video.id) 
 
 #===============================================================================
 # dto
@@ -104,3 +103,5 @@ class TracePointDTO:
         return self.video
     def getaddress(self):
         return self.address
+    def __str__(self):
+        return "%s, %s" % (self.lat, self.lon)

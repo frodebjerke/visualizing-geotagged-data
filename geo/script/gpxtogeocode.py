@@ -74,7 +74,7 @@ def filetodto(track, videopath):
 
 def resolveall():
     from geo.script.filldb import tracktovideo 
-    for trackpath in tracktovideo.keys():
+    for trackpath in tracktovideo:
         logger.info("Resolving file %s in mode %d" % (trackpath, tracktovideo[trackpath][0]))
         resolvefile(trackpath.replace(".geocode", ".gpx"), trackpath, tracktovideo[trackpath][0])
 
@@ -105,7 +105,7 @@ def calculateaverage():
     osm = OSM(1) 
     total_average = 0
 
-    for trackpath in tracktovideo.keys():
+    for trackpath in tracktovideo:
         logger.info("Checking file %s in mode %d" % (trackpath, tracktovideo[trackpath][0]))
         path,ext = os.path.splitext(trackpath)
         gpxpath = path+".gpx"
