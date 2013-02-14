@@ -44,6 +44,7 @@ parser.add_argument("--mode",
 
 parser = parser.parse_args()
 
+
 assert parser.reset or parser.resolve or parser.insert or parser.draw_single, "You must specify an action."
 assert (parser.draw_single) or (not parser.draw_multiple), "You must specify one: draw-single or draw-multiple"
 #assert parser.draw_multiple and parser.insert, "draw-multiple is only possible with insert" 
