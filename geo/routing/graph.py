@@ -15,6 +15,10 @@ from util import MapConnectionTrace, MapPointTrace, ConnectionMode
 from django.core.exceptions import ObjectDoesNotExist
 import logging
 
+# create a temporary dir for matplotlib thats writable from apache
+import tempfile
+import os
+os.environ['MPLCONFIGDIR'] = tempfile.mkdtemp()
 import matplotlib.pyplot as plt
 
 """Datastructure that hold Points and PointConnection"""
