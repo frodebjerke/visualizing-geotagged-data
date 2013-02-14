@@ -27,7 +27,9 @@ def resolvefile(inpath, outpath,mode):
     coordinates = gpx.gettrackpoints()
     geocodes = geocoder.reversegeocode(coordinates)
     
-    
+    #===========================================================================
+    # DEPRECATED CODE
+    #===========================================================================
     if os.path.exists(outpath):
         path,ext = os.path.splitext(outpath)
         testpath = "%s.perfect%s" % (path,ext)
@@ -47,6 +49,9 @@ def resolvefile(inpath, outpath,mode):
     
     if len(geocodes) != len(coordinates):
         raise RuntimeError, "The same amount of geocoded coordinates should be present."
+    #===========================================================================
+    # DEPRECATED CODE END
+    #===========================================================================
 #    
 #    for index in range(len(geocodes)):
 #        
@@ -90,6 +95,8 @@ def resolvedir(path):
     
     for trace in glob.glob("%s/*.gpx" % path):
         logger.info("Resolving file %s." % trace)
+        if trace == "/home/fredo/mountpoint/workspace/videotagging/res/evaluation/Track201210311421.gpx":
+            pass
         trace = os.path.join(path,trace)
         resolvefile(trace,trace.replace(".gpx",".geocode"),0)
 

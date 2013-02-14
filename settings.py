@@ -12,9 +12,11 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 STATIC_PATH = os.path.join(PROJECT_PATH, "static")
 
 UPLOAD_PATH = os.path.join("upload", "%Y", "%m", "%d")
+UPLOAD_DIR = os.path.join(STATIC_PATH, "upload")
 RES_DIR = os.path.join(PROJECT_PATH,"res")
 MAP_DIR = os.path.join(RES_DIR,"map")
 OUT_DIR = os.path.join(RES_DIR,"out")
+TRACKS_DIR = os.path.join(RES_DIR, "tracks")
 EVALUATION_DIR = os.path.join(RES_DIR,"evaluation")
 TEST_PATH = os.path.join(RES_DIR, "test")
 

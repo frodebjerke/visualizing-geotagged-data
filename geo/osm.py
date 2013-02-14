@@ -370,7 +370,7 @@ class OSMGraphView():
     
     def add(self, node):
         assert not node in self._blacklist
-        assert not node in self.visited
+        assert not node in self.visited, "Node %s has already been visited." % node
         self.visited.append(node)
         self.nodes.add(node)
         logger.debug("Adding node %s." % node)

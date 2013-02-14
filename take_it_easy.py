@@ -34,7 +34,7 @@ parser.add_argument("--draw-multiple",
                     help = "Draws the graph after every inserted gpx file. Needs mode.")
 
 parser.add_argument("--directory",
-                    default = settings.EVALUATION_DIR,
+                    default = settings.TRACKS_DIR,
                     help = "Path to the .gpx files. Defaults to evaluation dir.")
 
 parser.add_argument("--mode",
@@ -69,9 +69,8 @@ if parser.resolve:
 if parser.insert:
     from geo.script import filldb
     print "Inserting all .geocode files from %s" % path
-#    for n in filldb.insertdir(path, afterinsert = True):
-#        draw(n)
-    filldb.insertall()
+    filldb.insertdir(path)
+#    filldb.insertall()
     
 
 if parser.draw_single:
