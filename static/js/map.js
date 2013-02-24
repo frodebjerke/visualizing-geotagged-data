@@ -54,8 +54,9 @@ $("body").bind("cLoad",function(){
     	div : "map",
     	layers : [new OpenLayers.Layer.OSM()],
     	controls : [new OpenLayers.Control.Navigation(),
-    		    new OpenLayers.Control.LayerSwitcher(),
-    		    new OpenLayers.Control.Attribution()],
+    		    // new OpenLayers.Control.LayerSwitcher(),
+    		    // new OpenLayers.Control.Attribution()
+                   ],
     });
 
     trackLayer = new TrackLayer(map);
