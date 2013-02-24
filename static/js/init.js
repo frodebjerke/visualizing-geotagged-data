@@ -4,9 +4,9 @@
 $(window).load(function() {
    
    $("#tabs").tabs();
-   if(!$.browser.mozilla){
-      alert("Only tested for Mozilla Firefox. Use at your own risk");
-   }
+   // if(!$.browser.mozilla){
+   //    alert("Only tested for Mozilla Firefox. Use at your own risk");
+   // }
 
 });
 

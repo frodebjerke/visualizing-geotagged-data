@@ -125,6 +125,7 @@ COMPRESS_PRECOMPILERS = (
                          )
 
 MIDDLEWARE_CLASSES = (
+    'geo.middleware.NoSupportMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
