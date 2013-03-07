@@ -27,7 +27,6 @@ MANAGERS = ADMINS
 
 
 user = getpass.getuser()
-user = "different"
 
 import sys
 # Creating a postgres database takes quite awhile. Sqlite3 is much faster.
@@ -163,6 +162,7 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     "compressor",
     "geo",
+    "info",
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

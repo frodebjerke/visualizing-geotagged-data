@@ -7,6 +7,7 @@ admin.autodiscover()
 
 
 from geo.views import index, track
+from info.views import info
 
 
 # Uncomment the next two lines to enable the admin:
@@ -16,7 +17,8 @@ from geo.views import index, track
 urlpatterns = patterns('de.uni.mannnheim.informatik.geo.video',
     # Examples:
          url(r'^$', index),
-         (r'track/$', track),
+         (r'^track/$', track),
+         (r'^info/$', info),
     # url(r'^geotag/', include('geotag.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
