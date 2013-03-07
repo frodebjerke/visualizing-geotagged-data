@@ -77,9 +77,22 @@ Trace.prototype = {
 	return this.active;
 	    
     },
+   getNext  : function () {
+      // try the current segment
+      var next = this.segment.getNext();
 
-	
-	    
+      if (next === null) {
+         if (this.segmentIndex === this.segments.length - 1) {
+            // last feature of last segment
+            return null;
+         } else {
+            // return first feature of next segment
+            return this.segments[this.segmentIndex + 1].getFeature(0);
+         }
+      } else {
+         return next;
+      }
+   }
 };
 
 Segment = function(src){
@@ -140,7 +153,7 @@ Segment.prototype = {
 	}
 
 	indexOld = this.getIndex(this.active);
-	console.log("indexOld %d",indexOld);
+	// console.log("indexOld %d",indexOld);
 	var srcOld = this.active.getData("src");
 	// backward = (this.time > time)? true : false;
 	// this.time = time;
@@ -162,7 +175,7 @@ Segment.prototype = {
 	// else{
 	features = this.features;
 	// }
-	console.log(features);
+	// console.log(features);
 	var active = null;
 	//find the first feature where the current playback time fits
 	for (i = 0; i < features.length; i++){
@@ -187,8 +200,23 @@ Segment.prototype = {
 	    }
 	});
 	return position;
-    }
-
+    },
+   getFeature : function (index) {
+      if (index >= this.features.length) {
+         throw new Error(index + " is not a valid index");
+      } else {
+         return this.features[index];
+      }
+   },
+   getNext : function (feature) {
+      var index = this.getIndex(feature);
+    
+      if (index === this.features.length - 1) {
+         return null;
+      } else {
+         return this.features[index+1];
+      }
+   }
 };
 
 

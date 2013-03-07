@@ -2,7 +2,7 @@ from django.conf.urls.defaults import patterns, include, url
 from django.views.generic.simple import direct_to_template
 
 from django.contrib import admin
-#from geo.web.forms.uploadform import UploadForm
+# from geo.web.forms.uploadform import UploadForm
 admin.autodiscover()
 
 
@@ -14,9 +14,9 @@ from info.views import info
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('de.uni.mannnheim.informatik.geo.video',
+urlpatterns = patterns('',
     # Examples:
-         url(r'^$', index),
+         (r'^$', index),
          (r'^track/$', track),
          (r'^info/$', info),
     # url(r'^geotag/', include('geotag.foo.urls')),
