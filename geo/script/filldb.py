@@ -14,8 +14,8 @@ import logging
 logger = logging.getLogger(__name__)
 
 TRACK_DIR = os.path.join(settings.RES_DIR, "tracks")
-VIDEO_DIR = os.path.join(settings.STATIC_PATH, "upload")
-VIDEO_PATH = os.path.join(settings.TEST_PATH, "video.3gp")
+VIDEO_DIR = settings.VIDEO_DIR
+TEST_VIDEO_PATH = os.path.join(settings.TEST_PATH, "video.3gp")
 
 #===============================================================================
 # Track paths
@@ -73,18 +73,17 @@ def insertall():
 def insertevaluation():
     insertdir(settings.EVALUATION_DIR)
 
-from geo.test.map import VIDEO_PATH 
         
-def insertdir(geocodepath, dummypath = VIDEO_PATH, afterinsert = False ):
+def insertdir(geocodepath, dummypath = TEST_VIDEO_PATH, afterinsert = False ):
     count = 0
     for trace in glob.glob("%s/*.geocode" % geocodepath):
-        realvideopath = os.path.join(settings.UPLOAD_DIR, "%s.ogv" % os.path.basename(os.path.splitext(trace)[0]))
+        realvideopath = os.path.join(settings.VIDEO_DIR, "%s.ogv" % os.path.basename(os.path.splitext(trace)[0]))
         
         if os.path.exists(realvideopath):
             logger.info("Using real video %s." % realvideopath)
             videopath = realvideopath
         else:
-            logger.info("Did not find real video. Using %s." % dummypath)
+            logger.error("Did not find real video for trace %s. Using %s." % (trace, dummypath))
             videopath = dummypath
             
         dtos = filetodto(open(trace,"r"), videopath)

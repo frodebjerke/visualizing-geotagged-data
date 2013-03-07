@@ -18,8 +18,7 @@ import logging
 # create a temporary dir for matplotlib thats writable from apache
 import tempfile
 import os
-os.environ['MPLCONFIGDIR'] = tempfile.mkdtemp()
-import matplotlib.pyplot as plt
+
 
 """Datastructure that hold Points and PointConnection"""
 class Graph:
@@ -393,7 +392,8 @@ class Graph:
 
     def draw(self, path, node_color=None, trace_edge_color=None, map_edge_color=None, reset=True, draw_tracepoints=True):
 
-        
+        os.environ['MPLCONFIGDIR'] = tempfile.mkdtemp()
+        import matplotlib.pyplot as plt
 
         if not node_color:
             node_color = self.NODE_COLOR

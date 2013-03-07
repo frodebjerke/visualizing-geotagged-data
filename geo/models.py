@@ -7,7 +7,7 @@ from geo import loadmodels
 import os
 
 class Video(models.Model):
-    video = models.FileField(upload_to=settings.UPLOAD_PATH)
+    video = models.FileField(upload_to=settings.UPLOAD_DIR)
 
     def getpath(self):
         path = self.video.path.replace(settings.MEDIA_ROOT, "")

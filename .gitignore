@@ -1,4 +1,5 @@
 upload/
+videos/
 .metadata/
 *.pyc
 *.aux
@@ -21,4 +22,5 @@ CACHE/
 out/
 *.geocode
 *.sql
+*.sqlite3
 *.zip

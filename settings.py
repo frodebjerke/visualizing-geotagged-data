@@ -1,5 +1,6 @@
 # Django settings for geotag project.
 import os
+import getpass
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -11,39 +12,57 @@ ADMINS = (
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 STATIC_PATH = os.path.join(PROJECT_PATH, "static")
 
-UPLOAD_PATH = os.path.join("upload", "%Y", "%m", "%d")
 UPLOAD_DIR = os.path.join(STATIC_PATH, "upload")
 RES_DIR = os.path.join(PROJECT_PATH,"res")
 MAP_DIR = os.path.join(RES_DIR,"map")
 OUT_DIR = os.path.join(RES_DIR,"out")
 TRACKS_DIR = os.path.join(RES_DIR, "tracks")
+VIDEO_DIR = os.path.join(PROJECT_PATH, "videos")
 EVALUATION_DIR = os.path.join(RES_DIR,"evaluation")
 TEST_PATH = os.path.join(RES_DIR, "test")
+
 
 LOG_PATH = os.path.join(PROJECT_PATH, "main.log")
 MANAGERS = ADMINS
 
+
+user = getpass.getuser()
+user = "different"
+
 import sys
+# Creating a postgres database takes quite awhile. Sqlite3 is much faster.
 if 'test' in sys.argv:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(PROJECT_PATH, "test_db.sqlite"),
-            'USER'       : '',
-            'PASSWORD' : '',
-            'HOST'     : '',
+            'NAME': os.path.join(PROJECT_PATH, "test-db.sqlite3"),
         }
     }
-else:
+# Inserting multiple records is slow with sqlite3.
+elif user == "fredo" or user == "claus":
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME': 'videotagging', # Or path to database file if using sqlite3.
-            'USER': 'django', # Not used with sqlite3.
-            'PASSWORD': 'django', # Not used with sqlite3.
-            'HOST': 'localhost', # Set to empty string for localhost. Not used with sqlite3.
-            'PORT': '5432', # Set to empty string for default. Not used with sqlite3.
+                    'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+                    'NAME': 'videotagging', # Or path to database file if using sqlite3.
+                    'USER': 'django', # Not used with sqlite3.
+                    'PASSWORD': 'django', # Not used with sqlite3.
+                    'HOST': 'localhost', # Set to empty string for localhost. Not used with sqlite3.
+                    'PORT': '5432', # Set to empty string for default. Not used with sqlite3.
         }
+    }
+# The postgres database adapter is hard to install on different systems.
+# Sqlite3 comes with the standard python distribution
+else:
+    DATABASE_PATH = os.path.join(PROJECT_PATH, "seminar.sqlite3")
+    
+#    if not os.path.isfile(DATABASE_PATH):
+#        raise RuntimeError, "Database %s does not exist. Did you run the setup.py script?" % DATABASE_PATH
+    
+    DATABASES = {
+        'default': {
+                    'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+                    'NAME': DATABASE_PATH, # Or path to database file if using sqlite3.
+                    }
     }
 
 # Local time zone for this installation. Choices can be found here:
