@@ -7,7 +7,7 @@ admin.autodiscover()
 
 
 from geo.views import index, track
-from info.views import info
+from info.views import info, wikipedia
 
 
 # Uncomment the next two lines to enable the admin:
@@ -19,6 +19,7 @@ urlpatterns = patterns('',
          (r'^$', index),
          (r'^track/$', track),
          (r'^info/$', info),
+         (r'^info/wikipedia/(?P<title>[^/]+)/$', wikipedia),
     # url(r'^geotag/', include('geotag.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
