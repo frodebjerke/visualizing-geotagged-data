@@ -15,21 +15,29 @@ function onVideoProgress (current, next){
        lon = next.getData("lon"),
        src = next.getData("src");
 
+   // calulate points for the bounding box of overpass api
+   var s = parseFloat(lat) - 0.00005,
+       n = parseFloat(lat) + 0.00005,
+       w = parseFloat(lon) - 0.00005,
+       e = parseFloat(lon) + 0.00005;
+   
+   // assemble "position block" for the query
+   var position = s +","+ w +","+ n +","+ e;	
+
+   // assemble query
+   var query ="data=[out:json];node(" + position + ");node(around:500)[\"historic\"];out;";
+
+
 
    if (src === null) {
       // you might want to do nothing here because there is no video to show here (=MapPointConnection)
    }
 
-   // retrieve rich information from an external source
-   // the controller currently resides in info/views.py
-   // currently django will complain about a missing csrf token for whatever reason
+   // send query to overpass and handle response
    $.ajax({
       type : "post",
-      url : "/info/",
-      data : {
-         lat : lat,
-         lon : lon
-      },
+      url : "http://overpass-api.de/api/interpreter",
+      data : query,
       success : function (response) {
          console.dir(response);
       },
