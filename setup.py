@@ -35,7 +35,11 @@ try:
         if not os.path.isfile(video_path):
             print "%s does not exist. Did you unzip the whole videos.zip archive?" % video_path
             exit()
-            
+
+        if not os.path.isdir(settings.UPLOAD_DIR):
+            print "upload/ does not exist. Creating."
+            os.mkdir(settings.UPLOAD_DIR)
+
         upload_path = os.path.join(settings.UPLOAD_DIR, trace_name)
         # copy the video to the upload dir
         print "Copying %s to %s..." % (video_path, upload_path)
