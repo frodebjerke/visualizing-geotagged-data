@@ -5,19 +5,19 @@ Created on Mar 23, 2012
 '''
 
 from geo.io.gpx import GPX
-from geo.osm import OSM,calculate_distance
+from geo.osm import OSM, calculate_distance
 from geo.models import createvideo
 from geo.routing.points import TracePointDTO
 from geo.io.videotime import videotimes
 
-import numpy as np
+
 import os, pickle, logging, math, sys, glob
 from numpy.lib.function_base import average
 from decimal import Decimal
 
 logger = logging.getLogger(__name__)
 
-def resolvefile(inpath, outpath,mode):
+def resolvefile(inpath, outpath, mode):
     gpx = GPX(open(inpath, "r"))
     geocoder = OSM(mode)
 
@@ -31,12 +31,12 @@ def resolvefile(inpath, outpath,mode):
     # DEPRECATED CODE
     #===========================================================================
     if os.path.exists(outpath):
-        path,ext = os.path.splitext(outpath)
-        testpath = "%s.perfect%s" % (path,ext)
+        path, ext = os.path.splitext(outpath)
+        testpath = "%s.perfect%s" % (path, ext)
     
         if os.path.exists(testpath):
             logger.info("Test geocode file %s exists" % testpath)
-            testgeocodes = pickle.load(open(testpath,"r"))
+            testgeocodes = pickle.load(open(testpath, "r"))
             if geocodes != testgeocodes:
                 raise RuntimeError, "Geocodes are different"
         else:
@@ -64,7 +64,7 @@ def resolvefile(inpath, outpath,mode):
         
     out = open(outpath, "w")
     pickle.dump(videotimes(geocodes), out)
-    pickle.dump(geocodes,out)
+    pickle.dump(geocodes, out)
     out.flush()
     out.close()
 
@@ -73,7 +73,7 @@ def filetodto(track, videopath):
     video = createvideo(videopath)
     logger.info("Reading from %s..." % track)
     for (lat, lon, realtime, videotime) in pickle.load(track):
-        dto = TracePointDTO(lat=lat, lon=lon, realtime=realtime, videotime=videotime, video=video)
+        dto = TracePointDTO(lat = lat, lon = lon, realtime = realtime, videotime = videotime, video = video)
         dtos.append(dto)
     return dtos
 
@@ -97,8 +97,8 @@ def resolvedir(path):
         logger.info("Resolving file %s." % trace)
         if trace == "/home/fredo/mountpoint/workspace/videotagging/res/evaluation/Track201210311421.gpx":
             pass
-        trace = os.path.join(path,trace)
-        resolvefile(trace,trace.replace(".gpx",".geocode"),0)
+        trace = os.path.join(path, trace)
+        resolvefile(trace, trace.replace(".gpx", ".geocode"), 0)
 
 def next_different(current, coordinates):
     for coordinate in coordinates:
@@ -114,10 +114,10 @@ def calculateaverage():
 
     for trackpath in tracktovideo:
         logger.info("Checking file %s in mode %d" % (trackpath, tracktovideo[trackpath][0]))
-        path,ext = os.path.splitext(trackpath)
-        gpxpath = path+".gpx"
+        path, ext = os.path.splitext(trackpath)
+        gpxpath = path + ".gpx"
         gpx = GPX(gpxpath)
-        geocodes = pickle.load(open(trackpath,"r"))
+        geocodes = pickle.load(open(trackpath, "r"))
         coordinates = gpx.gettrackpoints()
         total_distance = 0
         for index in range(len(coordinates)):
@@ -125,27 +125,27 @@ def calculateaverage():
             successor = next_different(current, geocodes[index:])
             tmp = geocodes[:index]
             tmp.reverse()
-            predecessor = next_different(current,tmp)
+            predecessor = next_different(current, tmp)
             if index == 0:
                 total_distance += distance_to_line(current, successor, coordinates[index])
             elif index == len(coordinates) - 1:
-                total_distance += distance_to_line(predecessor,current , coordinates[index])
+                total_distance += distance_to_line(predecessor, current , coordinates[index])
             else:
                 if successor:
                     after = distance_to_line(current, successor, coordinates[index])
                 else:
                     after = sys.maxint
                 if predecessor:
-                    before = distance_to_line(predecessor,current , coordinates[index])
+                    before = distance_to_line(predecessor, current , coordinates[index])
                 else:
                     before = sys.maxint
-                total_distance += min(after,before)
+                total_distance += min(after, before)
 #            total_distance += osm.calculate_distance(geocodes[index], coordinates[index])
-        average = total_distance/len(geocodes)
+        average = total_distance / len(geocodes)
         logger.info("Average is %f" % (average))
         total_average += average
     
-    logger.info("Total average is %f." % (total_average/5))
+    logger.info("Total average is %f." % (total_average / 5))
 
 
 
@@ -153,31 +153,37 @@ R = 6367
 
 
 def normalize(t):
-    length =  math.sqrt((t[0] **2) + (t[1] **2) + (t[2]**2))
-    return t/length
+    length = math.sqrt((t[0] ** 2) + (t[1] ** 2) + (t[2] ** 2))
+    return t / length
 
 def deg_to_rad(x):
-    return Decimal(x * Decimal(math.pi/180))
+    return Decimal(x * Decimal(math.pi / 180))
 
 def rad_to_deg(x):
-    return Decimal(x * Decimal(180/math.pi))
+    return Decimal(x * Decimal(180 / math.pi))
 
 def from_cartesian(t):
-    r = math.sqrt(t[0]**2 + t[1]**2 + t[2]**2);
+    r = math.sqrt(t[0] ** 2 + t[1] ** 2 + t[2] ** 2);
     lat = rad_to_deg(Decimal(math.asin(t[2] / r)))
     lon = rad_to_deg(Decimal(math.atan2(t[1], t[0])))
-    return (lat,lon)
+    return (lat, lon)
 
 
-def distance_to_line(a,b,c):
+def distance_to_line(a, b, c):
+    try:
+        import numpy as np
+    except ImportError, e:
+        logger.error("Numpy is required but not installed. This error should not occur if you used the right requiremnts.pip.")
+        exit()
+        
     a = np.array(to_cartesian(a))
     b = np.array(to_cartesian(b))
     c = np.array(to_cartesian(c))
-    g = np.cross(a,b)
-    f = np.cross(c,g)
-    t = np.cross(g,f)
-    t = normalize(t) * R #normalize
-    return calculate_distance(from_cartesian(c),from_cartesian(t))
+    g = np.cross(a, b)
+    f = np.cross(c, g)
+    t = np.cross(g, f)
+    t = normalize(t) * R  # normalize
+    return calculate_distance(from_cartesian(c), from_cartesian(t))
     
 
 def to_cartesian(coordinate):
@@ -186,7 +192,7 @@ def to_cartesian(coordinate):
     x = R * math.cos(lat) * math.cos(lon)
     y = R * math.cos(lat) * math.sin(lon)
     z = R * math.sin(lat)
-    return (x,y,z)
+    return (x, y, z)
 
 if __name__ == "__main__":
     resolvetest()
