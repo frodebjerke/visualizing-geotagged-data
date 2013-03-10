@@ -12,7 +12,7 @@ from geo.io.videotime import videotimes
 
 
 import os, pickle, logging, math, sys, glob
-from numpy.lib.function_base import average
+
 from decimal import Decimal
 
 logger = logging.getLogger(__name__)
