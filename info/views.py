@@ -3,6 +3,8 @@
 from django.http import HttpResponse, HttpResponseBadRequest
 
 import wiki2plain
+import re
+
 from wikitools import Wiki, Page
 
 def info(request):
@@ -24,5 +26,8 @@ Returns the plain text of wikipedia article with given title
 """
 def wikipedia(request, title):
     wikipage = Page(Wiki("http://en.wikipedia.org/w/api.php"), title = title)
-    return HttpResponse(wiki2plain.Wiki2Plain(wikipage.getWikiText()).text)
+    text = wiki2plain.Wiki2Plain(wikipage.getWikiText()).text
+    text = re.sub(r"===([^=]*)===", r"<h2>\1</h2>", text)
+    text = re.sub(r"==([^=]*)==", r"<h3>\1</h3>", text)
+    return HttpResponse(text)
 

@@ -1,3 +1,28 @@
+$.info = {};
+
+/**
+ * Interface to provide you with the external information about the given object
+ * @author Jan Vorcak <jan@ifi.uio.no>
+ * @param api_name - name of the API (for now we support wikipedia)
+ * @param parameters - parameters for the ajax request
+ *
+ * i.e
+ * $.info.get("wikipedia", "Oslo Opera", {
+      success : function (response) {
+         console.dir(response);
+      },
+      error : function (error) {
+         console.log("Something went wrong!" + error.responseText);
+      },
+   });
+ */
+$.info.get = function (api_name, title, parameters) {
+    if(api_name == "wikipedia") {
+        parameters['url'] = '/info/wikipedia/'+title+'/';
+        $.ajax(parameters);
+    } // here we will be able to add support for other API
+};
+
 /**
  * @public
  * @description Gets called everytime the video proceeds to a new point on the map.
@@ -46,3 +71,4 @@ function onVideoProgress (current, next){
       },
    });
 }
+
