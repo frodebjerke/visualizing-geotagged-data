@@ -171,7 +171,7 @@ Segment.prototype = {
    },
    proceed : function(time){
       
-      if (this.timetoFeature[time] !== null){
+      if (this.timetoFeature[time] !== undefined){
 	 return this.timetoFeature[time];
       }
 
