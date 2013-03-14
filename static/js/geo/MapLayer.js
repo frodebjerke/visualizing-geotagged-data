@@ -41,22 +41,7 @@ MapLayer.prototype = {
 
       this._initControls();
    },
-   /**
-    * @public
-    * @description Disables all interactive features
-    */
-   disableControls : function(){
-      this.pointSelect.deactivate();
-      this.select.deactivate();
-   },
-   /**
-    * @private
-    * @description Enables all interactive features
-    */
-   enableControls : function(){
-      this.pointSelect.activate();
-      this.select.activate();
-   },
+
    /**
     * @public 
     * @description Updates the map to display the new graph
@@ -246,6 +231,23 @@ MapLayer.prototype = {
       this.map.addControl(this.pointSelect);
       this.pointSelect.activate();
    }
+   //TODO the graph layer does not need to be disabled, because the tracelayer will completely cover it
+   // /**
+   //  * @public
+   //  * @description Disables all interactive features
+   //  */
+   // disableControls : function(){
+   //    this.pointSelect.deactivate();
+   //    this.select.deactivate();
+   // },
+   // /**
+   //  * @private
+   //  * @description Enables all interactive features
+   //  */
+   // enableControls : function(){
+   //    this.pointSelect.activate();
+   //    this.select.activate();
+   // },
 };
 
 
