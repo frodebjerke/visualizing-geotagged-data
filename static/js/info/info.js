@@ -2,7 +2,7 @@ $.info = {};
 
 /**
  * Interface to provide you with the external information about the given object
- * @author Jan Vorcak <jan@ifi.uio.no>
+ * @author Jan Vorcak <janvor@ifi.uio.no>
  * @param api_name - name of the API (for now we support wikipedia)
  * @param parameters - parameters for the ajax request
  *
@@ -22,6 +22,24 @@ $.info.get = function (api_name, title, parameters) {
         $.ajax(parameters);
     } // here we will be able to add support for other API
 };
+
+/**
+ * Call to add object to the HTML video overlay
+ * @author Jan Vorcak <janvor@ifi.uio.no>
+ * @param text - text to be displayed
+ * @param left - left position in px
+ * @param top_ - top position in px
+ */
+var displayOnVideo = function(text, left, top_) {
+    $("#video-overlay").append("<a href='#' style='left:"+left+"px;top:"+top_+"px'>"+text+"</a>");
+}
+
+/**
+ * Clears HTML video overlay
+ */
+var clearVideo = function() {
+    $("#video-overlay").html("");
+}
 
 /**
  * @public
