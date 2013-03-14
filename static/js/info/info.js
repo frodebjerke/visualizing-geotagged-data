@@ -30,8 +30,9 @@ $.info.get = function (api_name, title, parameters) {
  * @param left - left position in px
  * @param top_ - top position in px
  */
-var displayOnVideo = function(text, left, top_) {
-    $("#video-overlay").append("<a href='#' style='left:"+left+"px;top:"+top_+"px'>"+text+"</a>");
+var showElementInVideo = function(element, left, top_) {
+    $("#video-overlay").append("<a href='#' style='left:"+left+"px;top:"+top_+"px'>"+
+        element.tags.name+"</a>");
 }
 
 /**
@@ -40,6 +41,15 @@ var displayOnVideo = function(text, left, top_) {
 var clearVideo = function() {
     $("#video-overlay").html("");
 }
+
+var showPlacesOnVideo = function(response) {
+    clearVideo();
+    $.each(response.elements, function(idx, element) {
+        showElementInVideo(element);
+        return false; // for now display just one place, we will need to invent filters
+    });
+}
+
 
 /**
  * @public
@@ -83,6 +93,7 @@ function onVideoProgress (current, next){
       data : query,
       success : function (response) {
          console.dir(response);
+         showPlacesOnVideo(response);
       },
       error : function (error) {
          console.log("Something went wrong!" + error.responseText);
