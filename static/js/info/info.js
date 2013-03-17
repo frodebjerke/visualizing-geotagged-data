@@ -35,6 +35,7 @@ function onVideoProgress (current, next){
    console.dir(current);
    console.dir(next);
 
+
    // use getData() to retrieve the lat/lon and video src
    var lat = next.getData("lat"),
        lon = next.getData("lon"),
@@ -45,6 +46,33 @@ function onVideoProgress (current, next){
        n = parseFloat(lat) + 0.00005,
        w = parseFloat(lon) - 0.00005,
        e = parseFloat(lon) + 0.00005;
+
+
+
+   // get the trace layer
+   // @see http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/Layer/Vector-js.html
+   // @see geo.js for the public interface
+   var traceLayer = geo.getTraceLayer();
+   assert(traceLayer.CLASS_NAME, "OpenLayers.Layer.Vector");
+   // calculate the coordinates for the box that covers the area between the current & the next feature
+   // this only works on a s->n or n->s trace, not on a w<->e trace
+   var currentPoint = geo.toPoint(current.getData("lat") , current.getData("lon")),
+       nextPoint = geo.toPoint(next.getData("lat"), next.getData("lon"));
+   // draw the bounding box. @see http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/BaseTypes/Bounds-js.html#OpenLayers.Bounds.OpenLayers.Bounds
+   bounds = new OpenLayers.Bounds();
+   // use a helper functions to create a OpenLayers.Geometry.Point and wrap the point in a OpenLayers.Feature.Vector
+   // if you want to display something else don't forget to transform all points from geographic to spherical projection
+   bounds.extend(currentPoint);
+   bounds.extend(nextPoint);
+   // you can set the style of the feature that will get precedence over the layer style
+   // @see http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/Feature/Vector-js.html#OpenLayers.Feature.Vector.OpenLayers.Feature.Vector
+   boundingBox = new OpenLayers.Feature.Vector(bounds.toGeometry(), 
+                                               null, 
+                                               styles.boundingBox); // styles.boundingBox is defined in styles.js
+   // add the feature to the layer. it will get displayed automatically
+   traceLayer.addFeatures([boundingBox]);
+
+
    
    // assemble "position block" for the query
    var position = s +","+ w +","+ n +","+ e;	

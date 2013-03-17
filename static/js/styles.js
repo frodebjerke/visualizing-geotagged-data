@@ -1,3 +1,7 @@
+/*global $*/
+
+"use strict";
+
 var styles = {
    "default" : {
       strokeWidth : 3,
@@ -34,3 +38,22 @@ styles.active = {
        strokeWidth : styles.track.strokeWidth,
        pointRadius : styles.track.pointRadius
 };
+
+styles.boundingBox = {
+   pointColor : "orange",
+   pointRadius : styles.track.pointRadius,
+
+   strokeColor : "orange",
+   strokeWidth : styles.track.strokeWidth,
+   strokeOpacity : 0.3,
+   
+   fillColor : "orange",
+   fillOpacity : 0.3,
+
+   // graphicZIndex : -10
+};
+
+
+
+
+
