@@ -33,28 +33,34 @@ var TrackLayer = function(map){
       this.currentTime(instance.track.getActive().getData("videotimestart"));
    });
 
+   this.trackLayer = null;
+
    this.oldFeature = undefined;
    this.newFeature = undefined;
+
+   assertTrue(typeof styles.track === "object");
+   assertTrue(typeof styles.active === "object");
+
+   this.trackLayer  = new OpenLayers.Layer.Vector("TrackLayer",{
+      styleMap : new OpenLayers.StyleMap({
+	 "default" : styles.track,
+	 "select" : styles.active
+      }),
+      projection  : geographic
+   });
+
+   this._initControls();
 
 };
 
 TrackLayer.prototype = {
-   init : function(){
-      assertTrue(typeof styles.track === "object");
-      assertTrue(typeof styles.active === "object");
+   // /**
+   //  * @private
+   //  * @description Creates a new vector layer and intialises controls
+   //  */
+   // _showLayer : function(){
 
-      this.trackLayer  = new OpenLayers.Layer.Vector("TrackLayer",{
-	 styleMap : new OpenLayers.StyleMap({
-	    "default" : styles.track,
-	    "select" : styles.active
-	 }),
-	 projection  : geographic
-      });
-
-      
-      this._initControls();
-
-   },
+   // },
    /**
     * @public
     * @description Removes the trace layer from the graph layer
@@ -65,14 +71,10 @@ TrackLayer.prototype = {
 
       if (this.trackLayer){
 	 this.map.removeLayer(this.trackLayer);
-	 this.trackLayer = null;
-      }
-      if (this.activeLayer){
-	 this.map.removeLayer(this.activeLayer);
-	 this.activeLayer = null;
+         this.trackLayer.removeAllFeatures();
+	 // this.trackLayer = null;
       }
    },
-
    /**
     * @public
     * @description Reinitialises the layer and draws the points
@@ -80,8 +82,6 @@ TrackLayer.prototype = {
    update : function(points){
       assertTrue(points instanceof Array);
       assertTrue(points.length > 0);
-      
-      this.init();
       
       var source = null,
           track = new Trace(),
@@ -96,10 +96,20 @@ TrackLayer.prototype = {
       this.trackLayer.addFeatures(track.toFeatures());
       // add the trace-layer to the map
       this.track = track;
+      // show layer
       this.map.addLayer(this.trackLayer);
       this.map.setLayerIndex(this.trackLayer,999);
 
+
       this._startVideo();
+   },
+   /**
+    * @public
+    * @returns {OpenLayers.Layer.Vector} Layer that displays the shortest trace
+    */
+   getVectorLayer : function () {
+      assertTrue(this.trackLayer !== undefined);
+      return this.trackLayer;
    },
    /** 
     * @private
@@ -126,27 +136,28 @@ TrackLayer.prototype = {
       assertTrue(this instanceof TrackLayer);
 
 
-      var oldFeature = this.track.getActive(),
-          // will return the next active feature of the track
-          // this might be a track belonging to a different source
-          newFeature  = this.track.proceed(this.player.currentTime());
-
+      // will return the next active feature of the track
+      // this might be a track belonging to a different source
+      this.newFeature  = this.track.proceed(this.player.currentTime());
 
       // console.log("newFeature",newFeature);
       // inform others update the progress
-      if (oldFeature !== newFeature) {
-         onVideoProgress(newFeature, this.track.getNext());
+      if (this.oldFeature !== this.newFeature) {
+         onVideoProgress(this.newFeature, this.track.getNext());
       }
       // end of video
       // don't remove listener yet -- this will be done in the layer destroy
-      if (newFeature === null){
+      if (this.newFeature === null){
 	 if (!this.isEnded){
 	    this._removeHighlight();
 	 }
-	 console.log("video ended");
+	 console.log("TraceLayer: ended");
 	 return;
-      } else if (oldFeature.getData("src") !== newFeature.getData("src")) { //change of videos
-	 console.log("video switched");
+      } else if (this.oldFeature === undefined) {
+         this._highlightFeature();
+         console.log("TraceLayer: start");
+      } else if (this.oldFeature.getData("src") !== this.newFeature.getData("src")) { //change of segments
+	 console.log("TraceLayer: new segment");
 	 // alert("switch");
 	 this.player.pause();
 	 this._stopHighlight();
@@ -154,11 +165,12 @@ TrackLayer.prototype = {
 	 this._startVideo();
 	 return;
       }
-      // video proceeds, highlight currently playing segment
-      if (oldFeature !== newFeature){
-	 console.log("video proceed");
+      // video proceeds, highlight current feature
+      if (this.oldFeature !== this.newFeature){
+	 console.log("TraceLayer: new feature");
 	 this._highlightFeature();
       }
+      this.oldFeature = this.newFeature;
    },
    /**
     * @private
@@ -211,7 +223,6 @@ TrackLayer.prototype = {
 	    var instance = trackLayer;
 	    //triggered by user
 	    if (!instance.ignoreSelect){
-	       console.log("skipping...");
 
 	       var srcOld = instance.track.getActive().getData("src"),
 	           src = feature.geo_data.src,
