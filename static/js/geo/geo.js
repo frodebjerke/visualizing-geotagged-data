@@ -1,114 +1,37 @@
-/*global $, OpenLayers, TrackLayer, MapLayer*/
+/*global trackLayer, toVector, toPoint, assertNumber */
 
 "use strict";
 
-var geographic = new OpenLayers.Projection("EPSG:4326"),
-    spherical = new OpenLayers.Projection("EPSG:900913"),
-    mapLayer,map,trackLayer,
-    $loading,$map,$controls,$reset;
+var geo = {
+   /**
+    * @public
+    * @returns {OpenLayers.Layer.Vector} Layer that is used to display the shortest trace. 
+    * The layer will be removed, but not destroyed, upon reset. 
+    */
+   getTraceLayer : function () {
+      return trackLayer.getVectorLayer();
+   },
+   /**
+    * @public
+    * @description Useful for building more complex geometries like LineStrings or Polygons
+    * @returns OpenLayers.Geometry.Point
+    * @param {String or Number} lat
+    * @param {String or Number} lon
+    */
+   toPoint : function (lat, lon) {
+      try {
+         if (typeof lat === "string") {
+            lat = parseFloat(lat);
+         }
+         if (typeof lon === "string") {
+            lon = parseFloat(lon);
+         }
+      } catch (error) {
+         throw new Error("Either lat or lon could not be parsed as a float.");
+      }
+      assertNumber(lat, "Lat must be a float.");
+      assertNumber(lon, "Lon must be a float.");
 
-/**
- * @public
- * @description Fetches the graph for the selected mode
- */
-function updateMap(){
-   var mode = parseInt($controls.find("option:selected").val());
-    mapLayer.update(mode);
-}
-
-/**
- * @public
- * @description Binds listener for loading overlay, mode selection, reset and the like
- */
-function bindListener(){
-
-    $loading.css({
-	top : $map.position().top,
-	left : $map.position().left
-    });
-    
-    $("select[name=transportation]").change(function(){
-	$reset.trigger("click");
-	updateMap();
-    });
-
-    $map
-	.bind("updateStart.geo",function(){
-	    $controls.attr("disabled",true);
-	    $loading.show();
-	})
-	.bind("updateStop.geo",function(){
-	    $controls.attr("disabled",false);
-	    $loading.hide();
-
-	});
-
-   // destroy the current trace
-    $reset.click(function(){
-	mapLayer.resetSelectedFeatures();
-	trackLayer.destroy();
-    });
-}
-
-
-$("body").bind("cLoad",function(){
-
-    $loading = $(".map-loading");
-    $map = $("#map");
-    $controls = $("select,button");
-    $reset = $("#reset");
-
-    //binds listener for ui elements
-    bindListener();
-
-    //init map
-    map = new OpenLayers.Map({
-       div : "map",
-       layers : [new OpenLayers.Layer.OSM()],
-       controls : [new OpenLayers.Control.Navigation()],
-    });
-
-    trackLayer = new TrackLayer(map);
-    mapLayer = new MapLayer(map,trackLayer);
-    updateMap();
-});
-
-function toPoint(jpoint){
-    return new OpenLayers.Geometry.Point(
-	parseFloat(jpoint.lon),
-	parseFloat(jpoint.lat))
-      .transform(geographic,spherical);
-}
-
-function toVector(geometry){
-    return new OpenLayers.Feature.Vector(geometry);
-}
-
-function toVectors(pair){
-   var source = pair[0],
-       target = pair[1],
-       sourcePoint = toPoint(source),
-       targetPoint = toPoint(target);
-    sourcePoint.geo_id = source.id;
-    targetPoint.geo_id = target.id;
-    return([
-	    toVector(sourcePoint),
-	    toVector(targetPoint),
-	    toVector(new OpenLayers.Geometry.LineString([sourcePoint,targetPoint]))
-    ]);
-}
-
-
-function pointToVector(jpoint){
-    return new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Point(
-	parseFloat(jpoint.lon),
-	parseFloat(jpoint.lat))
-	.transform(geographic,spherical));
-
-}
-
-
-
-
-
-
+      return toPoint({"lat" : lat, "lon" : lon});
+   }
+};
