@@ -56,8 +56,12 @@
     <!-- spacer -->
     <div class="span-2"> <table></table></div>
 
-    <video id="video" poster="static/images/logo.png" class="window span-10 last video-js vjs-default-skin" preload controls> </video>
-    
+    <div id="video-container" class="span-10">
+        <video id="video" poster="static/images/logo.png" class="window span-10 last video-js vjs-default-skin" preload controls> </video>
+        <div id="video-overlay">
+        </div>
+    </div>
+
     <fieldset class="span-22 first last" id="controls">
       <legend>Controls</legend>
       <label for="transportation">Mode of Transportation</label>
