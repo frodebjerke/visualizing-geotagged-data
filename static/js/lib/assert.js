@@ -20,3 +20,9 @@ function assertTrue (actual, message) {
       croak(actual, true, message);
    }
 }
+
+function assertNumber(actual, message) {
+   if (typeof actual !== "number") {
+      croak(typeof actual, "number", message);
+   }
+}
