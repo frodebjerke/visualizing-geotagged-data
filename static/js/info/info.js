@@ -50,6 +50,18 @@ var showPlacesOnVideo = function(response) {
     });
 }
 
+/**
+ * Displays POI as markers on map. Sets the markers dynamically to the "seen" nodes from the Overpass response.
+ */
+var setMarker = function(response) {
+   markerLayer.clearMarkers();
+	
+   $.each(response.elements, function(idx, element) {
+      //console.log(element);
+      var lonLat = new OpenLayers.LonLat( element.lon, element.lat ).transform('EPSG:4326', map.getProjectionObject());
+      markerLayer.addMarker(new OpenLayers.Marker(lonLat));
+   }); 
+}
 
 /**
  * @public
@@ -65,9 +77,9 @@ function onVideoProgress (current, next){
 
 
    // use getData() to retrieve the lat/lon and video src
-   var lat = next.getData("lat"),
-       lon = next.getData("lon"),
-       src = next.getData("src");
+   var lat = current.getData("lat"),
+       lon = current.getData("lon"),
+       src = current.getData("src");
 
    // calulate points for the bounding box of overpass api
    var s = parseFloat(lat) - 0.00005,
@@ -100,7 +112,7 @@ function onVideoProgress (current, next){
    // add the feature to the layer. it will get displayed automatically
    traceLayer.addFeatures([boundingBox]);
 
-
+   
    
    // assemble "position block" for the query
    var position = s +","+ w +","+ n +","+ e;	
@@ -122,10 +134,13 @@ function onVideoProgress (current, next){
       success : function (response) {
          console.dir(response);
          showPlacesOnVideo(response);
+         setMarker(response);
       },
       error : function (error) {
          console.log("Something went wrong!" + error.responseText);
       },
    });
+
+  
 }
 

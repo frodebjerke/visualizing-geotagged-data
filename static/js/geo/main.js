@@ -7,6 +7,7 @@ var geographic = new OpenLayers.Projection("EPSG:4326"),
     mapLayer = null,
     map = null,
     trackLayer = null,
+    markerLayer = null,
     $loading,$map,$controls,$reset;
 
 
@@ -74,6 +75,8 @@ $("body").bind("cLoad",function(){
 
     trackLayer = new TrackLayer(map);
     mapLayer = new MapLayer(map,trackLayer);
+    markerLayer = new OpenLayers.Layer.Markers( "Markers" );
+    map.addLayer(markerLayer);
     updateMap();
 });
 
