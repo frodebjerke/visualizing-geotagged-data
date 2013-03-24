@@ -70,11 +70,22 @@ var setMarker = function(response) {
  * @param {TrackPoint or TrackConnection} next: The next point to be reached
  */
 function onVideoProgress (current, next){
-   // I will add some more documentation once I now what the other methods of the TrackPoint/TrackPointConnection where there for ;)
+
+   if (next === null) {
+      console.log("Reached end of track");
+      return;
+   }
+
+
    console.log("Video reached new Point!");
    console.dir(current);
    console.dir(next);
 
+   // the transition is either point -> connection or connection to point
+   pointToConnection = current instanceof TrackPoint && next instanceof TrackConnection;
+   connectionToPoint = current instanceof TrackConnection && next instanceof TrackPoint;
+   
+   assertTrue(pointToConnection || connectionToPoint);
 
    // use getData() to retrieve the lat/lon and video src
    var lat = current.getData("lat"),

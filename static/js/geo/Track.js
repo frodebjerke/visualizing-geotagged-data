@@ -1,4 +1,4 @@
-/*global $, toPoint, toVector, OpenLayers */
+/*global $, toPoint, toVector, OpenLayers, assertNumber */
 
 "use strict";
 
@@ -39,7 +39,7 @@ Trace.prototype = {
       }
       return this.segment.getActive();
    },
-   setActive : function(src,id){
+   setActive : function(src, id){
       var i = 0,
           segment = null;
       for (i = 0; i< this.segments.length; i++){
@@ -70,9 +70,8 @@ Trace.prototype = {
 
       var instance = this,
           i = 0,
-          segment;
-
-      time = parseInt(time);
+          segment,
+          time = parseInt(time);
       
       this.active = this.segment.proceed(time);
 
@@ -94,7 +93,7 @@ Trace.prototype = {
       
    },
    getNext  : function () {
-      // try the current segment
+      // try the next feature of the current segment
       var next = this.segment.getNext();
 
       if (next === null) {
@@ -113,7 +112,7 @@ Trace.prototype = {
 
 /**
  * @public 
- * @description Resembles a trackseg from gpx. Consists of points and connections
+ * @description Resembles a trackseg from gpx. Consists of points and connections with the same video url
  */
 Segment = function(src){
    this.features = [];
@@ -175,16 +174,21 @@ Segment.prototype = {
 	 return this.timetoFeature[time];
       }
 
-      var indexOld = this.getIndex(this.active),
+
       // console.log("indexOld %d",indexOld);
-          srcOld = this.active.getData("src"),
-          features = this.features,
+          
+      var features = this.features,
           feature = null,
           active = null,
           i = 0;
+
       //find the first feature where the current playback time fits
       for (i = 0; i < features.length; i++){
 	 feature = features[i];
+         // there will be a TrackPoint after this TrackConnection that we 'really' selected
+         if (feature.getData("videotimeend") === time && feature instanceof TrackConnection) {
+            continue;
+         }
 	 //search for the first segment that holds the time marker 
 	 if (feature.getData("videotimestart") <= time && feature.getData("videotimeend") >= time && feature.getData("src") !== null){
 	    active = feature;
@@ -213,9 +217,10 @@ Segment.prototype = {
          return this.features[index];
       }
    },
-   getNext : function (feature) {
-      var index = this.getIndex(feature);
-      
+   getNext : function () {
+      var index = this.getIndex(this.active);
+      assertNumber(index);
+
       if (index === this.features.length - 1) {
          return null;
       } else {

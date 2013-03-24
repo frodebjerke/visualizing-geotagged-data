@@ -1,4 +1,4 @@
-/*global $, _V_, OpenLayers, MapLayer, styles, assert, assertTrue, geographic, onVideoProgress, Trace */
+/*global $, _V_, OpenLayers, MapLayer, styles, assert, assertTrue, geographic, onVideoProgress, Trace, TrackPoint, TrackConnection */
 
 "use strict";
 
@@ -21,17 +21,8 @@ var TrackLayer = function(map){
    //mute player
    this.player.volume(0);
    this.player.size(width,height);
+   this._bindListenerToVideo();
 
-   // start playing as soon as the video metadata is fully loaded
-   // update the current position of the trace
-   this.player.addEvent("loadeddata",function(){
-      //this is the video object
-      this.addEvent("timeupdate", function () {
-         instance._highlightUpdate.apply(instance);
-      });
-      this.play();
-      this.currentTime(instance.track.getActive().getData("videotimestart"));
-   });
 
    this.trackLayer = null;
 
@@ -115,11 +106,31 @@ TrackLayer.prototype = {
     * @private
     * @description Starts the video belonging to the current active segment
     */
-   _startVideo : function(){
+   _startVideo : function(feature){
       var start = this.track.getActive();
+      this.player.pause();
+
+      this._stopHighlight();
 
       this.player.src({type:"video/ogg",src:start.getData("src")});
+
+      this._bindListenerToVideo();
+
       console.log("start at %d with %s",start.getData("videotimestart"),start);
+   },
+   // start playing as soon as the video metadata is fully loaded
+   // update the current position of the trace
+   _bindListenerToVideo : function () {
+      var instance = this;
+
+      this.player.addEvent("loadeddata",function(){
+         //this is the video object
+         this.addEvent("timeupdate", function () {
+            instance._highlightUpdate.apply(instance);
+         });
+         this.currentTime(instance.track.getActive().getData("videotimestart"));
+         this.play();
+      });
    },
    /** 
     * @private
@@ -142,8 +153,16 @@ TrackLayer.prototype = {
 
       // console.log("newFeature",newFeature);
       // inform others update the progress
-      if (this.oldFeature !== this.newFeature) {
+      if (this.oldFeature !== this.newFeature && this.newFeature !== null) {
+         var next = this.track.getNext(),
+             pointToConnection = this.newFeature instanceof TrackPoint && next instanceof TrackConnection,
+             connectionToPoint = this.newFeature instanceof TrackConnection && next instanceof TrackPoint,
+             ended = this.newFeature instanceof TrackPoint && next === null;
+
+         assertTrue(pointToConnection || connectionToPoint || ended);
+
          onVideoProgress(this.newFeature, this.track.getNext());
+
       }
       // end of video
       // don't remove listener yet -- this will be done in the layer destroy
@@ -163,6 +182,8 @@ TrackLayer.prototype = {
 	 this._stopHighlight();
 	 // restart video
 	 this._startVideo();
+         // avoid the video from being stuck at a transition
+         this.oldFeature = this.newFeature;
 	 return;
       }
       // video proceeds, highlight current feature
