@@ -223,24 +223,29 @@ TrackLayer.prototype = {
 	    var instance = trackLayer;
 	    //triggered by user
 	    if (!instance.ignoreSelect){
+               
+               if (feature.geo_data === undefined) {
+                  console.log("The selected feature does not belong to the graph. Skipping...");
+                  return;
+               }
 
 	       var srcOld = instance.track.getActive().getData("src"),
 	           src = feature.geo_data.src,
 	           videotimestart = feature.geo_data.videotimestart;
 
-	       //hit a mapconnection do nothing
-	       if (!videotimestart){
+	       // hit a mapconnection do nothing
+	       if (!src){
 		  alert("There is no video to show here.");
 		  return;
 	       }
-	       //hit another video. set active and load video
+	       // hit another video. set active and load video
 	       else if (srcOld !== src){
 		  instance._stopHighlight();
-		  instance.track.setActive(src,feature.geo_data.id);
+		  instance.track.setActive(src, feature.geo_data.id);
 		  instance._startVideo();
 		  return;
 	       }
-	       //still the same video. proceed to the current time marker
+	       // still the same video. proceed to the current time marker
 	       else{
 		  instance.player.currentTime(videotimestart);
 		  return;
