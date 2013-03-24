@@ -71,21 +71,31 @@ var setMarker = function(response) {
  */
 function onVideoProgress (current, next){
 
-   if (next === null) {
-      console.log("Reached end of track");
-      return;
-   }
-
-
    console.log("Video reached new Point!");
    console.dir(current);
    console.dir(next);
 
-   // the transition is either point -> connection or connection to point
-   pointToConnection = current instanceof TrackPoint && next instanceof TrackConnection;
-   connectionToPoint = current instanceof TrackConnection && next instanceof TrackPoint;
+   // the transition is either point -> connection, connection to point, point to point or ended
+   pointToConnection = current instanceof TrackPoint && next instanceof TrackConnection,
+   connectionToPoint = current instanceof TrackConnection && next instanceof TrackPoint,
+   segmentChange = current instanceof TrackPoint && next instanceof TrackPoint,
+   ended = current instanceof TrackPoint && next === null;
    
-   assertTrue(pointToConnection || connectionToPoint);
+   assertTrue(pointToConnection || connectionToPoint || segmentChange || ended);
+
+   if (ended) {
+      console.log("Reached end of track");
+      return;
+   }
+
+   if (!segmentChange) {
+      var connection = (current instanceof TrackConnection)? current : next;
+      var source = connection.getData("source");
+      console.log("Connection started at %s,%s", source.lat, source.lon);
+   } else {
+      console.log("This will be skipped, because there is no video to show.");
+      return;
+   }
 
    // use getData() to retrieve the lat/lon and video src
    var lat = current.getData("lat"),
@@ -130,12 +140,6 @@ function onVideoProgress (current, next){
 
    // assemble query
    var query ="data=[out:json];node(" + position + ");node(around:500)[\"historic\"];out;";
-
-
-
-   if (src === null) {
-      // you might want to do nothing here because there is no video to show here (=MapPointConnection)
-   }
 
    // send query to overpass and handle response
    $.ajax({

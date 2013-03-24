@@ -157,11 +157,12 @@ TrackLayer.prototype = {
          var next = this.track.getNext(),
              pointToConnection = this.newFeature instanceof TrackPoint && next instanceof TrackConnection,
              connectionToPoint = this.newFeature instanceof TrackConnection && next instanceof TrackPoint,
+             segmentChange = this.newFeature instanceof TrackPoint && next instanceof TrackPoint,
              ended = this.newFeature instanceof TrackPoint && next === null;
 
-         assertTrue(pointToConnection || connectionToPoint || ended);
+         assertTrue(pointToConnection || connectionToPoint || segmentChange || ended);
 
-         onVideoProgress(this.newFeature, this.track.getNext());
+         onVideoProgress(this.newFeature, next);
 
       }
       // end of video

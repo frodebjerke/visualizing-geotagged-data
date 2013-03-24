@@ -264,12 +264,20 @@ TrackConnection = function(source,target){
    //both on the same track add make the connection start when the source ends and end when the target starts
    if (source.getData("src") === target.getData("src")){
       data = $.extend({}, target.data);
+      data.source = {
+         "lat" : source.getData("lat"),
+         "lon" : source.getData("lon")
+      };
       data.videotimestart = source.data.videotimeend;
       data.videotimeend = target.data.videotimestart;
    }
    //both on a different track only use the data from the target
    else if (target.getData("src")){
       data = $.extend({},target.data);
+      data.source = {
+         "lat" : source.getData("lat"),
+         "lon" : source.getData("lon")
+      };
    }
    //both on no track use nothing
    else{
