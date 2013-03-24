@@ -22,6 +22,16 @@ $.info.get = function (api_name, title, parameters) {
         $.ajax(parameters);
     } // here we will be able to add support for other API
 };
+/*
+$(function() {
+  $(document).tooltip({
+    items : "[data-wikipedia]",
+    content : function () {
+        return $(this).attr("data-wikipedia");
+    }
+  });
+});
+*/
 
 /**
  * Call to add object to the HTML video overlay
@@ -31,8 +41,14 @@ $.info.get = function (api_name, title, parameters) {
  * @param top_ - top position in px
  */
 var showElementInVideo = function(element, left, top_) {
-    $("#video-overlay").append("<a href='#' style='left:"+left+"px;top:"+top_+"px'>"+
-        element.tags.name+"</a>");
+    link = $("<a>").attr("href", "#")
+        .css("left", left+"px")
+        .css("top", top_+"px")
+        .html(element.tags.name)
+        .attr("data-wikipedia", element.tags.name)
+        .attr("title", element.tags.name);
+
+    $("#video-overlay").append(link);
 }
 
 /**
@@ -42,11 +58,24 @@ var clearVideo = function() {
     $("#video-overlay").html("");
 }
 
-var showPlacesOnVideo = function(response) {
+var isNearby = function(current, element) {
+
+    var r = 0.0009;
+
+    c_lon = current.data.lon;
+    c_lat = current.data.lat;
+    e_lon = element.lon;
+    e_lat = element.lat;
+
+    return Math.abs(c_lon - e_lon) < r && Math.abs(c_lat - e_lat) < r;
+}
+
+var showPlacesOnVideo = function(current, response) {
     clearVideo();
     $.each(response.elements, function(idx, element) {
-        showElementInVideo(element);
-        return false; // for now display just one place, we will need to invent filters
+        if(isNearby(current, element)) {
+            showElementInVideo(element);
+        }
     });
 }
 
@@ -148,7 +177,7 @@ function onVideoProgress (current, next){
       data : query,
       success : function (response) {
          console.dir(response);
-         showPlacesOnVideo(response);
+         showPlacesOnVideo(current, response);
          setMarker(response);
       },
       error : function (error) {
