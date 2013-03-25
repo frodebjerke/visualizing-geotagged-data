@@ -70,10 +70,75 @@ var isNearby = function(current, element) {
     return Math.abs(c_lon - e_lon) < r && Math.abs(c_lat - e_lat) < r;
 }
 
-var showPlacesOnVideo = function(current, response) {
+var isInFrontOfMe = function(current, next, element) {
+
+    // if one of the following is null, it's not worth of counting
+    if(!(current && next)) return false;
+
+    // prepare points
+    var x = {};
+    var y = {};
+    var z = {};
+    var w = {};
+    var c = {};
+    var n = {};
+
+    var e = {}; // element
+
+    // prepare vectors
+    var v1 = {};
+    var v2 = {};
+
+    // get the coordinates - [0] = lat, [1] = lon
+    c[0] = parseFloat(current.data.lat);
+    c[1] = parseFloat(current.data.lon);
+    n[0] = parseFloat(next.data.lat);
+    n[1] = parseFloat(next.data.lon);
+    e[0] = parseFloat(element.lat);
+    e[1] = parseFloat(element.lon);
+
+    // count the vector v1 = (C,N)
+    v1[0] = n[0] - c[0];
+    v1[1] = n[1] - c[1];
+
+    // count it's normal vector
+    v2[0] = -v1[1]
+    v2[1] =  v1[0]
+
+    //        ->
+    //        v2
+    // Z ---- N ---- W
+    //        |
+    //        |->
+    //        |v1
+    //        |
+    //        |
+    // X      C      Y
+
+    // x should be C + v2 vector
+    x[0] = c[0] - v2[0];
+    x[1] = c[1] - v2[1];
+
+    // z should be N + v2 vector
+    z[0] = n[0] - v2[0];
+    z[1] = n[1] - v2[1];
+
+    // we add the reversed v2 vector
+    y[0] = c[0] + v2[0];
+    y[1] = c[1] + v2[1];
+
+    // we add the reversed v2 vector
+    w[0] = n[0] + v2[0];
+    w[1] = n[1] + v2[1];
+
+    return (((x[0] <= e[0] && e[0] <= w[0]) || (x[0] >= e[0] && e[0] >= w[0])) && ((x[1] <= e[1] && e[1] <= w[1]) || (x[1] >= e[1] && e[1] >= w[1])));
+}
+
+var showPlacesOnVideo = function(current, next, response) {
     clearVideo();
+
     $.each(response.elements, function(idx, element) {
-        if(isNearby(current, element)) {
+        if(isInFrontOfMe(current, next, element)) {
             showElementInVideo(element);
         }
     });
@@ -177,7 +242,7 @@ function onVideoProgress (current, next){
       data : query,
       success : function (response) {
          console.dir(response);
-         showPlacesOnVideo(current, response);
+         showPlacesOnVideo(current, next, response);
          setMarker(response);
       },
       error : function (error) {
