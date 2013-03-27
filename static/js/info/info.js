@@ -153,7 +153,15 @@ var setMarker = function(response) {
    $.each(response.elements, function(idx, element) {
       //console.log(element);
       var lonLat = new OpenLayers.LonLat( element.lon, element.lat ).transform('EPSG:4326', map.getProjectionObject());
-      markerLayer.addMarker(new OpenLayers.Marker(lonLat));
+      
+      marker = new OpenLayers.Marker(lonLat);
+      marker.events.register('mouseover', marker, function(evt) {
+         popup = new OpenLayers.Popup.FramedCloud("Popup", lonLat, null,
+         '<div>Hello World! Text Test</div>', null, true);
+         map.addPopup(popup);
+      });
+
+      markerLayer.addMarker(marker);
    }); 
 }
 
