@@ -146,6 +146,7 @@ var showPlacesOnVideo = function(current, next, response) {
 
 /**
  * Displays POI as markers on map. Sets the markers dynamically to the "seen" nodes from the Overpass response.
+ * Adds popups to the markers
  */
 var setMarker = function(response) {
    markerLayer.clearMarkers();
@@ -153,8 +154,19 @@ var setMarker = function(response) {
    $.each(response.elements, function(idx, element) {
       //console.log(element);
       var lonLat = new OpenLayers.LonLat( element.lon, element.lat ).transform('EPSG:4326', map.getProjectionObject());
-      markerLayer.addMarker(new OpenLayers.Marker(lonLat));
+      
+      marker = new OpenLayers.Marker(lonLat);
+      marker.events.register('mouseover', marker, function(evt) {
+         popup = new OpenLayers.Popup.FramedCloud("Popup", lonLat, null, element.tags.name, null, false);
+         map.addPopup(popup);
+      });
+
+      marker.events.register('mouseout', marker, function(evt) {popup.hide();});
+
+      markerLayer.addMarker(marker);
    }); 
+
+  
 }
 
 /**

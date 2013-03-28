@@ -1,4 +1,4 @@
-/*global $, _V_, OpenLayers, MapLayer, styles, assert, assertTrue, geographic, onVideoProgress, Trace, TrackPoint, TrackConnection */
+/*global $, _V_, OpenLayers, MapLayer, styles, assert, assertTrue, geographic, onVideoProgress, Trace, TrackPoint, TrackConnection, markerLayer */
 
 "use strict";
 
@@ -89,7 +89,11 @@ TrackLayer.prototype = {
       this.track = track;
       // show layer
       this.map.addLayer(this.trackLayer);
+      // if we don't set the layerindex to a high number, it will be displayed below the map layer
       this.map.setLayerIndex(this.trackLayer,999);
+      // it is only possible to set the z-index of the whole layer after adding it
+      // it must be > 726, the z-index of the highest vector layer
+      markerLayer.setZIndex(900);
 
 
       this._startVideo();
