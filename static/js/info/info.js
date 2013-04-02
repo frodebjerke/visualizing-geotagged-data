@@ -150,23 +150,34 @@ var showPlacesOnVideo = function(current, next, response) {
  */
 var setMarker = function(response) {
    markerLayer.clearMarkers();
-	
+
+
+
    $.each(response.elements, function(idx, element) {
-      //console.log(element);
+
+      var text;
+	
+      $.info.get("wikipedia", element.tags.name, {
+         success : function (response) {
+            text = response;
+         },
+         error : function (error) {
+            text = "no additional information";
+         },
+      });
+
       var lonLat = new OpenLayers.LonLat( element.lon, element.lat ).transform('EPSG:4326', map.getProjectionObject());
       
       marker = new OpenLayers.Marker(lonLat);
       marker.events.register('mouseover', marker, function(evt) {
-         popup = new OpenLayers.Popup.FramedCloud("Popup", lonLat, null, element.tags.name, null, false);
+         popup = new OpenLayers.Popup.FramedCloud("Popup", lonLat, null, element.tags.name + "<br>" + text, null, false);
          map.addPopup(popup);
       });
 
       marker.events.register('mouseout', marker, function(evt) {popup.hide();});
 
       markerLayer.addMarker(marker);
-   }); 
-
-  
+   });  
 }
 
 /**
@@ -209,10 +220,10 @@ function onVideoProgress (current, next){
        src = current.getData("src");
 
    // calulate points for the bounding box of overpass api
-   var s = parseFloat(lat) - 0.00005,
-       n = parseFloat(lat) + 0.00005,
-       w = parseFloat(lon) - 0.00005,
-       e = parseFloat(lon) + 0.00005;
+   var s = lat, //parseFloat(lat) - 0.00005,
+       n = lat, //parseFloat(lat) + 0.00005,
+       w = lon, //parseFloat(lon) - 0.00005,
+       e = lon; //parseFloat(lon) + 0.00005;
 
 
 
