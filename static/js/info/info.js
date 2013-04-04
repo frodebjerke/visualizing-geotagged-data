@@ -176,6 +176,10 @@ var setMarker = function(response) {
 
       marker.events.register('click', marker, function(evt) {
          //Put your code here for the onClick-behaviour or call a method
+         //http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/Popup-js.html
+         popup2 = new OpenLayers.Popup.FramedCloud("Popup2", lonLat, null, element.tags.name + "<br>" + text, null, true);
+         map.addPopup(popup2);
+
          console.log("click!");
       });
 
@@ -223,10 +227,10 @@ function onVideoProgress (current, next){
        src = current.getData("src");
 
    // calulate points for the bounding box of overpass api
-   var s = lat, //parseFloat(lat) - 0.00005,
-       n = lat, //parseFloat(lat) + 0.00005,
-       w = lon, //parseFloat(lon) - 0.00005,
-       e = lon; //parseFloat(lon) + 0.00005;
+   var s = parseFloat(lat) - 0.00005,
+       n = parseFloat(lat) + 0.00005,
+       w = parseFloat(lon) - 0.00005,
+       e = parseFloat(lon) + 0.00005;
 
    /**
    Bounding Box example
