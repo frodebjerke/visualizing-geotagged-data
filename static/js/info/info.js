@@ -151,8 +151,6 @@ var showPlacesOnVideo = function(current, next, response) {
 var setMarker = function(response) {
    markerLayer.clearMarkers();
 
-
-
    $.each(response.elements, function(idx, element) {
 
       var text;
@@ -175,6 +173,11 @@ var setMarker = function(response) {
       });
 
       marker.events.register('mouseout', marker, function(evt) {popup.hide();});
+
+      marker.events.register('click', marker, function(evt) {
+         //Put your code here for the onClick-behaviour or call a method
+         console.log("click!");
+      });
 
       markerLayer.addMarker(marker);
    });  
@@ -225,8 +228,8 @@ function onVideoProgress (current, next){
        w = lon, //parseFloat(lon) - 0.00005,
        e = lon; //parseFloat(lon) + 0.00005;
 
-
-
+   /**
+   Bounding Box example
    // get the trace layer
    // @see http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/Layer/Vector-js.html
    // @see geo.js for the public interface
@@ -249,7 +252,7 @@ function onVideoProgress (current, next){
                                                styles.boundingBox); // styles.boundingBox is defined in styles.js
    // add the feature to the layer. it will get displayed automatically
    traceLayer.addFeatures([boundingBox]);
-
+   */
    
    
    // assemble "position block" for the query
@@ -264,7 +267,7 @@ function onVideoProgress (current, next){
       url : "http://overpass-api.de/api/interpreter",
       data : query,
       success : function (response) {
-         console.dir(response);
+         //console.dir(response);
          showPlacesOnVideo(current, next, response);
          setMarker(response);
       },
