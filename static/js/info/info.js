@@ -175,10 +175,12 @@ var setMarker = function(response) {
       marker.events.register('mouseout', marker, function(evt) {popup.hide();});
 
       marker.events.register('click', marker, function(evt) {
+
          //Put your code here for the onClick-behaviour or call a method
          //http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/Popup-js.html
          popup2 = new OpenLayers.Popup.FramedCloud("Popup2", lonLat, null, element.tags.name + "<br>" + text, null, true);
          map.addPopup(popup2);
+         $("#Popup2").css('z-index', '901');
 
          console.log("click!");
       });
@@ -274,6 +276,7 @@ function onVideoProgress (current, next){
          //console.dir(response);
          showPlacesOnVideo(current, next, response);
          setMarker(response);
+
       },
       error : function (error) {
          console.log("Something went wrong!" + error.responseText);
@@ -282,4 +285,3 @@ function onVideoProgress (current, next){
 
   
 }
-
