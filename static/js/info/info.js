@@ -15,13 +15,13 @@ $.info = {};
          console.log("Something went wrong!" + error.responseText);
       },
    });
- */
+*/
 $.info.get = function (api_name, title, parameters) {
-    if(api_name == "wikipedia") {
-        parameters['url'] = '/info/wikipedia/'+title+'/';
-        $.ajax(parameters);
+  if(api_name == "wikipedia") {
+    parameters['url'] = '/info/wikipedia/'+title+'/';
+    $.ajax(parameters);
     } // here we will be able to add support for other API
-};
+  };
 /*
 $(function() {
   $(document).tooltip({
@@ -40,34 +40,34 @@ $(function() {
  * @param left - left position in px
  * @param top_ - top position in px
  */
-var showElementInVideo = function(element, left, top_) {
-    link = $("<a>").attr("href", "#")
-        .css("left", left+"px")
-        .css("top", top_+"px")
-        .html(element.tags.name)
-        .attr("data-wikipedia", element.tags.name)
-        .attr("title", element.tags.name);
+ var showElementInVideo = function(element, left, top_) {
+  link = $("<a>").attr("href", "#")
+  .css("left", left+"px")
+  .css("top", top_+"px")
+  .html(element.tags.name)
+  .attr("data-wikipedia", element.tags.name)
+  .attr("title", element.tags.name);
 
-    $("#video-overlay").append(link);
+  $("#video-overlay").append(link);
 }
 
 /**
  * Clears HTML video overlay
  */
-var clearVideo = function() {
-    $("#video-overlay").html("");
+ var clearVideo = function() {
+  $("#video-overlay").html("");
 }
 
 var isNearby = function(current, element) {
 
-    var r = 0.0009;
+  var r = 0.0009;
 
-    c_lon = current.data.lon;
-    c_lat = current.data.lat;
-    e_lon = element.lon;
-    e_lat = element.lat;
+  c_lon = current.data.lon;
+  c_lat = current.data.lat;
+  e_lon = element.lon;
+  e_lat = element.lat;
 
-    return Math.abs(c_lon - e_lon) < r && Math.abs(c_lat - e_lat) < r;
+  return Math.abs(c_lon - e_lon) < r && Math.abs(c_lat - e_lat) < r;
 }
 
 var isInFrontOfMe = function(current, next, element) {
@@ -132,62 +132,53 @@ var isInFrontOfMe = function(current, next, element) {
     w[1] = n[1] + v2[1];
 
     return (((x[0] <= e[0] && e[0] <= w[0]) || (x[0] >= e[0] && e[0] >= w[0])) && ((x[1] <= e[1] && e[1] <= w[1]) || (x[1] >= e[1] && e[1] >= w[1])));
-}
+  }
 
-var showPlacesOnVideo = function(current, next, response) {
+  var showPlacesOnVideo = function(current, next, response) {
     clearVideo();
 
     $.each(response.elements, function(idx, element) {
-        if(isInFrontOfMe(current, next, element)) {
-            showElementInVideo(element);
-        }
+      if(isInFrontOfMe(current, next, element)) {
+        showElementInVideo(element);
+      }
     });
-}
+  }
 
 /**
  * Displays POI as markers on map. Sets the markers dynamically to the "seen" nodes from the Overpass response.
  * Adds popups to the markers
  */
-var setMarker = function(response) {
+ var setMarker = function(response) {
    markerLayer.clearMarkers();
 
    $.each(response.elements, function(idx, element) {
 
-      var text;
-	
-      $.info.get("wikipedia", element.tags.name, {
-         success : function (response) {
-            text = response;
-         },
-         error : function (error) {
-            text = "no additional information";
-         },
+    var text;
+
+    $.info.get("wikipedia", element.tags.name, {
+     success : function (response) {
+      if (response) text = response;
+      else text = "No Wikipedia content found."
+    },
+    error : function (error) {
+      text = "No Wikipedia content found.";
+    },
+  });
+
+    var lonLat = new OpenLayers.LonLat( element.lon, element.lat ).transform('EPSG:4326', map.getProjectionObject());
+
+    marker = new OpenLayers.Marker(lonLat);
+
+    marker.events.register('click', marker, function(evt) {
+
+      popupText = "<h3>"+element.tags.name + "</h3><hr />" + text;
+        popup = new OpenLayers.Popup.FramedCloud("popup", lonLat, null, popupText, null, true);
+        map.addPopup(popup, true);
       });
 
-      var lonLat = new OpenLayers.LonLat( element.lon, element.lat ).transform('EPSG:4326', map.getProjectionObject());
-      
-      marker = new OpenLayers.Marker(lonLat);
-      marker.events.register('mouseover', marker, function(evt) {
-         popup = new OpenLayers.Popup.FramedCloud("Popup", lonLat, null, element.tags.name + "<br>" + text, null, false);
-         map.addPopup(popup);
-      });
-
-      marker.events.register('mouseout', marker, function(evt) {popup.hide();});
-
-      marker.events.register('click', marker, function(evt) {
-
-         //Put your code here for the onClick-behaviour or call a method
-         //http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/Popup-js.html
-         popup2 = new OpenLayers.Popup.FramedCloud("Popup2", lonLat, null, element.tags.name + "<br>" + text, null, true);
-         map.addPopup(popup2);
-         $("#Popup2").css('z-index', '901');
-
-         console.log("click!");
-      });
-
-      markerLayer.addMarker(marker);
-   });  
-}
+    markerLayer.addMarker(marker);
+  });  
+ }
 
 /**
  * @public
@@ -195,7 +186,7 @@ var setMarker = function(response) {
  * @param {TrackPoint or TrackConnection} current: The last point reached
  * @param {TrackPoint or TrackConnection} next: The next point to be reached
  */
-function onVideoProgress (current, next){
+ function onVideoProgress (current, next){
 
    console.log("Video reached new Point!");
    console.dir(current);
@@ -210,29 +201,29 @@ function onVideoProgress (current, next){
    assertTrue(pointToConnection || connectionToPoint || segmentChange || ended);
 
    if (ended) {
-      console.log("Reached end of track");
-      return;
-   }
+    console.log("Reached end of track");
+    return;
+  }
 
-   if (!segmentChange) {
-      var connection = (current instanceof TrackConnection)? current : next;
-      var source = connection.getData("source");
-      console.log("Connection started at %s,%s", source.lat, source.lon);
-   } else {
-      console.log("This will be skipped, because there is no video to show.");
-      return;
-   }
+  if (!segmentChange) {
+    var connection = (current instanceof TrackConnection)? current : next;
+    var source = connection.getData("source");
+    console.log("Connection started at %s,%s", source.lat, source.lon);
+  } else {
+    console.log("This will be skipped, because there is no video to show.");
+    return;
+  }
 
    // use getData() to retrieve the lat/lon and video src
    var lat = current.getData("lat"),
-       lon = current.getData("lon"),
-       src = current.getData("src");
+   lon = current.getData("lon"),
+   src = current.getData("src");
 
    // calulate points for the bounding box of overpass api
    var s = parseFloat(lat) - 0.00005,
-       n = parseFloat(lat) + 0.00005,
-       w = parseFloat(lon) - 0.00005,
-       e = parseFloat(lon) + 0.00005;
+   n = parseFloat(lat) + 0.00005,
+   w = parseFloat(lon) - 0.00005,
+   e = parseFloat(lon) + 0.00005;
 
    /**
    Bounding Box example
@@ -269,19 +260,19 @@ function onVideoProgress (current, next){
 
    // send query to overpass and handle response
    $.ajax({
-      type : "post",
-      url : "http://overpass-api.de/api/interpreter",
-      data : query,
-      success : function (response) {
+    type : "post",
+    url : "http://overpass-api.de/api/interpreter",
+    data : query,
+    success : function (response) {
          //console.dir(response);
          showPlacesOnVideo(current, next, response);
          setMarker(response);
 
-      },
-      error : function (error) {
+       },
+       error : function (error) {
          console.log("Something went wrong!" + error.responseText);
-      },
-   });
+       },
+     });
 
-  
-}
+
+ }
