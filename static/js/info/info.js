@@ -157,10 +157,11 @@ var isInFrontOfMe = function(current, next, element) {
 
     $.info.get("wikipedia", element.tags.name, {
      success : function (response) {
-      text = response;
+      if (response) text = response;
+      else text = "No Wikipedia content found."
     },
     error : function (error) {
-      text = "no additional information";
+      text = "No Wikipedia content found.";
     },
   });
 
@@ -170,12 +171,9 @@ var isInFrontOfMe = function(current, next, element) {
 
     marker.events.register('click', marker, function(evt) {
 
-        //Put your code here for the onClick-behaviour or call a method
-        //http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/Popup-js.html
-        popup = new OpenLayers.Popup.FramedCloud("popup", lonLat, null, element.tags.name + "<br>" + text, null, true);
+      popupText = "<h3>"+element.tags.name + "</h3><hr />" + text;
+        popup = new OpenLayers.Popup.FramedCloud("popup", lonLat, null, popupText, null, true);
         map.addPopup(popup, true);
-        
-        console.log("loltf2!");
       });
 
     markerLayer.addMarker(marker);
