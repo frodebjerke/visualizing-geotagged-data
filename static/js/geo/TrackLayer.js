@@ -93,7 +93,7 @@ TrackLayer.prototype = {
       this.map.setLayerIndex(this.trackLayer,999);
       // it is only possible to set the z-index of the whole layer after adding it
       // it must be > 726, the z-index of the highest vector layer
-      markerLayer.setZIndex(900);
+      markerLayer.setZIndex(750);
 
 
       this._startVideo();
