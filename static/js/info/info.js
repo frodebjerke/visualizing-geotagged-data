@@ -36,17 +36,28 @@ $(function() {
 /**
  * Call to add object to the HTML video overlay
  * @author Jan Vorcak <janvor@ifi.uio.no>
- * @param text - text to be displayed
- * @param left - left position in px
- * @param top_ - top position in px
+ * @param element - element from OSM API to display
+ * @param position - 1 for left side, right side otherwise
  */
- var showElementInVideo = function(element, left, top_) {
+ var showElementInVideo = function(element, position) {
+
+  var icons;
+  if (position == 1) {
+      icons = {
+        primary: "ui-icon-arrowthick-1-w",
+      }
+  } else {
+      icons = {
+        secondary: "ui-icon-arrowthick-1-e"
+      }
+  }
+
   link = $("<a>").attr("href", "#")
-  .css("left", left+"px")
-  .css("top", top_+"px")
+  .css("float", (position == 1 ? "left" : "right"))
   .html(element.tags.name)
   .attr("data-wikipedia", element.tags.name)
-  .attr("title", element.tags.name);
+  .attr("title", element.tags.name)
+  .button({ icons : icons });
 
   $("#video-overlay").append(link);
 }
@@ -70,6 +81,10 @@ var isNearby = function(current, element) {
   return Math.abs(c_lon - e_lon) < r && Math.abs(c_lat - e_lat) < r;
 }
 
+/*
+ * Return -1 if objects is on the left side, 1 if object is on the right side
+ * false otherwise
+ */
 var isInFrontOfMe = function(current, next, element) {
 
     // if one of the following is null, it's not worth of counting
@@ -131,15 +146,19 @@ var isInFrontOfMe = function(current, next, element) {
     w[0] = n[0] + v2[0];
     w[1] = n[1] + v2[1];
 
-    return (((x[0] <= e[0] && e[0] <= w[0]) || (x[0] >= e[0] && e[0] >= w[0])) && ((x[1] <= e[1] && e[1] <= w[1]) || (x[1] >= e[1] && e[1] >= w[1])));
+    if (((x[0] <= e[0] && e[0] <= w[0]) || (x[0] >= e[0] && e[0] >= w[0])) && ((x[1] <= e[1] && e[1] <= w[1]) || (x[1] >= e[1] && e[1] >= w[1]))) {
+        position = ((n[0]-c[0])*(e[1]-c[1]) - (n[1]-c[1])*(e[0]-c[0])) >= 0;
+        return position == true ? -1 : 1;
+    } else return false;
   }
 
   var showPlacesOnVideo = function(current, next, response) {
     clearVideo();
 
     $.each(response.elements, function(idx, element) {
-      if(isInFrontOfMe(current, next, element)) {
-        showElementInVideo(element);
+      position = isInFrontOfMe(current, next, element);
+      if(position == 1 || position == -1) {
+        showElementInVideo(element, position);
       }
     });
   }
