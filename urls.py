@@ -20,6 +20,7 @@ urlpatterns = patterns('',
          (r'^track/$', track),
          (r'^info/$', info),
          (r'^info/wikipedia/(?P<title>[^/]+)/$', wikipedia),
+         (r'^info/wikipedia/(?P<title>[^/]+)/(?P<language>[a-z]{2})/$', wikipedia),
     # url(r'^geotag/', include('geotag.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

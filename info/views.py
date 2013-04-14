@@ -24,10 +24,14 @@ def info(request):
 Returns the plain text of wikipedia article with given title
 @author Jan Vorcak <janvor@ifi.uio.no>
 """
-def wikipedia(request, title):
-    wikipage = Page(Wiki("http://en.wikipedia.org/w/api.php"), title = title)
-    text = wiki2plain.Wiki2Plain(wikipage.getWikiText()).text
-    text = re.sub(r"===([^=]*)===", r"<h2>\1</h2>", text)
-    text = re.sub(r"==([^=]*)==", r"<h3>\1</h3>", text)
-    return HttpResponse(text)
+def wikipedia(request, title, language="en"):
+
+    if request.is_ajax():
+        wikipage = Page(Wiki("http://"+language+".wikipedia.org/w/api.php"), title = title)
+        text = wiki2plain.Wiki2Plain(wikipage.getWikiText()).text
+        text = re.sub(r"===([^=]*)===", r"<h2>\1</h2>", text)
+        text = re.sub(r"==([^=]*)==", r"<h3>\1</h3>", text)
+        return HttpResponse(text)
+    else:
+        return HttpResponse("")
 

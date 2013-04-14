@@ -16,9 +16,12 @@ $.info = {};
       },
    });
 */
-$.info.get = function (api_name, title, parameters) {
+$.info.get = function (api_name, title, parameters, language) {
+
+  language = (typeof language === 'undefined') ? "de" : language;
+
   if(api_name == "wikipedia") {
-    parameters['url'] = '/info/wikipedia/'+title+'/';
+    parameters['url'] = '/info/wikipedia/'+title+'/'+language+'/';
     $.ajax(parameters);
     } // here we will be able to add support for other API
   };
