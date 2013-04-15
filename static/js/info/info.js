@@ -173,10 +173,12 @@ var isInFrontOfMe = function(current, next, element) {
  var setMarker = function(response) {
    markerLayer.clearMarkers();
 
+   //iterate through the elements (POIs) of the response
    $.each(response.elements, function(idx, element) {
 
     var text;
 
+    //set the text for additional information (if available)
     $.info.get("wikipedia", element.tags.name, {
      success : function (response) {
       if (response) text = response;
@@ -187,10 +189,14 @@ var isInFrontOfMe = function(current, next, element) {
     },
   });
 
+    //get the position of the element and transform it into the right projection 
     var lonLat = new OpenLayers.LonLat( element.lon, element.lat ).transform('EPSG:4326', map.getProjectionObject());
 
+    //create a marker
     marker = new OpenLayers.Marker(lonLat);
 
+    //add a mouse listener to the marker and define the event that will be triggered
+    //listen for clicks. if clicked: show a popup with the additional information text
     marker.events.register('click', marker, function(evt) {
 
       popupText = "<h3>"+element.tags.name + "</h3><hr />" + text;
@@ -198,6 +204,18 @@ var isInFrontOfMe = function(current, next, element) {
         map.addPopup(popup, true);
       });
 
+    /**
+     //possibility to realize a "hover" functionality.
+     //seems a little bit unpractical since you trigger many events while you navigate through the map
+     *marker.events.register('mouseover', marker, function(evt) {
+     *    popup2Text = "<h3>"+element.tags.name + "</h3><hr />" + text;
+     *    popup2 = new OpenLayers.Popup.FramedCloud("Popup2", lonLat, null, popup2Text, null, false);
+     *    map.addPopup(popup2);
+     *  });
+     *marker.events.register('mouseout', marker, function(evt) {popup2.hide();});
+     */
+
+    //add marker to the layer
     markerLayer.addMarker(marker);
   });  
  }
@@ -247,40 +265,13 @@ var isInFrontOfMe = function(current, next, element) {
    w = parseFloat(lon) - 0.00005,
    e = parseFloat(lon) + 0.00005;
 
-   /**
-   Bounding Box example
-   // get the trace layer
-   // @see http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/Layer/Vector-js.html
-   // @see geo.js for the public interface
-   var traceLayer = geo.getTraceLayer();
-   assert(traceLayer.CLASS_NAME, "OpenLayers.Layer.Vector");
-   // calculate the coordinates for the box that covers the area between the current & the next feature
-   // this only works on a s->n or n->s trace, not on a w<->e trace
-   var currentPoint = geo.toPoint(current.getData("lat") , current.getData("lon")),
-       nextPoint = geo.toPoint(next.getData("lat"), next.getData("lon"));
-   // draw the bounding box. @see http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/BaseTypes/Bounds-js.html#OpenLayers.Bounds.OpenLayers.Bounds
-   bounds = new OpenLayers.Bounds();
-   // use a helper functions to create a OpenLayers.Geometry.Point and wrap the point in a OpenLayers.Feature.Vector
-   // if you want to display something else don't forget to transform all points from geographic to spherical projection
-   bounds.extend(currentPoint);
-   bounds.extend(nextPoint);
-   // you can set the style of the feature that will get precedence over the layer style
-   // @see http://dev.openlayers.org/releases/OpenLayers-2.12/doc/apidocs/files/OpenLayers/Feature/Vector-js.html#OpenLayers.Feature.Vector.OpenLayers.Feature.Vector
-   boundingBox = new OpenLayers.Feature.Vector(bounds.toGeometry(), 
-                                               null, 
-                                               styles.boundingBox); // styles.boundingBox is defined in styles.js
-   // add the feature to the layer. it will get displayed automatically
-   traceLayer.addFeatures([boundingBox]);
-   */
-   
-   
    // assemble "position block" for the query
    var position = s +","+ w +","+ n +","+ e;	
 
    // assemble query
    var query ="data=[out:json];node(" + position + ");node(around:500)[\"historic\"];out;";
 
-   // send query to overpass and handle response
+   // send query to overpass and handle response (-> call further methods)
    $.ajax({
     type : "post",
     url : "http://overpass-api.de/api/interpreter",
