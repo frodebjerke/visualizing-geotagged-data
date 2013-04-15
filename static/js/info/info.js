@@ -36,6 +36,11 @@ $(function() {
 });
 */
 
+$.position = {
+    LEFT : 1,
+    RIGHT : -1
+}
+
 /**
  * Call to add object to the HTML video overlay
  * @author Jan Vorcak <janvor@ifi.uio.no>
@@ -45,18 +50,18 @@ $(function() {
  var showElementInVideo = function(element, position) {
 
   var icons;
-  if (position == 1) {
+  if (position == $.position.LEFT) {
       icons = {
-        primary: "ui-icon-arrowthick-1-w",
+        primary: "ui-icon-arrowthick-1-sw",
       }
   } else {
       icons = {
-        secondary: "ui-icon-arrowthick-1-e"
+        secondary: "ui-icon-arrowthick-1-se"
       }
   }
 
   link = $("<a>").attr("href", "#")
-  .css("float", (position == 1 ? "left" : "right"))
+  .css("float", (position == $.position.LEFT ? "left" : "right"))
   .html(element.tags.name)
   .attr("data-wikipedia", element.tags.name)
   .attr("title", element.tags.name)
@@ -72,6 +77,9 @@ $(function() {
   $("#video-overlay").html("");
 }
 
+/*
+ * Return true if object is not far away
+ */
 var isNearby = function(current, element) {
 
   var r = 0.0009;
@@ -85,8 +93,8 @@ var isNearby = function(current, element) {
 }
 
 /*
- * Return -1 if objects is on the left side, 1 if object is on the right side
- * false otherwise
+ * Return $.position.LEFT if objects is on the left side, $.position.RIGHT if 
+ * object is on the right side, false otherwise
  */
 var isInFrontOfMe = function(current, next, element) {
 
@@ -150,21 +158,28 @@ var isInFrontOfMe = function(current, next, element) {
     w[1] = n[1] + v2[1];
 
     if (((x[0] <= e[0] && e[0] <= w[0]) || (x[0] >= e[0] && e[0] >= w[0])) && ((x[1] <= e[1] && e[1] <= w[1]) || (x[1] >= e[1] && e[1] >= w[1]))) {
+        // we calculate the determinant of matrix CN->, CE->, if it's positive
+        // the object is on the right side, if negative it's on the left side
         position = ((n[0]-c[0])*(e[1]-c[1]) - (n[1]-c[1])*(e[0]-c[0])) >= 0;
-        return position == true ? -1 : 1;
+        return position == true ? $.position.RIGHT : $.position.LEFT;
     } else return false;
-  }
+}
 
-  var showPlacesOnVideo = function(current, next, response) {
-    clearVideo();
+/*
+ * Displays elements inside response object on the video if they are visible
+ */
+var showPlacesOnVideo = function(current, next, response) {
 
-    $.each(response.elements, function(idx, element) {
-      position = isInFrontOfMe(current, next, element);
-      if(position == 1 || position == -1) {
-        showElementInVideo(element, position);
-      }
-    });
-  }
+  clearVideo();
+
+  $.each(response.elements, function(idx, element) {
+    position = isInFrontOfMe(current, next, element);
+    if(position == $.position.LEFT || position == $.position.RIGHT) {
+      showElementInVideo(element, position);
+    }
+  });
+
+}
 
 /**
  * Displays POI as markers on map. Sets the markers dynamically to the "seen" nodes from the Overpass response.
@@ -277,7 +292,6 @@ var isInFrontOfMe = function(current, next, element) {
     url : "http://overpass-api.de/api/interpreter",
     data : query,
     success : function (response) {
-         //console.dir(response);
          showPlacesOnVideo(current, next, response);
          setMarker(response);
 
